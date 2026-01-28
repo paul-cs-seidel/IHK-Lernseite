@@ -12,6 +12,11 @@
         
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        * {
+            box-sizing: border-box;
         }
         
         body {
@@ -23,6 +28,7 @@
             color: #252525;
             font-size: 0.92em;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         /* Navigation - Desktop */
@@ -106,13 +112,17 @@
             .nav-links-container {
                 display: none;
                 flex-direction: column;
-                width: 100%;
-                border-top: 2px solid #252525;
-                max-height: 60vh;
+                width: 100vw;
+                position: absolute;
+                left: 0;
+                top: 56px;
+                border-bottom: 2px solid #252525;
+                max-height: 85vh;
                 overflow-y: auto;
-                background: rgba(208, 208, 208, 0.95);
+                background: rgba(208, 208, 208, 0.2);
                 -webkit-backdrop-filter: blur(12px);
                 backdrop-filter: blur(12px);
+                box-shadow: 10px 10px 20px;
             }
             .burger-toggle:checked ~ .nav-links-container {
                 display: flex;
@@ -495,20 +505,88 @@
         
         /* Responsive */
         @media (max-width: 1024px) {
+            body {
+                padding: 0 24px;
+            }
+            
             .container0, .container1, .container2, .container3,
             .container4, .container5, .container6,
             .container-wide, .container-wide-right,.container-wide-mid, .container-full {
-                grid-column: 1 / 13;
+                grid-column: 1 / -1;
             }
             .grid { gap: 20px; }
+            
+            .vergleichs-tabelle,
+            .container-text table {
+                font-size: 0.85em;
+            }
         }
         
         @media (max-width: 768px) {
+            body {
+                padding: 0 16px;
+            }
+            
             .grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
             .text-container { margin-top: 16px; font-size: 32px; }
+            
+            /* Tabellen responsive */
+            .vergleichs-tabelle,
+            .container-text table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                font-size: 0.8em;
+            }
+            
+            .vergleichs-tabelle th,
+            .vergleichs-tabelle td,
+            .container-text th,
+            .container-text td {
+                padding: 6px 8px;
+                min-width: 80px;
+            }
+            
+            /* Listen anpassen */
+            ul, ol {
+                padding-left: 16px;
+            }
+            
+            /* Info-Boxen anpassen */
+            .merksatz,
+            .pruefungsfalle,
+            .typische-frage,
+            .formel-box {
+                padding: 12px 14px;
+                margin: 16px 0;
+                font-size: 0.9em;
+            }
+            
+            .merksatz::before,
+            .pruefungsfalle::before,
+            .typische-frage::before {
+                display: block;
+                margin-bottom: 6px;
+            }
+            
+            /* Subheadings */
+            .subheadding {
+                font-size: 1.1em;
+                word-wrap: break-word;
+            }
+            
+            /* Micrographic Box */
+            .micrographic {
+                padding: 12px 14px;
+            }
+            
+            /* Media Container */
+            .media-container {
+                margin: 16px 0;
+            }
             
             /* Blur-Overlay für Hintergrund wenn Menü offen */
             .blur-overlay {
