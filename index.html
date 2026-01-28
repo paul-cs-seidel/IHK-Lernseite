@@ -147,14 +147,72 @@
         }
         
         /* Hauptüberschrift - Brutalist Hero */
-        .text-container {
+        .hero {
             width: 100%;
-            margin: 80px 0 48px 0;
-            font-size: clamp(48px, 6vw, 72px);
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 0 48px 0;
+            padding: 120px 0 60px 0;
+            font-size: clamp(56px, 9vw, 136px);
             font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            padding-bottom: 16px;
+            letter-spacing: -0.04em;
+            line-height: 1.0;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "AP1";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            font-size: clamp(150px, 25vw, 400px);
+            font-weight: 700;
+            color: rgba(37, 37, 37, 0.06);
+            letter-spacing: -0.05em;
+            line-height: 1;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(14px, 2vw, 20px);
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 24px;
+            padding: 8px 0;
+            border-top: 2px solid #252525;
+            color: #505050;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .hero-stat-value {
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.56em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #505050;
+            margin-top: 4px;
         }
         
         /* Sektions-Titel - Tech Spec Style */
@@ -509,6 +567,19 @@
                 padding: 0 24px;
             }
             
+            .hero {
+                min-height: 50vh;
+                padding: 100px 0 48px 0;
+            }
+            
+            .hero::before {
+                font-size: clamp(100px, 20vw, 250px);
+            }
+            
+            .hero-stats {
+                gap: 24px;
+            }
+            
             .container0, .container1, .container2, .container3,
             .container4, .container5, .container6,
             .container-wide, .container-wide-right,.container-wide-mid, .container-full {
@@ -525,6 +596,25 @@
         @media (max-width: 768px) {
             body {
                 padding: 0 16px;
+            }
+            
+            .hero {
+                min-height: 45vh;
+                padding: 80px 0 40px 0;
+            }
+            
+            .hero::before {
+                display: none;
+            }
+            
+            .hero-subtitle {
+                font-size: 12px;
+                margin-top: 16px;
+            }
+            
+            .hero-stats {
+                gap: 20px;
+                margin-top: 24px;
             }
             
             .grid {
@@ -593,6 +683,30 @@
         @media (max-width: 430px) {
             body {
                 padding: 0 12px;
+            }
+            
+            .hero {
+                min-height: 40vh;
+                padding: 70px 0 32px 0;
+                font-size: clamp(36px, 10vw, 48px);
+            }
+            
+            .hero-subtitle {
+                font-size: 10px;
+                letter-spacing: 0.05em;
+            }
+            
+            .hero-stats {
+                gap: 16px;
+                margin-top: 20px;
+            }
+            
+            .hero-stat-value {
+                font-size: 28px;
+            }
+            
+            .hero-stat-label {
+                font-size: 0.65em;
             }
             
             .text-container {
@@ -710,7 +824,25 @@
     </header>
     <div class="blur-overlay" id="blur-overlay"></div>
     <body>
-        <div class="text-container">IHK Prüfungsvorbereitung</div>
+        <div class="hero">
+            IHK PRÜFUNG 
+            <span style="font-weight: 200; font-size: clamp(52px, 8.3vw, 126px); color: #3c3c3c;">VORBEREITUNG</span>
+            <div class="hero-subtitle">Fachinformatiker · Systemintegration · Anwendungsentwicklung</div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">90</span>
+                    <span class="hero-stat-label">Minuten</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">20%</span>
+                    <span class="hero-stat-label">Gesamtnote</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">13</span>
+                    <span class="hero-stat-label">Themen</span>
+                </div>
+            </div>
+        </div>
 
 
         <!-- ═══════════════════════════════════════════════════════════════ -->
