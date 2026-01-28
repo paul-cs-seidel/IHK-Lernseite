@@ -158,11 +158,25 @@
             align-items: flex-start;
             margin: 0 0 48px 0;
             padding: 120px 0 60px 0;
-            font-size: clamp(56px, 9vw, 136px);
+            font-size: 9vw;
             font-weight: 700;
             letter-spacing: -0.04em;
             line-height: 1.0;
             position: relative;
+            white-space: nowrap;
+        }
+        
+        .hero-title {
+            display: block;
+            white-space: nowrap;
+        }
+        
+        .hero-title-light {
+            display: block;
+            font-weight: 200;
+            font-size: 0.93em;
+            color: #3c3c3c;
+            white-space: nowrap;
         }
         
         .hero::before {
@@ -171,7 +185,7 @@
             top: 50%;
             right: 0;
             transform: translateY(-30%);
-            font-size: clamp(200px, 30vw, 470px);
+            font-size: 30vw;
             font-weight: 700;
             color: rgba(37, 37, 37, 0.06);
             letter-spacing: -0.05em;
@@ -181,21 +195,22 @@
         }
         
         .hero-subtitle {
-            font-size: clamp(8.3px, 1.32vw, 20px);
+            font-size: 1.33vw;
             font-weight: 500;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            margin-top: 24px;
-            padding: 8px 0;
+            margin-top: 2vw;
+            padding: 0.5vw 0;
             border-top: 2px solid #252525;
             color: #505050;
+            white-space: nowrap;
         }
         
         .hero-stats {
             display: flex;
-            gap: 40px;
-            margin-top: 32px;
-            flex-wrap: wrap;
+            gap: 3vw;
+            margin-top: 2.5vw;
+            flex-wrap: nowrap;
         }
         
         .hero-stat {
@@ -204,20 +219,44 @@
         }
         
         .hero-stat-value {
-            font-size: clamp(24px, 1.32vw, 32px);
+            font-size: 2.7vw;
             font-weight: 700;
             letter-spacing: 0.05em;
             line-height: 1;
         }
         
         .hero-stat-label {
-            font-size: clamp(18px, 2vw, 52px);
+            font-size: 3.35vw;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-top: 24px;
-            padding: 8px 0;
             color: #505050;
-            margin-top: 4px;
+            margin-top: 0.3vw;
+        }
+        
+        /* Hero Mobile - größere Schrift auf kleinen Bildschirmen */
+        @media (max-width: 768px) {
+            .hero {
+                font-size: 12vw;
+                padding: 100px 0 40px 0;
+                min-height: 40vh;
+            }
+            .hero::before {
+                font-size: 40vw;
+            }
+            .hero-subtitle {
+                font-size: 1.78vw;
+                margin-top: 3vw;
+            }
+            .hero-stats {
+                gap: 5vw;
+                margin-top: 4vw;
+            }
+            .hero-stat-value {
+                font-size: 4vw;
+            }
+            .hero-stat-label {
+                font-size: 4.35vw;
+            }
         }
         
         /* Sektions-Titel - Tech Spec Style */
@@ -465,6 +504,7 @@
             background-color: #252525;
             color: #d0d0d0;
             border: none;
+            border-radius: 4px;
             padding: 16px 20px;
             margin: 20px 0;
             font-style: normal;
@@ -821,8 +861,8 @@
     <div class="blur-overlay" id="blur-overlay"></div>
     <body>
         <div class="hero">
-            IHK PRÜFUNG 
-            <span style="font-weight: 200; font-size: clamp(52px, 8.3vw, 126px); color: #3c3c3c;">VORBEREITUNG</span>
+            <span class="hero-title">IHK PRÜFUNG</span>
+            <span class="hero-title-light">VORBEREITUNG</span>
             <div class="hero-subtitle">Fachinformatiker · Systemintegration · Anwendungsentwicklung</div>
             <div class="hero-stats">
                 <div class="hero-stat">
