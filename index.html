@@ -605,6 +605,99 @@
                 display: block;
             }
         }
+        
+        /* Sehr kleine Bildschirme (Smartphones) */
+        @media (max-width: 430px) {
+            body {
+                padding: 0 12px;
+            }
+            
+            .text-container {
+                font-size: 26px;
+                margin-top: 12px;
+                word-wrap: break-word;
+            }
+            
+            /* Alle Container gleiche Breite */
+            .grid {
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+            
+            .container0, .container1, .container2, .container3,
+            .container4, .container5, .container6,
+            .container-wide, .container-wide-mid, .container-wide-right, .container-full {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            /* Tabellen anpassen */
+            .vergleichs-tabelle,
+            .container-text table {
+                font-size: 0.75em;
+                margin: 12px 0;
+            }
+            
+            .vergleichs-tabelle th,
+            .vergleichs-tabelle td,
+            .container-text th,
+            .container-text td {
+                padding: 5px 6px;
+                min-width: 60px;
+            }
+            
+            /* Subheadings kleiner */
+            .subheadding {
+                font-size: 1em;
+            }
+            
+            /* Info-Boxen kompakter */
+            .merksatz,
+            .pruefungsfalle,
+            .typische-frage,
+            .formel-box {
+                padding: 10px 12px;
+                margin: 12px 0;
+                font-size: 0.85em;
+            }
+            
+            /* Micrographic Box */
+            .micrographic {
+                padding: 10px 12px;
+            }
+            
+            .micrographic-list {
+                font-size: 0.8em;
+            }
+            
+            /* Listen */
+            ul, ol {
+                padding-left: 14px;
+            }
+            
+            li {
+                font-size: 0.9em;
+            }
+            
+            /* Sektions-Titel */
+            span[id] {
+                font-size: 0.95em;
+                margin: 48px 0 6px 0;
+            }
+            
+            /* Badges */
+            .badge-relevant, .badge-top {
+                font-size: 0.55em;
+                padding: 2px 6px;
+            }
+            
+            /* Formel-Box */
+            .formel-box .formel {
+                font-size: 1em;
+                word-wrap: break-word;
+            }
+        }
     </style>
 
     <header>
