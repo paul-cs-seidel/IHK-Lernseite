@@ -259,6 +259,32 @@
             }
         }
         
+        /* Hero für kleine Smartphones */
+        @media (max-width: 430px) {
+            .hero {
+                font-size: 13vw;
+                padding: 90px 0 30px 0;
+                min-height: 35vh;
+            }
+            .hero::before {
+                font-size: 45vw;
+            }
+            .hero-subtitle {
+                font-size: 2.5vw;
+                margin-top: 4vw;
+            }
+            .hero-stats {
+                gap: 6vw;
+                margin-top: 5vw;
+            }
+            .hero-stat-value {
+                font-size: 5vw;
+            }
+            .hero-stat-label {
+                font-size: 5vw;
+            }
+        }
+        
         /* Sektions-Titel - Tech Spec Style */
         span[id] {
             display: block;
