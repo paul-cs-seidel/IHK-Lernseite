@@ -298,14 +298,14 @@ const NavigationController = {
     },
 
     /**
-     * Handle main nav item click (toggle submenu on mobile, navigate on desktop)
+     * Handle main nav item click (toggle submenu on mobile/small screens, navigate on large desktop)
      */
     handleNavItemClick(e, link) {
         const navItem = link.closest('.nav-item');
         const isMobile = window.innerWidth <= 768;
         
-        if (isMobile && this.isTouch) {
-            // On mobile touch devices, toggle submenu
+        if (isMobile) {
+            // On small screens (mobile or small desktop window), toggle submenu
             e.preventDefault();
             
             // Close other open submenus
