@@ -328,6 +328,9 @@
         border: none;
         border-radius: 0;
         border-top: 1px solid rgba(160, 160, 160, 0.3);
+        background: none !important;
+        -webkit-backdrop-filter: blur(0px) saturate(1) brightness(1) !important;
+        backdrop-filter: blur(0px) saturate(1) brightness(1) !important;
         max-height: 0;
         overflow: hidden;
         padding: 0;
