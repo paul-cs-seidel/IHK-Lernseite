@@ -25,12 +25,12 @@
 
 /**
  * Burger Menu Controller
- * Handles menu toggle, scroll lock, and outside click
+ * Handles menu toggle and outside click
  */
 const NavigationController = {
     burgerToggle: null,
     blurOverlay: null,
-    scrollPosition: 0,
+    isTouch: false,
 
     /**
      * Initialize navigation
@@ -40,6 +40,9 @@ const NavigationController = {
         this.blurOverlay = document.getElementById('blur-overlay');
 
         if (!this.burgerToggle || !this.blurOverlay) return;
+
+        // Detect touch device
+        this.isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
         this.bindEvents();
     },
@@ -56,29 +59,26 @@ const NavigationController = {
             link.addEventListener('click', (e) => this.handleNavLinkClick(e, link));
         });
 
-        // Blur overlay click
-        this.blurOverlay.addEventListener('click', (e) => this.handleOverlayClick(e));
-
-        // Click outside to close
-        document.addEventListener('click', (e) => this.handleOutsideClick(e));
+        // Blur overlay click - closes menu when clicking outside
+        this.blurOverlay.addEventListener('click', () => this.closeMenu());
     },
 
     /**
-     * Lock scroll when menu is open
+     * Lock scroll on touch devices
      */
     lockScroll() {
-        this.scrollPosition = window.pageYOffset;
-        document.body.classList.add('menu-open');
-        document.body.style.top = `-${this.scrollPosition}px`;
+        if (this.isTouch) {
+            document.body.style.overflow = 'hidden';
+        }
     },
 
     /**
-     * Unlock scroll when menu is closed
+     * Unlock scroll on touch devices
      */
     unlockScroll() {
-        document.body.classList.remove('menu-open');
-        document.body.style.top = '';
-        window.scrollTo(0, this.scrollPosition);
+        if (this.isTouch) {
+            document.body.style.overflow = '';
+        }
     },
 
     /**
@@ -115,28 +115,7 @@ const NavigationController = {
         }, 50);
     },
 
-    /**
-     * Handle blur overlay click
-     */
-    handleOverlayClick(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        this.closeMenu();
-    },
 
-    /**
-     * Handle click outside menu
-     */
-    handleOutsideClick(e) {
-        const navBar = document.querySelector('.nav-bar');
-        const navLinksContainer = document.querySelector('.nav-links-container');
-
-        if (this.burgerToggle.checked &&
-            !navBar.contains(e.target) &&
-            !navLinksContainer.contains(e.target)) {
-            this.closeMenu();
-        }
-    },
 
     /**
      * Close menu helper

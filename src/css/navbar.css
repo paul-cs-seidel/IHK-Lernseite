@@ -33,6 +33,11 @@
     z-index: var(--z-navbar);
     padding: 0;
     background: transparent;
+    pointer-events: none;
+}
+
+.nav-bar > * {
+    pointer-events: auto;
 }
 
 /* ============================
@@ -169,25 +174,25 @@
 }
 
 /* ============================
- * BLUR OVERLAY
+ * CLICK OVERLAY (invisible)
  * ============================ */
 
 .blur-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: var(--z-overlay);
+    background: transparent;
+    z-index: calc(var(--z-navbar) - 1);
+    pointer-events: none;
+    cursor: pointer;
 }
 
 .blur-overlay.active {
-    display: block;
+    pointer-events: auto;
 }
+
 
 /* ============================
  * RESPONSIVE - MOBILE
