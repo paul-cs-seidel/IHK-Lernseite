@@ -1,0 +1,177 @@
+/**
+ * ========================================
+ * BASE.CSS - Reset & Base Styles
+ * ========================================
+ * 
+ * Grundlegende Styles und CSS Reset:
+ * - Box-Sizing Reset
+ * - Body Defaults
+ * - Typography Defaults
+ * - Links
+ * - Lists
+ * - Horizontal Rules
+ * 
+ * @author Cedric Seidel
+ * @version 2.0.0
+ */
+
+/* ============================
+ * BOX-SIZING RESET
+ * ============================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ============================
+ * BODY DEFAULTS
+ * ============================ */
+
+body {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: 0 var(--spacing-3xl);
+    font-family: var(--font-family-mono);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    overflow-x: hidden;
+}
+
+/* Scroll-Lock wenn Menü offen */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+/* ============================
+ * HORIZONTAL RULES
+ * ============================ */
+
+hr {
+    border: none;
+    border-top: 2px solid var(--color-border);
+    margin: var(--spacing-sm) 0 var(--spacing-2xl) 0;
+}
+
+/* ============================
+ * SECTION TITLES
+ * ============================ */
+
+span[id] {
+    display: block;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    margin: var(--spacing-5xl) 0 var(--spacing-sm) 0;
+    padding-top: var(--spacing-2xl);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+/* ============================
+ * LISTS
+ * ============================ */
+
+ul, ol {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+}
+
+li {
+    margin-bottom: 6px;
+    line-height: var(--line-height-normal);
+}
+
+/* Numbered steps list */
+.schritte-liste {
+    counter-reset: schritt;
+    list-style: none;
+    padding-left: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.schritte-liste li {
+    counter-increment: schritt;
+    margin-bottom: var(--spacing-sm);
+    padding-left: 2em;
+    position: relative;
+}
+
+.schritte-liste li::before {
+    content: counter(schritt);
+    position: absolute;
+    left: 0;
+    font-weight: var(--font-weight-bold);
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    width: 1.4em;
+    height: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+}
+
+/* ============================
+ * TEXT UTILITIES
+ * ============================ */
+
+.info-text {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-normal);
+    color: #404040;
+    font-style: italic;
+}
+
+/* ============================
+ * RESPONSIVE - TABLET
+ * ============================ */
+
+@media (max-width: 1024px) {
+    body {
+        padding: 0 var(--spacing-2xl);
+    }
+}
+
+/* ============================
+ * RESPONSIVE - MOBILE
+ * ============================ */
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    ul, ol {
+        padding-left: var(--spacing-lg);
+    }
+}
+
+/* ============================
+ * RESPONSIVE - SMALL MOBILE
+ * ============================ */
+
+@media (max-width: 430px) {
+    body {
+        padding: 0 var(--spacing-md);
+    }
+    
+    ul, ol {
+        padding-left: 14px;
+    }
+    
+    li {
+        font-size: var(--font-size-md);
+    }
+    
+    span[id] {
+        font-size: 0.95em;
+        margin: var(--spacing-4xl) 0 6px 0;
+    }
+}

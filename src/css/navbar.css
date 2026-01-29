@@ -1,0 +1,202 @@
+/**
+ * ========================================
+ * NAVBAR.CSS - Navigation & Burger Menu
+ * ========================================
+ * 
+ * Styles für:
+ * - Navbar Container
+ * - Logo
+ * - Burger Menu Toggle
+ * - Navigation Links Container
+ * - Blur Overlay
+ * 
+ * @author Cedric Seidel
+ * @version 2.0.0
+ */
+
+/* ============================
+ * NAVBAR CONTAINER
+ * ============================ */
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-navbar);
+    padding: 0;
+    background: transparent;
+}
+
+/* ============================
+ * LOGO
+ * ============================ */
+
+.nav-logo {
+    order: 1;
+    margin-left: var(--spacing-lg);
+    margin-right: auto;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-sm);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.nav-logo img {
+    height: 20px;
+    width: auto;
+    transition: transform var(--transition-normal);
+}
+
+.nav-logo:hover img {
+    transform: scale(1.1);
+}
+
+/* ============================
+ * BURGER MENU TOGGLE
+ * ============================ */
+
+.burger-toggle {
+    display: none;
+}
+
+.burger-btn {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    margin: var(--spacing-sm) var(--spacing-lg);
+}
+
+.burger-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color-primary-dark);
+    transition: all var(--transition-slow);
+}
+
+/* Burger Animation - X */
+.burger-toggle:checked ~ .burger-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+.burger-toggle:checked ~ .burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-toggle:checked ~ .burger-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* ============================
+ * NAVIGATION LINKS CONTAINER
+ * ============================ */
+
+.nav-links-container {
+    order: 3;
+    display: none;
+    flex-direction: column;
+    width: 95vw;
+    max-width: var(--nav-dropdown-max-width);
+    position: fixed;
+    right: var(--spacing-lg);
+    left: auto;
+    transform: none;
+    top: var(--nav-height);
+    border: 1px solid rgba(160, 160, 160, 0.63);
+    border-radius: var(--radius-md);
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    background: var(--color-surface);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-md);
+}
+
+.burger-toggle:checked ~ .nav-links-container {
+    display: flex;
+}
+
+/* ============================
+ * NAVIGATION LINKS
+ * ============================ */
+
+.nav-bar-links {
+    padding: var(--spacing-md) var(--spacing-xl);
+    color: var(--color-primary-dark);
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-mono);
+    text-decoration: none;
+    border-bottom: none;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-bar-links:hover {
+    background-color: rgba(108, 108, 108, 0.6);
+    color: #e5e5e5;
+}
+
+.nav-bar-links:last-child {
+    box-shadow: none;
+}
+
+/* ============================
+ * BLUR OVERLAY
+ * ============================ */
+
+.blur-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: var(--z-overlay);
+}
+
+.blur-overlay.active {
+    display: block;
+}
+
+/* ============================
+ * RESPONSIVE - MOBILE
+ * ============================ */
+
+@media (max-width: 768px) {
+    .nav-links-container {
+        width: 95vw;
+        max-width: none;
+        right: 2.5vw;
+    }
+}

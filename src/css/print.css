@@ -1,0 +1,140 @@
+/**
+ * ========================================
+ * PRINT.CSS - Druckstyles
+ * ========================================
+ * 
+ * Optimierte Styles für den Druck:
+ * - Versteckte UI-Elemente
+ * - Angepasste Layouts
+ * - Schwarzweiß-freundlich
+ * 
+ * @author Cedric Seidel
+ * @version 2.0.0
+ */
+
+@media print {
+    /* ============================
+     * VERSTECKTE ELEMENTE
+     * ============================ */
+    
+    .nav-bar,
+    .burger-btn,
+    .burger-toggle,
+    .blur-overlay,
+    .micrographic,
+    .sidebar-sticky-wrapper,
+    .timer-box,
+    .timer-start-btn,
+    .reset-btn,
+    .loesung-header,
+    .uebung-toggle,
+    .selbsttest-btn,
+    .site-footer {
+        display: none !important;
+    }
+    
+    /* ============================
+     * BODY DEFAULTS
+     * ============================ */
+    
+    body {
+        background: none;
+        color: #1a1a1a;
+        font-size: 10pt;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    /* ============================
+     * HERO
+     * ============================ */
+    
+    .hero {
+        padding: 20px 0;
+        margin-bottom: 20px;
+        min-height: auto;
+        font-size: 24pt;
+    }
+    
+    .hero::before {
+        display: none;
+    }
+    
+    /* ============================
+     * LAYOUT
+     * ============================ */
+    
+    .grid {
+        display: block;
+        padding-left: 0;
+    }
+    
+    .container0,
+    .container1,
+    .container2,
+    .container3,
+    .container4,
+    .container5,
+    .container6,
+    .container-wide,
+    .container-wide-mid,
+    .container-wide-right,
+    .container-full {
+        width: 100%;
+        page-break-inside: avoid;
+        margin-bottom: 15px;
+    }
+    
+    /* ============================
+     * ÜBUNGEN & LÖSUNGEN
+     * ============================ */
+    
+    .uebung-box,
+    .loesung-box {
+        border: 1px solid #000;
+    }
+    
+    .uebung-content,
+    .loesung-content {
+        display: block !important;
+        max-height: none !important;
+    }
+    
+    /* ============================
+     * INFO-BOXEN
+     * ============================ */
+    
+    .merksatz,
+    .pruefungsfalle,
+    .typische-frage {
+        border: 1px solid #000;
+        background: #f5f5f5 !important;
+        color: #000;
+    }
+    
+    .merksatz {
+        background: #e0e0e0 !important;
+    }
+    
+    /* ============================
+     * SONSTIGES
+     * ============================ */
+    
+    hr {
+        border-color: #000;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    /* Page Breaks */
+    h2, h3, .subheadding {
+        page-break-after: avoid;
+    }
+    
+    table {
+        page-break-inside: avoid;
+    }
+}

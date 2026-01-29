@@ -1,0 +1,12 @@
+<svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Apple Touch Icon - IHK Lernseite -->
+    <!-- Background -->
+    <rect width="180" height="180" rx="40" fill="#d0d0d0"/>
+    
+    <!-- Logo centered and scaled -->
+    <g transform="translate(40, 40) scale(4.2)">
+        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#1a1a1a"/>
+        <path d="M2 17L12 22L22 17" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12L12 17L22 12" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+</svg>

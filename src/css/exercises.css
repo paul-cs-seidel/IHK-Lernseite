@@ -1,0 +1,198 @@
+/**
+ * ========================================
+ * EXERCISES.CSS - Übungen & Selbsttests
+ * ========================================
+ * 
+ * Styles für:
+ * - Übungsboxen
+ * - Lösungsboxen
+ * - Selbsttest Komponenten
+ * - Feedback States
+ * 
+ * @author Cedric Seidel
+ * @version 2.0.0
+ */
+
+/* ============================
+ * ÜBUNGSBOX
+ * ============================ */
+
+.uebung-box {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-xl) 0;
+}
+
+.uebung-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color var(--transition-fast);
+}
+
+.uebung-header:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.uebung-titel {
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: var(--font-size-md);
+}
+
+.uebung-toggle {
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xl);
+    transition: transform var(--transition-normal);
+}
+
+.uebung-content {
+    display: none;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.uebung-aufgabe {
+    padding: var(--spacing-lg);
+}
+
+/* Übung geöffnet */
+.uebung-box.open .uebung-content {
+    display: block;
+}
+
+.uebung-box.open .uebung-toggle {
+    transform: rotate(45deg);
+}
+
+/* ============================
+ * LÖSUNGSBOX
+ * ============================ */
+
+.loesung-box {
+    border: 2px dashed #404040;
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-lg) 0 0 0;
+}
+
+.loesung-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.loesung-header:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.loesung-titel {
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: 0.8em;
+    color: var(--color-text-muted);
+}
+
+.loesung-titel::before {
+    content: "[+] ";
+}
+
+.loesung-box.open .loesung-titel::before {
+    content: "[-] ";
+}
+
+.loesung-content {
+    display: none;
+    padding: 14px;
+    border-top: 1px dashed #404040;
+}
+
+.loesung-box.open .loesung-content {
+    display: block;
+}
+
+/* ============================
+ * SELBSTTEST
+ * ============================ */
+
+.selbsttest-box {
+    border: 2px solid var(--color-border);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.selbsttest-frage {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+}
+
+.selbsttest-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-border);
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-md);
+    background: var(--color-background);
+    margin-bottom: 10px;
+    transition: border-color var(--transition-fast);
+}
+
+.selbsttest-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Input States */
+.selbsttest-input.correct {
+    border-color: var(--color-success);
+    background: var(--color-success-bg);
+}
+
+.selbsttest-input.incorrect {
+    border-color: var(--color-error);
+    background: var(--color-error-bg);
+}
+
+/* Buttons */
+.selbsttest-btn {
+    font-family: var(--font-family-mono);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: 2px solid var(--color-border);
+    background: none;
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-fast);
+    margin-right: var(--spacing-sm);
+}
+
+.selbsttest-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+}
+
+/* Feedback */
+.selbsttest-feedback {
+    margin-top: var(--spacing-md);
+    padding: 10px;
+    display: none;
+}
+
+.selbsttest-feedback.correct {
+    border-left: 4px solid var(--color-success);
+    background: var(--color-success-bg);
+    display: block;
+}
+
+.selbsttest-feedback.incorrect {
+    border-left: 4px solid var(--color-error);
+    background: var(--color-error-bg);
+    display: block;
+}

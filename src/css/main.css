@@ -1,0 +1,49 @@
+/**
+ * ========================================
+ * MAIN.CSS - Haupt-Stylesheet
+ * ========================================
+ * 
+ * Zentrale CSS-Datei, die alle Module importiert.
+ * Reihenfolge ist wichtig für Cascading!
+ * 
+ * Struktur:
+ * 1. Tokens (Variablen)
+ * 2. Base (Reset & Grundlagen)
+ * 3. Layout (Grid & Hero)
+ * 4. Navbar (Navigation)
+ * 5. Components (UI-Elemente)
+ * 6. Exercises (Übungen)
+ * 7. Timer
+ * 8. Print
+ * 
+ * @author Cedric Seidel
+ * @version 2.0.0
+ */
+
+/* ============================
+ * MODULE IMPORTS
+ * ============================ */
+
+/* 1. Design Tokens & Variablen */
+@import 'tokens.css';
+
+/* 2. CSS Reset & Basis-Styles */
+@import 'base.css';
+
+/* 3. Layout System & Hero */
+@import 'layout.css';
+
+/* 4. Navigation & Burger Menu */
+@import 'navbar.css';
+
+/* 5. UI Components */
+@import 'components.css';
+
+/* 6. Übungen & Selbsttests */
+@import 'exercises.css';
+
+/* 7. Timer */
+@import 'timer.css';
+
+/* 8. Print Styles */
+@import 'print.css';
