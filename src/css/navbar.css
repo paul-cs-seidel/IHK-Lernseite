@@ -164,13 +164,7 @@
     transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
-/* Disable hover on touch devices */
-@media (hover: hover) and (pointer: fine) {
-    .nav-bar-links:hover {
-        background-color: rgba(108, 108, 108, 0.6);
-        color: #e5e5e5;
-    }
-}
+
 
 /* ============================
  * CLICK OVERLAY (invisible)
