@@ -141,7 +141,7 @@
     -webkit-backdrop-filter: blur(12px) saturate(1.05) brightness(1.05);
     backdrop-filter: blur(12px) saturate(1.05) brightness(1.05);
     border-top: 1px solid rgba(160, 160, 160, 0.3);
-    box-shadow: 5px 5px 10px;
+    box-shadow: 5px 5px;
 }
 
 /* Inner scrollable wrapper */
@@ -233,6 +233,13 @@
 @media (hover: hover) and (pointer: fine) {
     .nav-item:hover > .nav-bar-links {
         background-color: rgba(108, 108, 108, 0.3);
+        color: #e5e5e5;
+    }
+}
+/* Disable hover on touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .nav-bar-links:hover {
+        background-color: rgba(108, 108, 108, 0.6);
         color: #e5e5e5;
     }
 }
