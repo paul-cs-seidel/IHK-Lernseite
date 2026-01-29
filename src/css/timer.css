@@ -162,6 +162,15 @@
     cursor: pointer;
     z-index: var(--z-timer-btn);
     transition: all var(--transition-fast);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.timer-start-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .timer-start-btn:hover {

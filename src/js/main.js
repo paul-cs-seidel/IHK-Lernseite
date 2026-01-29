@@ -201,16 +201,18 @@ const ExerciseController = {
 
 /**
  * Checklist Controller
- * Manages checklist with localStorage persistence
+ * Manages checklist and exercise checkboxes with localStorage persistence
  */
 const ChecklistController = {
     storageKey: 'ihk-checkliste',
+    exerciseStorageKey: 'ihk-uebungen',
 
     /**
      * Initialize checklist
      */
     init() {
         this.loadChecklist();
+        this.loadExercises();
         this.bindEvents();
     },
 
@@ -218,27 +220,28 @@ const ChecklistController = {
      * Bind event listeners
      */
     bindEvents() {
+        // Checkliste checkboxes
         document.querySelectorAll('.checkliste input[type="checkbox"]').forEach(cb => {
             cb.addEventListener('change', () => this.saveChecklist());
         });
 
-        // Reset button
+        // Exercise checkboxes
+        document.querySelectorAll('.uebung-check').forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                e.stopPropagation(); // Prevent toggle from opening
+                this.saveExercises();
+            });
+            // Prevent click from bubbling to header
+            cb.addEventListener('click', (e) => e.stopPropagation());
+        });
+
+        // Reset button - resets both
         const resetBtn = document.querySelector('.reset-btn');
         if (resetBtn) {
-            resetBtn.addEventListener('click', () => this.resetChecklist());
-        }
-    },
-
-    /**
-     * Update counter display
-     */
-    updateCounter() {
-        const checkboxes = document.querySelectorAll('.checkliste input[type="checkbox"]');
-        const checked = document.querySelectorAll('.checkliste input[type="checkbox"]:checked').length;
-        const counter = document.getElementById('checked-count');
-        
-        if (counter) {
-            counter.textContent = checked;
+            resetBtn.addEventListener('click', () => {
+                this.resetChecklist();
+                this.resetExercises();
+            });
         }
     },
 
@@ -254,7 +257,6 @@ const ChecklistController = {
         });
         
         localStorage.setItem(this.storageKey, JSON.stringify(state));
-        this.updateCounter();
     },
 
     /**
@@ -272,12 +274,10 @@ const ChecklistController = {
                 }
             });
         }
-        
-        this.updateCounter();
     },
 
     /**
-     * Reset all checkboxes
+     * Reset checklist
      */
     resetChecklist() {
         document.querySelectorAll('.checkliste input[type="checkbox"]').forEach(cb => {
@@ -285,7 +285,48 @@ const ChecklistController = {
         });
         
         localStorage.removeItem(this.storageKey);
-        this.updateCounter();
+    },
+
+    /**
+     * Save exercises to localStorage
+     */
+    saveExercises() {
+        const checkboxes = document.querySelectorAll('.uebung-check');
+        const state = {};
+        
+        checkboxes.forEach(cb => {
+            state[cb.dataset.id] = cb.checked;
+        });
+        
+        localStorage.setItem(this.exerciseStorageKey, JSON.stringify(state));
+    },
+
+    /**
+     * Load exercises from localStorage
+     */
+    loadExercises() {
+        const saved = localStorage.getItem(this.exerciseStorageKey);
+        
+        if (saved) {
+            const state = JSON.parse(saved);
+            
+            document.querySelectorAll('.uebung-check').forEach(cb => {
+                if (state[cb.dataset.id]) {
+                    cb.checked = true;
+                }
+            });
+        }
+    },
+
+    /**
+     * Reset exercises
+     */
+    resetExercises() {
+        document.querySelectorAll('.uebung-check').forEach(cb => {
+            cb.checked = false;
+        });
+        
+        localStorage.removeItem(this.exerciseStorageKey);
     }
 };
 
@@ -297,22 +338,66 @@ const ChecklistController = {
 /**
  * Timer Controller
  * Countdown timer for exam simulation
+ * Only visible in exam-related sections
  */
 const TimerController = {
     interval: null,
     seconds: 90 * 60,  // Default: 90 minutes
     running: false,
     startTime: 90 * 60,
+    timerSections: ['pruefungscheck', 'uebungen'],
 
     /**
      * Initialize timer
      */
     init() {
         const timerBox = document.getElementById('timer-box');
-        if (!timerBox) return;
+        const openBtn = document.getElementById('open-timer-btn');
+        if (!timerBox || !openBtn) return;
 
         this.updateDisplay();
         this.bindEvents();
+        this.checkVisibility();
+        
+        // Check visibility on scroll
+        window.addEventListener('scroll', () => this.checkVisibility());
+    },
+
+    /**
+     * Check if timer button should be visible
+     */
+    checkVisibility() {
+        const openBtn = document.getElementById('open-timer-btn');
+        if (!openBtn) return;
+
+        let inTimerSection = false;
+        
+        for (const sectionId of this.timerSections) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top;
+                
+                // Find the next major section (next <span> with id after this section)
+                let nextSection = section.nextElementSibling;
+                while (nextSection && (nextSection.tagName !== 'SPAN' || !nextSection.id)) {
+                    nextSection = nextSection.nextElementSibling;
+                }
+                
+                // Check if we're within the section
+                if (sectionTop < window.innerHeight && (!nextSection || nextSection.getBoundingClientRect().top > 0)) {
+                    inTimerSection = true;
+                    break;
+                }
+            }
+        }
+
+        // Show/hide timer button
+        if (inTimerSection) {
+            openBtn.classList.add('visible');
+        } else {
+            openBtn.classList.remove('visible');
+        }
     },
 
     /**

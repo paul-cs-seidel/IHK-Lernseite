@@ -1,0 +1,13 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100" height="100" fill="#d0d0d0"/>
+    
+    <!-- Top diamond/layer -->
+    <path d="M50 25L25 40L50 55L75 40L50 25Z" fill="#1a1a1a"/>
+    
+    <!-- Middle chevron -->
+    <path d="M25 52L50 67L75 52" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Bottom chevron -->
+    <path d="M25 65L50 80L75 65" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
