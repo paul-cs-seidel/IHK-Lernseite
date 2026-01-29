@@ -313,6 +313,7 @@
         width: 95vw;
         max-width: none;
         right: 2.5vw;
+        box-shadow: 5px 5px 10px;
     }
     
     /* On mobile, submenu appears below the nav item */
@@ -326,7 +327,6 @@
         border: none;
         border-radius: 0;
         border-top: 1px solid rgba(160, 160, 160, 0.3);
-        box-shadow: 5px 5px 10px;
         max-height: 0;
         overflow: hidden;
         padding: 0;
