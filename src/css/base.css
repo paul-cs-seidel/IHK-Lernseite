@@ -125,7 +125,7 @@ li {
 .info-text {
     font-size: var(--font-size-md);
     line-height: var(--line-height-normal);
-    color: #404040;
+    color: var(--color-text-muted);
     font-style: italic;
 }
 

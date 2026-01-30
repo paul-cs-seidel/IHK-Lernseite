@@ -30,7 +30,7 @@
 .vergleichs-tabelle th,
 .container-text th {
     text-align: left;
-    padding: var(--spacing-sm) 10px;
+    padding: var(--spacing-sm) var(--spacing-md);
     border-bottom: 1px solid var(--color-border-light);
     font-weight: 800;
     background: none;
@@ -41,7 +41,7 @@
 
 .vergleichs-tabelle td,
 .container-text td {
-    padding: 10px;
+    padding: var(--spacing-md);
     border-bottom: 1px solid var(--color-border-light);
     vertical-align: top;
 }
@@ -99,10 +99,10 @@
 }
 
 .media-caption {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
     font-size: 0.8em;
     border-top: 1px solid var(--color-border);
-    background: rgba(0, 0, 0, 0.03);
+    background: none;
 }
 
 /* ============================
@@ -115,7 +115,7 @@
     color: var(--color-text-inverted);
     border: none;
     border-radius: var(--radius-sm);
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     margin: var(--spacing-xl) 0;
     font-style: normal;
     font-weight: var(--font-weight-medium);
@@ -133,7 +133,7 @@
     background: none;
     border: 3px solid var(--color-error);
     border-radius: var(--radius-sm);
-    padding: 14px 18px;
+    padding: var(--spacing-xl) var(--spacing-2xl);
     margin: var(--spacing-xl) 0;
 }
 
@@ -147,9 +147,9 @@
 /* Typische Frage */
 .typische-frage {
     background: none;
-    border: 2px dashed #404040;
+    border: 2px dashed var(--color-border-dotted);
     border-radius: var(--radius-sm);
-    padding: 14px 18px;
+    padding: var(--spacing-xl) var(--spacing-2xl);
     margin: var(--spacing-xl) 0;
 }
 
@@ -165,7 +165,7 @@
     background: none;
     border: 2px solid var(--color-border);
     border-radius: var(--radius-sm);
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     margin: var(--spacing-xl) 0;
 }
 
@@ -184,7 +184,7 @@
 .badge-top {
     display: inline;
     font-size: var(--font-size-xs);
-    padding: 2px var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
     border: 2px solid var(--color-border);
     border-radius: var(--radius-sm);
     background: none;
@@ -229,7 +229,7 @@
 .check-item {
     display: flex;
     align-items: flex-start;
-    padding: 10px 0;
+    padding: var(--spacing-md) 0;
     border-bottom: 1px dotted var(--color-border-dotted);
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -286,7 +286,7 @@
 
 .diagram-container {
     margin: var(--spacing-xl) 0;
-    padding: 6px;
+    padding: var(--spacing-sm);
     overflow-x: auto;
 }
 
@@ -374,7 +374,7 @@
     .vergleichs-tabelle td,
     .container-text th,
     .container-text td {
-        padding: 6px var(--spacing-sm);
+        padding: var(--spacing-xs) var(--spacing-sm);
         min-width: 80px;
     }
     
@@ -382,7 +382,7 @@
     .pruefungsfalle,
     .typische-frage,
     .formel-box {
-        padding: var(--spacing-md) 14px;
+        padding: var(--spacing-md) var(--spacing-lg);
         margin: var(--spacing-lg) 0;
         font-size: var(--font-size-md);
     }
@@ -391,7 +391,7 @@
     .pruefungsfalle::before,
     .typische-frage::before {
         display: block;
-        margin-bottom: 6px;
+        margin-bottom: var(--spacing-xs);
     }
     
     .media-container {
@@ -414,7 +414,7 @@
     .vergleichs-tabelle td,
     .container-text th,
     .container-text td {
-        padding: 5px 6px;
+        padding: var(--spacing-xs);
         min-width: 60px;
     }
     
@@ -422,7 +422,7 @@
     .pruefungsfalle,
     .typische-frage,
     .formel-box {
-        padding: 10px var(--spacing-md);
+        padding: var(--spacing-sm) var(--spacing-md);
         margin: var(--spacing-md) 0;
         font-size: var(--font-size-sm);
     }
@@ -430,7 +430,7 @@
     .badge-relevant,
     .badge-top {
         font-size: 0.55em;
-        padding: 2px 6px;
+        padding: var(--spacing-2xs) var(--spacing-xs);
     }
     
     .formel-box .formel {

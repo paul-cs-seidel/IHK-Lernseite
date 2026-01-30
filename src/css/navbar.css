@@ -255,7 +255,7 @@
     .nav-item:hover > .nav-bar-links,
     .nav-bar-links:hover {
         background-color: rgba(108, 108, 108, 0.8);
-        color: #e5e5e5;
+        color: var(--color-text-inverted);
     }
 }
 
@@ -293,7 +293,7 @@
 @media (hover: hover) and (pointer: fine) {
     .nav-submenu a:hover {
         background-color: rgba(108, 108, 108, 0.8);
-        color: #e5e5e5;
+        color: var(--color-text-inverted);
         padding-left: var(--spacing-lg);
     }
 }

@@ -27,6 +27,7 @@
     
     /* Hintergrund & Oberflächen */
     --color-background: #d0d0d0;
+    --color-background-alt: #c0c0c0;
     --color-surface: none;
     --color-surface-hover: rgba(108, 108, 108, 0.8);
     

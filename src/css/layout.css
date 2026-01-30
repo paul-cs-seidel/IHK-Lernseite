@@ -192,7 +192,7 @@
 .micrographic {
     border: 2px solid var(--color-border);
     border-radius: var(--radius-sm);
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     margin-bottom: var(--spacing-lg);
     background-color: var(--color-background);
 }
@@ -225,12 +225,12 @@
 
 .micrographic-list li a {
     display: block;
-    padding: 6px var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
     color: var(--color-text);
     text-decoration: none;
     transition: all var(--transition-fast);
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: calc(var(--spacing-sm) * -1);
+    margin-right: calc(var(--spacing-sm) * -1);
 }
 
 .micrographic-list li a::before {
@@ -253,7 +253,7 @@
     background-color: var(--color-primary);
     color: var(--color-text-inverted);
     padding-left: var(--spacing-sm);
-    margin-left: -8px;
+    margin-left: calc(var(--spacing-sm) * -1);
 }
 
 /* ============================
@@ -387,7 +387,7 @@
     }
     
     .micrographic {
-        padding: var(--spacing-md) 14px;
+        padding: var(--spacing-md) var(--spacing-lg);
     }
 }
 
@@ -451,7 +451,7 @@
     }
     
     .micrographic {
-        padding: 10px var(--spacing-md);
+        padding: var(--spacing-sm) var(--spacing-md);
     }
     
     .micrographic-list {

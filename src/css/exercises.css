@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-xl);
     cursor: pointer;
     border-bottom: 1px solid var(--color-border);
     transition: background-color var(--transition-fast);
@@ -87,12 +87,12 @@
 
 .uebung-content {
     display: none;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     border-bottom: 1px solid var(--color-border-light);
 }
 
 .uebung-aufgabe {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-2xl);
 }
 
 /* Übung geöffnet */
@@ -109,7 +109,7 @@
  * ============================ */
 
 .loesung-box {
-    border: 2px dashed #404040;
+    border: 2px dashed var(--color-border-dotted);
     border-radius: var(--radius-sm);
     margin: var(--spacing-lg) 0 0 0;
     background: none;
@@ -119,8 +119,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 14px;
+    padding: var(--spacing-lg) var(--spacing-xl);
     cursor: pointer;
+}
+
+.loesung-header span:first-child {
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: 0.8em;
+    color: var(--color-text);
+}
+
+.loesung-header span:first-child::before {
+    content: "[+] ";
+}
+
+.loesung-box.open .loesung-header span:first-child::before {
+    content: "[-] ";
 }
 
 .loesung-titel {
@@ -128,7 +144,7 @@
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide);
     font-size: 0.8em;
-    color: #1a1a1a;
+    color: var(--color-text);
 }
 
 .loesung-titel::before {
@@ -141,14 +157,14 @@
 
 .loesung-content {
     display: none;
-    padding: 14px;
-    border-top: 1px dashed #404040;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    border-top: 1px dashed var(--color-border-dotted);
     background: none;
-    color: #1a1a1a;
+    color: var(--color-text);
 }
 
 .loesung-content * {
-    color: #1a1a1a !important;
+    color: var(--color-text) !important;
     background: none !important;
 }
 
@@ -162,34 +178,61 @@
 }
 
 /* ============================
- * SELBSTTEST
+ * SELBSTTEST - Brutalist Tech Style
  * ============================ */
 
 .selbsttest-box {
-    border: 2px solid var(--color-border);
-    padding: var(--spacing-lg);
+    border: 2px solid var(--color-primary);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     margin: var(--spacing-lg) 0;
+    position: relative;
+    background: var(--color-background);
+}
+
+.selbsttest-box::before {
+    content: "// SCHNELLTEST";
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background: var(--color-background);
+    padding: 0 var(--spacing-sm);
+    font-family: var(--font-family-mono);
+    font-size: 0.7em;
+    color: var(--color-primary);
+    letter-spacing: 1px;
 }
 
 .selbsttest-frage {
+    font-family: var(--font-family-mono);
     font-weight: var(--font-weight-bold);
+    font-size: 0.95em;
     margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px dashed var(--color-border);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .selbsttest-input {
     width: 100%;
-    padding: 10px;
+    padding: var(--spacing-md);
     border: 2px solid var(--color-border);
     font-family: var(--font-family-mono);
     font-size: var(--font-size-md);
     background: var(--color-background);
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-xs);
     transition: border-color var(--transition-fast);
+}
+
+.selbsttest-input::placeholder {
+    color: var(--color-text-light);
+    font-style: italic;
 }
 
 .selbsttest-input:focus {
     outline: none;
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 /* Input States */
@@ -203,33 +246,347 @@
     background: var(--color-error-bg);
 }
 
-/* Buttons */
-.selbsttest-btn {
-    font-family: var(--font-family-mono);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: 2px solid var(--color-border);
-    background: none;
-    cursor: pointer;
-    font-weight: var(--font-weight-semibold);
-    transition: all var(--transition-fast);
-    margin-right: var(--spacing-sm);
+/* ============================
+ * SELBSTTEST BUTTONS - Brutalist Tech Style
+ * ============================ */
+
+.selbsttest-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
 }
 
-/* Feedback */
+.selbsttest-btn {
+    font-family: var(--font-family-mono);
+    font-size: 0.8em;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.selbsttest-btn::before {
+    content: "[ ";
+    opacity: 0.6;
+}
+
+.selbsttest-btn::after {
+    content: " ]";
+    opacity: 0.6;
+}
+
+.selbsttest-btn:hover {
+    background: var(--color-text-inverted);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.selbsttest-btn:active {
+    transform: translateY(0);
+}
+
+.selbsttest-btn.btn-reset {
+    background: none;
+    color: var(--color-primary);
+    border: 2px solid var(--color-border);
+}
+
+.selbsttest-btn.btn-reset:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+}
+
+/* ============================
+ * SELBSTTEST FEEDBACK - Tech Spec Style
+ * ============================ */
+
 .selbsttest-feedback {
-    margin-top: var(--spacing-md);
-    padding: 10px;
+    font-family: var(--font-family-mono);
+    font-size: 0.85em;
+    margin-top: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
     display: none;
 }
 
 .selbsttest-feedback.correct {
-    border-left: 4px solid var(--color-success);
+    border-left: 3px solid var(--color-success);
     background: var(--color-success-bg);
     display: block;
+    color: var(--color-success);
+}
+
+.selbsttest-feedback.correct::before {
+    content: "✓ ";
+    font-weight: bold;
 }
 
 .selbsttest-feedback.incorrect {
-    border-left: 4px solid var(--color-error);
+    border-left: 3px solid var(--color-error);
     background: var(--color-error-bg);
     display: block;
+    color: var(--color-error);
+}
+
+.selbsttest-feedback.incorrect::before {
+    content: "✗ ";
+    font-weight: bold;
+}
+
+/* ============================
+ * RECHENAUFGABEN MIT LÖSUNGSWEG
+ * ============================ */
+
+.rechenaufgabe-box {
+    border: 2px solid var(--color-border);
+    margin: var(--spacing-lg) 0;
+    background: none;
+}
+
+.aufgabe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: none;
+    border-bottom: 2px solid var(--color-border);
+    font-family: var(--font-family-mono);
+}
+
+.aufgabe-nummer {
+    font-weight: var(--font-weight-bold);
+    font-size: 0.9em;
+}
+
+.aufgabe-thema {
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+.aufgabe-text {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    line-height: 1.7;
+}
+
+.aufgabe-content {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.rechenweg {
+    background: none;
+    border-left: 3px solid var(--color-primary);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    margin: var(--spacing-sm) 0 var(--spacing-md);
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+    line-height: 1.8;
+}
+
+/* ============================
+ * SQL ÜBUNGEN
+ * ============================ */
+
+.sql-tabelle {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-family-mono);
+    font-size: 0.85em;
+    margin: var(--spacing-sm) 0;
+}
+
+.sql-tabelle th,
+.sql-tabelle td {
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+}
+
+.sql-tabelle th {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+}
+
+.sql-tabelle tr:nth-child(even) {
+    background: none;
+}
+
+.sql-code {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+    margin: var(--spacing-sm) 0;
+    border-radius: 0;
+    overflow-x: auto;
+}
+
+.sql-ergebnis {
+    background: none;
+    border-left: 3px solid var(--color-success);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-family: var(--font-family-mono);
+    font-size: 0.85em;
+    color: var(--color-success);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ============================
+ * VIDEO EMPFEHLUNGEN
+ * ============================ */
+
+.video-empfehlung {
+    background: none;
+    border: 2px solid var(--color-primary);
+    color: var(--color-text);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+}
+
+.video-empfehlung a {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.video-empfehlung a:hover {
+    opacity: 0.7;
+}
+
+/* ============================
+ * PRÜFUNGSSIMULATION
+ * ============================ */
+
+.pruefungs-info {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
+    font-family: var(--font-family-mono);
+    text-align: center;
+}
+
+.pruefung-simulation {
+    border: 3px solid var(--color-primary);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.pruefung-aufgabe {
+    border-bottom: 1px dashed var(--color-border);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.pruefung-aufgabe:last-of-type {
+    border-bottom: none;
+}
+
+.aufgabe-kopf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.aufgabe-nr {
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.1em;
+}
+
+.punkte {
+    font-family: var(--font-family-mono);
+    font-size: 0.85em;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ============================
+ * SZENARIO-AUFGABEN
+ * ============================ */
+
+.szenario-box {
+    margin: var(--spacing-xl) 0;
+    background: none;
+}
+
+.szenario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+}
+
+.szenario-firma {
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-bold);
+}
+
+.szenario-thema {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.szenario-text {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: none;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.szenario-aufgaben {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.szenario-teilaufgabe {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.szenario-teilaufgabe:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* ============================
+ * BEGRÜNDUNGSAUFGABEN
+ * ============================ */
+
+.begruendung-box {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: none;
+    border: 2px solid var(--color-primary);
+}
+
+.begruendung-frage {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: none;
+    border-left: 4px solid var(--color-primary);
+    font-style: italic;
+    font-size: 1.05em;
+}
+
+/* ============================
+ * CODE BEISPIELE
+ * ============================ */
+
+.code-beispiel {
+    background: none;
+    border: 2px solid var(--color-border);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    margin: var(--spacing-md) 0;
+    overflow-x: auto;
 }
