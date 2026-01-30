@@ -27,8 +27,8 @@
     
     /* Hintergrund & Oberflächen */
     --color-background: #d0d0d0;
-    --color-surface: rgba(208, 208, 208, 0.2);
-    --color-surface-hover: rgba(0, 0, 0, 0.05);
+    --color-surface: none;
+    --color-surface-hover: rgba(108, 108, 108, 0.8);
     
     /* Text */
     --color-text: #252525;
