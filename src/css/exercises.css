@@ -473,7 +473,7 @@
     padding: var(--spacing-xl) var(--spacing-2xl);
     margin-bottom: var(--spacing-xl);
     font-family: var(--font-family-mono);
-    text-align: center;
+    text-align: left;
 }
 
 .pruefung-simulation {

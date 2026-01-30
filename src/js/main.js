@@ -900,35 +900,41 @@ function berechneSubnetting() {
 function berechneAfA() {
     const anschaffung = parseFloat(document.getElementById('afa-anschaffung').value);
     const nutzung = parseInt(document.getElementById('afa-nutzung').value);
+    const restwert = parseFloat(document.getElementById('afa-restwert').value);
     const resultDiv = document.getElementById('afa-result');
-    
-    if (isNaN(anschaffung) || isNaN(nutzung) || anschaffung <= 0 || nutzung <= 0) {
+
+    if (isNaN(anschaffung) || isNaN(nutzung) || isNaN(restwert) || anschaffung <= 0 || nutzung <= 0 || restwert < 0 || restwert >= anschaffung) {
         resultDiv.innerHTML = '<span style="color: #c0392b;">Bitte gültige Werte eingeben</span>';
         return;
     }
-    
-    const jahresAfA = anschaffung / nutzung;
-    
+
+    const jahresAfA = (anschaffung - restwert) / nutzung;
+
     let tabelle = `<table class="sql-tabelle">
         <thead><tr><th>Jahr</th><th>AfA</th><th>Buchwert Anfang</th><th>Buchwert Ende</th></tr></thead>
         <tbody>`;
-    
+
     let buchwert = anschaffung;
     for (let jahr = 1; jahr <= nutzung; jahr++) {
         const anfang = buchwert;
-        buchwert -= jahresAfA;
+        // Im letzten Jahr auf Restwert setzen
+        if (jahr === nutzung) {
+            buchwert = restwert;
+        } else {
+            buchwert -= jahresAfA;
+        }
         tabelle += `<tr>
             <td>${jahr}</td>
             <td>${jahresAfA.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
             <td>${anfang.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
-            <td>${Math.max(0, buchwert).toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
+            <td>${buchwert.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})}</td>
         </tr>`;
     }
     tabelle += '</tbody></table>';
-    
+
     resultDiv.innerHTML = `
         <div class="rechenweg">
-            <b>Formel:</b> AfA = ${anschaffung.toLocaleString('de-DE')} € ÷ ${nutzung} Jahre = <b>${jahresAfA.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})} pro Jahr</b>
+            <b>Formel:</b> AfA = (${anschaffung.toLocaleString('de-DE')} € - ${restwert.toLocaleString('de-DE')} €) ÷ ${nutzung} Jahre = <b>${jahresAfA.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'})} pro Jahr</b>
         </div>
         ${tabelle}
     `;

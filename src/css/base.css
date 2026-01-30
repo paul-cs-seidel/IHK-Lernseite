@@ -130,6 +130,34 @@ li {
 }
 
 /* ============================
+ * SVG STYLING
+ * ============================ */
+
+svg text {
+    fill: #252525;
+}
+
+svg text[fill="#d0d0d0"] {
+    fill: #d0d0d0 !important;
+}
+
+svg rect[fill="#fff"],
+svg rect[fill="#ffffff"],
+svg rect[fill="white"],
+svg rect[fill="#f5f5f5"],
+svg rect[fill="#f0f0f0"],
+svg rect[fill="#e8e8e8"],
+svg rect[fill="#e0e0e0"],
+svg rect[fill="#fafafa"] {
+    fill: #d0d0d0 !important;
+}
+
+svg .svg-bg,
+svg rect.text-bg {
+    fill: #d0d0d0 !important;
+}
+
+/* ============================
  * RESPONSIVE - TABLET
  * ============================ */
 
