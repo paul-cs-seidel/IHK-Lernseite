@@ -212,6 +212,8 @@
     padding: 0;
     margin: 0;
     font-size: var(--font-size-sm);
+    max-height: 40vh;
+    overflow-y: auto;
 }
 
 .micrographic-list li {

@@ -86,6 +86,15 @@
                         <a href="#sub-ipv4">IPv4-Adressierung</a>
                         <a href="#sub-subnetting">Subnetting</a>
                         <a href="#sub-ports-protokolle">Ports & Protokolle</a>
+                        <a href="#sub-ipv4-ipv6">IPv4 vs. IPv6</a>
+                        <a href="#sub-osi-vertieft">OSI Vertieft</a>
+                        <a href="#sub-ports">Ports</a>
+                        <a href="#sub-netz-befehle">Netzwerk-Befehle</a>
+                        <a href="#sub-netz-hardware">Netzwerk-Hardware</a>
+                        <a href="#sub-vlan">VLAN</a>
+                        <a href="#sub-vpn">VPN</a>
+                        <a href="#sub-dhcp-dns">DHCP & DNS</a>
+                        <a href="#sub-nat">NAT</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -234,22 +243,6 @@
                         <a href="#sub-raid">RAID</a>
                         <a href="#sub-peripherie">Peripherie</a>
                         <a href="#sub-virtualisierung-hw">Virtualisierung</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-bar-links" href="#netzwerk-vertieft">Netz+</a>
-                    <div class="nav-submenu">
-                        <div class="nav-submenu-title">Netzwerk Vertieft</div>
-                        <a href="#sub-ipv4-ipv6">IPv4 vs. IPv6</a>
-                        <a href="#sub-osi-vertieft">OSI Vertieft</a>
-                        <a href="#sub-ports">Ports</a>
-                        <a href="#sub-netz-befehle">Netzwerk-Befehle</a>
-                        <a href="#sub-netz-hardware">Netzwerk-Hardware</a>
-                        <a href="#sub-vlan">VLAN</a>
-                        <a href="#sub-vpn">VPN</a>
-                        <a href="#sub-dhcp-dns">DHCP & DNS</a>
-                        <a href="#sub-subnetting">Subnetting</a>
-                        <a href="#sub-nat">NAT</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -1011,6 +1004,15 @@
                             <li><a href="#sub-ipv4">IPv4-Adressierung</a></li>
                             <li><a href="#sub-subnetting">Subnetting</a></li>
                             <li><a href="#sub-ports-protokolle">Ports & Protokolle</a></li>
+                            <li><a href="#sub-ipv4-ipv6">IPv4 vs. IPv6</a></li>
+                            <li><a href="#sub-osi-vertieft">OSI Vertieft</a></li>
+                            <li><a href="#sub-ports">Wichtige Ports</a></li>
+                            <li><a href="#sub-netz-befehle">Netzwerk-Befehle</a></li>
+                            <li><a href="#sub-netz-hardware">Netzwerkgeräte</a></li>
+                            <li><a href="#sub-vlan">VLAN</a></li>
+                            <li><a href="#sub-vpn">VPN</a></li>
+                            <li><a href="#sub-dhcp-dns">DHCP & DNS</a></li>
+                            <li><a href="#sub-nat">NAT</a></li>
                         </ul>
                     </div>
                     <div class="media-container">
@@ -1861,6 +1863,530 @@
                         
                         <div class="typische-frage">
                             „Geben Sie eine Begründung dafür an, dass Sie sich für IMAP statt POP3 entscheiden."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- NETZWERKTECHNIK VERTIEFT (zusammengeführt) -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+
+            <div class="container-full">
+                <div class="subheadding" id="sub-ipv4-ipv6">IPv4 vs. IPv6</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Kriterium</th>
+                                    <th>IPv4</th>
+                                    <th>IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Adresslänge</b></td>
+                                    <td>32 Bit</td>
+                                    <td>128 Bit</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Schreibweise</b></td>
+                                    <td>Dezimal, Punkte</td>
+                                    <td>Hexadezimal, Doppelpunkte</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Beispiel</b></td>
+                                    <td>192.168.1.1</td>
+                                    <td>2001:0db8::1</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Adressen</b></td>
+                                    <td>~4,3 Milliarden</td>
+                                    <td>~340 Sextillionen</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NAT nötig?</b></td>
+                                    <td>Häufig</td>
+                                    <td>Nein</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="formel-box">
+                            <div class="formel">Subnetzberechnung IPv4</div>
+                            /24 = 255.255.255.0 → 256 – 2 = <b>254 Hosts</b><br>
+                            /25 = 255.255.255.128 → 128 – 2 = <b>126 Hosts</b><br>
+                            /26 = 255.255.255.192 → 64 – 2 = <b>62 Hosts</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-full">
+                <div class="subheadding" id="sub-osi-vertieft">OSI-Modell (vertieft)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Schicht</th>
+                                    <th>Name</th>
+                                    <th>Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>7</td><td>Anwendung</td><td>HTTP, FTP, SMTP</td></tr>
+                                <tr><td>6</td><td>Darstellung</td><td>SSL/TLS, JPEG</td></tr>
+                                <tr><td>5</td><td>Sitzung</td><td>NetBIOS, RPC</td></tr>
+                                <tr><td>4</td><td>Transport</td><td>TCP, UDP</td></tr>
+                                <tr><td>3</td><td>Vermittlung</td><td>IP, ICMP, Router</td></tr>
+                                <tr><td>2</td><td>Sicherung</td><td>Ethernet, Switch, MAC</td></tr>
+                                <tr><td>1</td><td>Bitübertragung</td><td>Kabel, Hub</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="merksatz">
+                            Merkhilfe: „Alle Priester saufen Tequila nach der Predigt" (Anwendung → Physisch)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-full">
+                <div class="subheadding" id="sub-ports">Wichtige Ports</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Port</th>
+                                    <th>Dienst</th>
+                                    <th>Protokoll</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>20/21</td><td>FTP</td><td>TCP</td></tr>
+                                <tr><td>22</td><td>SSH</td><td>TCP</td></tr>
+                                <tr><td>23</td><td>Telnet</td><td>TCP</td></tr>
+                                <tr><td>25</td><td>SMTP</td><td>TCP</td></tr>
+                                <tr><td>53</td><td>DNS</td><td>TCP/UDP</td></tr>
+                                <tr><td>67/68</td><td>DHCP</td><td>UDP</td></tr>
+                                <tr><td>80</td><td>HTTP</td><td>TCP</td></tr>
+                                <tr><td>443</td><td>HTTPS</td><td>TCP</td></tr>
+                                <tr><td>3389</td><td>RDP</td><td>TCP</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="pruefungsfalle">
+                            Telnet (23) ist unverschlüsselt – immer SSH (22) bevorzugen!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Netzwerk-Befehle -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-netz-befehle">Netzwerk-Befehle (Prüfungsrelevant)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <div class="pruefungsfalle">
+                            <b>Wichtig:</b> Netzwerk-Befehle werden in fast jeder IHK-Prüfung abgefragt!
+                        </div>
+                        
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Befehl</th>
+                                    <th>Zweck</th>
+                                    <th>Wichtige Parameter</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>ipconfig</b></td>
+                                    <td>IP-Konfiguration anzeigen</td>
+                                    <td>/all (Details), /release, /renew (DHCP)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ping</b></td>
+                                    <td>Erreichbarkeit testen (ICMP)</td>
+                                    <td>-t (dauerhaft), -n (Anzahl)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>nslookup</b></td>
+                                    <td>DNS-Auflösung prüfen</td>
+                                    <td>Hostname oder IP eingeben</td>
+                                </tr>
+                                <tr>
+                                    <td><b>tracert</b></td>
+                                    <td>Route zum Ziel anzeigen</td>
+                                    <td>Zeigt alle Hops (Router)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>arp</b></td>
+                                    <td>ARP-Cache anzeigen (IP↔MAC)</td>
+                                    <td>-a (anzeigen), -d (löschen)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>netstat</b></td>
+                                    <td>Netzwerkverbindungen anzeigen</td>
+                                    <td>-a (alle), -n (numerisch)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>netsh</b></td>
+                                    <td>Netzwerk konfigurieren</td>
+                                    <td>interface ipv4 set address</td>
+                                </tr>
+                                <tr>
+                                    <td><b>getmac</b></td>
+                                    <td>MAC-Adressen anzeigen</td>
+                                    <td>-v (verbose)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>APIPA (Automatic Private IP Addressing):</b><br>
+                        Wenn kein DHCP-Server erreichbar ist, vergibt Windows automatisch eine IP aus dem Bereich <b>169.254.x.x</b> (Subnetzmaske 255.255.0.0). Dies ist ein Warnsignal für Netzwerkprobleme!
+                        
+                        <div class="merksatz">
+                            Siehst du eine 169.254.x.x Adresse? → DHCP-Server nicht erreichbar, Kabel prüfen!
+                        </div>
+                        
+                        <b>Typische Fehlerdiagnose:</b>
+                        <ol>
+                            <li><b>ipconfig /all</b> – Prüfen ob gültige IP vorhanden</li>
+                            <li><b>ping 127.0.0.1</b> – Lokaler TCP/IP-Stack funktioniert?</li>
+                            <li><b>ping [Gateway]</b> – Router erreichbar?</li>
+                            <li><b>ping 8.8.8.8</b> – Internet erreichbar?</li>
+                            <li><b>nslookup google.de</b> – DNS-Auflösung funktioniert?</li>
+                        </ol>
+                        
+                        <div class="typische-frage">
+                            „Welches Befehlszeilenkommando zeigt die vollständige IP-Konfiguration eines Windows-Rechners an?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container-full">
+                <div class="subheadding" id="sub-netz-hardware">Netzwerkgeräte im Überblick</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Gerät</th>
+                                    <th>OSI-Schicht</th>
+                                    <th>Funktion</th>
+                                    <th>Adressierung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Hub</b></td>
+                                    <td>1</td>
+                                    <td>Signalverstärker, alle Ports</td>
+                                    <td>Keine</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Switch</b></td>
+                                    <td>2</td>
+                                    <td>Frames weiterleiten</td>
+                                    <td>MAC-Adresse</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Router</b></td>
+                                    <td>3</td>
+                                    <td>Pakete zwischen Netzen routen</td>
+                                    <td>IP-Adresse</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Firewall</b></td>
+                                    <td>3-7</td>
+                                    <td>Pakete filtern, Schutz</td>
+                                    <td>IP, Ports, Protokolle</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Access Point</b></td>
+                                    <td>1-2</td>
+                                    <td>WLAN-Anbindung</td>
+                                    <td>MAC-Adresse</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="typische-frage">
+                            „Erklären Sie den Unterschied zwischen Switch und Router anhand der OSI-Schichten."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VLAN -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-vlan">VLAN (Virtual Local Area Network)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Definition:</b><br>
+                        Logische Segmentierung eines physischen Netzwerks in mehrere virtuelle Netzwerke.
+                        
+                        <b>Vorteile von VLANs:</b>
+                        <ul>
+                            <li><b>Sicherheit:</b> Trennung von Datenverkehr (z.B. Gäste-WLAN vom Firmennetz)</li>
+                            <li><b>Broadcast-Reduzierung:</b> Broadcasts nur innerhalb des VLANs</li>
+                            <li><b>Flexibilität:</b> Geräte können unabhängig vom Standort gruppiert werden</li>
+                            <li><b>Kostenersparnis:</b> Ein physischer Switch für mehrere logische Netze</li>
+                        </ul>
+                        
+                        <b>VLAN-Typen:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Typ</th>
+                                    <th>Zuordnung durch</th>
+                                    <th>Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Port-basiert</b></td>
+                                    <td>Switch-Port</td>
+                                    <td>Port 1-8 = VLAN 10</td>
+                                </tr>
+                                <tr>
+                                    <td><b>MAC-basiert</b></td>
+                                    <td>MAC-Adresse</td>
+                                    <td>Gerät A immer in VLAN 20</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Protokoll-basiert</b></td>
+                                    <td>Protokoll</td>
+                                    <td>IP in VLAN 10, IPX in VLAN 20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Tagged vs. Untagged:</b>
+                        <ul>
+                            <li><b>Access Port (untagged):</b> Endgeräte, keine VLAN-Info im Frame</li>
+                            <li><b>Trunk Port (tagged):</b> Switch-zu-Switch, VLAN-Tag (802.1Q) im Frame</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            VLAN-Kommunikation zwischen VLANs erfordert einen Router (Inter-VLAN-Routing) oder Layer-3-Switch.
+                        </div>
+                        
+                        <div class="typische-frage">
+                            „Nennen Sie zwei Vorteile des Einsatzes von VLANs in einem Unternehmensnetzwerk."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VPN -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-vpn">VPN (Virtual Private Network)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Definition:</b><br>
+                        Verschlüsselte Verbindung über ein unsicheres Netzwerk (z.B. Internet) zur sicheren Anbindung von Standorten oder Mitarbeitern.
+                        
+                        <b>VPN-Typen:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Typ</th>
+                                    <th>Anwendung</th>
+                                    <th>Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Site-to-Site</b></td>
+                                    <td>Standortverbindung</td>
+                                    <td>Zentrale ↔ Filiale</td>
+                                </tr>
+                                <tr>
+                                    <td><b>End-to-Site</b></td>
+                                    <td>Remote-Zugang</td>
+                                    <td>Homeoffice → Firmennetz</td>
+                                </tr>
+                                <tr>
+                                    <td><b>End-to-End</b></td>
+                                    <td>Direkte Verbindung</td>
+                                    <td>Client ↔ Client</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>VPN-Protokolle:</b>
+                        <ul>
+                            <li><b>IPsec:</b> Layer 3, häufig für Site-to-Site</li>
+                            <li><b>OpenVPN:</b> Open Source, SSL/TLS-basiert</li>
+                            <li><b>WireGuard:</b> Modern, schnell, einfach</li>
+                            <li><b>L2TP/IPsec:</b> Kombination Layer 2 + 3</li>
+                            <li><b>PPTP:</b> Veraltet, unsicher – nicht mehr verwenden!</li>
+                        </ul>
+                        
+                        <b>Tunneling:</b><br>
+                        Datenpakete werden in VPN-Pakete verpackt (eingekapselt) und verschlüsselt übertragen.
+                        
+                        <div class="pruefungsfalle">
+                            PPTP gilt als unsicher und sollte nicht mehr eingesetzt werden. WireGuard und OpenVPN sind aktuelle Standards.
+                        </div>
+                        
+                        <div class="typische-frage">
+                            „Beschreiben Sie den Unterschied zwischen Site-to-Site- und End-to-Site-VPN."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DHCP & DNS vertieft -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-dhcp-dns">DHCP & DNS (vertieft)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>DHCP (Dynamic Host Configuration Protocol):</b><br>
+                        Automatische Vergabe von IP-Konfiguration an Clients.
+                        
+                        <b>DORA-Prozess:</b>
+                        <ol>
+                            <li><b>D</b>iscover – Client sucht DHCP-Server (Broadcast)</li>
+                            <li><b>O</b>ffer – Server bietet IP-Adresse an</li>
+                            <li><b>R</b>equest – Client fordert Adresse an</li>
+                            <li><b>A</b>ck – Server bestätigt</li>
+                        </ol>
+                        
+                        <b>DHCP-Lease enthält:</b>
+                        <ul>
+                            <li>IP-Adresse</li>
+                            <li>Subnetzmaske</li>
+                            <li>Standard-Gateway</li>
+                            <li>DNS-Server</li>
+                            <li>Lease-Dauer</li>
+                        </ul>
+                        
+                        <b>DNS (Domain Name System):</b><br>
+                        Übersetzt Domainnamen in IP-Adressen.
+                        
+                        <b>DNS-Record-Typen:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Record</th>
+                                    <th>Zweck</th>
+                                    <th>Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>A</b></td>
+                                    <td>IPv4-Adresse</td>
+                                    <td>example.com → 192.0.2.1</td>
+                                </tr>
+                                <tr>
+                                    <td><b>AAAA</b></td>
+                                    <td>IPv6-Adresse</td>
+                                    <td>example.com → 2001:db8::1</td>
+                                </tr>
+                                <tr>
+                                    <td><b>CNAME</b></td>
+                                    <td>Alias</td>
+                                    <td>www → example.com</td>
+                                </tr>
+                                <tr>
+                                    <td><b>MX</b></td>
+                                    <td>Mailserver</td>
+                                    <td>mail.example.com</td>
+                                </tr>
+                                <tr>
+                                    <td><b>TXT</b></td>
+                                    <td>Text (SPF, DKIM)</td>
+                                    <td>v=spf1 include:...</td>
+                                </tr>
+                                <tr>
+                                    <td><b>PTR</b></td>
+                                    <td>Reverse-Lookup</td>
+                                    <td>IP → Name</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="typische-frage">
+                            „Beschreiben Sie den DORA-Prozess bei DHCP."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NAT -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-nat">NAT (Network Address Translation)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Definition:</b><br>
+                        Übersetzung von privaten IP-Adressen in öffentliche IP-Adressen und umgekehrt.
+                        
+                        <b>NAT-Typen:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Typ</th>
+                                    <th>Beschreibung</th>
+                                    <th>Anwendung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Static NAT</b></td>
+                                    <td>1:1 Zuordnung privat ↔ öffentlich</td>
+                                    <td>Server mit fester IP</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Dynamic NAT</b></td>
+                                    <td>Pool öffentlicher IPs</td>
+                                    <td>Mehrere Clients, mehrere IPs</td>
+                                </tr>
+                                <tr>
+                                    <td><b>PAT (Overloading)</b></td>
+                                    <td>Viele Clients, eine öffentliche IP</td>
+                                    <td>Heimrouter (häufigste Form)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Port Forwarding:</b><br>
+                        Weiterleitung von eingehenden Verbindungen auf bestimmten Ports an interne Server.
+                        
+                        <div class="merksatz">
+                            PAT ist das, was in jedem Heimrouter stattfindet: Alle Geräte teilen sich eine öffentliche IP.
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <div class="selbsttest-frage">Selbsttest: Netzwerktechnik</div>
+                            
+                            <p>Wie viele Hosts sind in einem /24-Netz nutzbar?</p>
+                            <input type="text" class="selbsttest-input" data-correct="254" placeholder="Anzahl Hosts">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welche Subnetzmaske hat /27?</p>
+                            <input type="text" class="selbsttest-input" data-correct="255.255.255.224" placeholder="z.B. 255.255.255.0">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Wie lautet die Formel zur Host-Berechnung?</p>
+                            <input type="text" class="selbsttest-input" data-correct="2^(32-Präfix)-2|2^n-2|2 hoch n minus 2" placeholder="z.B. 2^n-2">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welcher NAT-Typ wird im Heimrouter verwendet?</p>
+                            <input type="text" class="selbsttest-input" data-correct="PAT|pat|Port Address Translation|NAPT" placeholder="NAT-Typ">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <div class="selbsttest-buttons">
+                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
+                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2878,11 +3404,6 @@
                                 <!-- Mitte -->
                                 <text x="350" y="190" fill="#252525" font-family="JetBrains Mono" font-size="12" text-anchor="middle">Projekterfolg</text>
                                 
-                                <!-- Pfeile zwischen Ecken -->
-                                <line x1="280" y1="140" x2="180" y2="240" stroke="#252525" stroke-width="1" stroke-dasharray="4"/>
-                                <line x1="420" y1="140" x2="520" y2="240" stroke="#252525" stroke-width="1" stroke-dasharray="4"/>
-                                <line x1="200" y1="280" x2="500" y2="280" stroke="#252525" stroke-width="1" stroke-dasharray="4"/>
-                                
                                 <!-- Erklärung -->
                                 <text x="350" y="220" fill="currentColor" font-family="JetBrains Mono" font-size="10" text-anchor="middle">Änderung einer Größe beeinflusst die anderen!</text>
                             </svg>
@@ -3033,10 +3554,10 @@
                                 <text x="620" y="95" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Übergabe, Doku</text>
                                 
                                 <!-- Kick-Off Marker -->
-                                <line x1="205" y1="130" x2="205" y2="150" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="205" cy="155" r="5" fill="currentColor"/>
-                                <text x="205" y="175" fill="currentColor" font-family="JetBrains Mono" font-size="10" text-anchor="middle" font-weight="bold">Kick-Off-Meeting</text>
-                                <text x="205" y="190" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Nach Planung, vor Durchführung</text>
+                                <line x1="367" y1="130" x2="367" y2="150" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="367" cy="155" r="5" fill="currentColor"/>
+                                <text x="367" y="175" fill="currentColor" font-family="JetBrains Mono" font-size="10" text-anchor="middle" font-weight="bold">Kick-Off-Meeting</text>
+                                <text x="367" y="190" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Nach Planung, vor Durchführung</text>
                             </svg>
                             <div class="diagram-caption">Die 4 Projektphasen mit Kick-Off-Meeting</div>
                         </div>
@@ -3320,40 +3841,31 @@
                                 <text x="175" y="290" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Sequenziell, keine Rückschritte</text>
                                 <text x="175" y="305" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Feedback erst am Ende</text>
                                 
-                                <!-- SCRUM -->
-                                <!-- Sprint-Kreis -->
-                                <circle cx="525" cy="160" r="80" fill="none" stroke="#252525" stroke-width="2" stroke-dasharray="4"/>
+                                <!-- SCRUM - Neuaufbau -->
+                                <!-- Äußerer gestrichelter Kreis -->
+                                <circle cx="525" cy="165" r="90" fill="none" stroke="#252525" stroke-width="1" stroke-dasharray="4"/>
                                 
-                                <!-- Sprint Phasen -->
-                                <rect x="475" y="55" width="100" height="30" rx="5" fill="none" stroke="#252525" stroke-width="1"/>
-                                <text x="525" y="75" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Planning</text>
+                                <!-- Innerer Sprint-Kreis -->
+                                <circle cx="525" cy="165" r="40" fill="#d0d0d0" stroke="#252525" stroke-width="2"/>
+                                <text x="525" y="162" fill="#252525" font-family="JetBrains Mono" font-size="11" text-anchor="middle" font-weight="bold">Sprint</text>
+                                <text x="525" y="177" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">2-4 Wo.</text>
                                 
-                                <rect x="570" y="130" width="80" height="30" rx="5" fill="none" stroke="#252525" stroke-width="1"/>
-                                <text x="610" y="150" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Daily</text>
+                                <!-- Phasen-Boxen auf dem Kreis (12, 3, 6, 9 Uhr Position) -->
+                                <!-- Planning (oben - 12 Uhr) -->
+                                <rect x="480" y="50" width="90" height="28" rx="4" fill="#d0d0d0" stroke="#252525" stroke-width="2"/>
+                                <text x="525" y="69" fill="#252525" font-family="JetBrains Mono" font-size="10" text-anchor="middle">Planning</text>
                                 
-                                <rect x="475" y="235" width="100" height="30" rx="5" fill="none" stroke="#252525" stroke-width="1"/>
-                                <text x="525" y="255" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Review</text>
+                                <!-- Daily (rechts - 3 Uhr) -->
+                                <rect x="590" y="151" width="70" height="28" rx="4" fill="#d0d0d0" stroke="#252525" stroke-width="2"/>
+                                <text x="625" y="170" fill="#252525" font-family="JetBrains Mono" font-size="10" text-anchor="middle">Daily</text>
                                 
-                                <rect x="395" y="130" width="80" height="30" rx="5" fill="none" stroke="#252525" stroke-width="1"/>
-                                <text x="435" y="150" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Retro</text>
+                                <!-- Review (unten - 6 Uhr) -->
+                                <rect x="480" y="252" width="90" height="28" rx="4" fill="#d0d0d0" stroke="#252525" stroke-width="2"/>
+                                <text x="525" y="271" fill="#252525" font-family="JetBrains Mono" font-size="10" text-anchor="middle">Review</text>
                                 
-                                <!-- Mitte: Sprint -->
-                                <circle cx="525" cy="160" r="35" fill="none" stroke="#252525" stroke-width="2"/>
-                                <text x="525" y="157" fill="#252525" font-family="JetBrains Mono" font-size="10" text-anchor="middle" font-weight="bold">Sprint</text>
-                                <text x="525" y="170" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">2-4 Wo.</text>
-                                
-                                <!-- Pfeile Scrum (Kreis) -->
-                                <path d="M 525 85 Q 590 100, 590 130" fill="none" stroke="#252525" stroke-width="2"/>
-                                <polygon points="590,130 586,122 594,124" fill="#252525"/>
-                                
-                                <path d="M 590 160 Q 590 210, 560 235" fill="none" stroke="#252525" stroke-width="2"/>
-                                <polygon points="560,235 566,228 570,235" fill="#252525"/>
-                                
-                                <path d="M 490 250 Q 430 220, 435 160" fill="none" stroke="#252525" stroke-width="2"/>
-                                <polygon points="435,160 430,168 440,168" fill="#252525"/>
-                                
-                                <path d="M 450 130 Q 470 100, 500 85" fill="none" stroke="#252525" stroke-width="2"/>
-                                <polygon points="500,85 492,86 495,94" fill="#252525"/>
+                                <!-- Retro (links - 9 Uhr) -->
+                                <rect x="390" y="151" width="70" height="28" rx="4" fill="#d0d0d0" stroke="#252525" stroke-width="2"/>
+                                <text x="425" y="170" fill="#252525" font-family="JetBrains Mono" font-size="10" text-anchor="middle">Retro</text>
                                 
                                 <!-- Merkmal Scrum -->
                                 <text x="525" y="290" fill="#252525" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Iterativ, Feedback nach Sprint</text>
@@ -3494,13 +4006,13 @@
                                 
                                 <!-- Erklärungspfeile -->
                                 <line x1="150" y1="70" x2="195" y2="70" stroke="#252525" stroke-width="1"/>
-                                <text x="80" y="75" fill="#252525" font-family="JetBrains Mono" font-size="10">Frühester Anfang</text>
+                                <text x="47" y="75" fill="#252525" font-family="JetBrains Mono" font-size="10">Frühester Anfang</text>
                                 
                                 <line x1="505" y1="70" x2="550" y2="70" stroke="#252525" stroke-width="1"/>
                                 <text x="555" y="75" fill="#252525" font-family="JetBrains Mono" font-size="10">Frühestes Ende</text>
                                 
                                 <line x1="150" y1="150" x2="195" y2="150" stroke="#252525" stroke-width="1"/>
-                                <text x="80" y="155" fill="#252525" font-family="JetBrains Mono" font-size="10">Spätester Anfang</text>
+                                <text x="47" y="155" fill="#252525" font-family="JetBrains Mono" font-size="10">Spätester Anfang</text>
                                 
                                 <line x1="505" y1="150" x2="550" y2="150" stroke="#252525" stroke-width="1"/>
                                 <text x="555" y="155" fill="#252525" font-family="JetBrains Mono" font-size="10">Spätestes Ende</text>
@@ -7726,643 +8238,8 @@
         </div>
 
 
-        <!-- ═══════════════════════════════════════════════════════════════ -->
-        <!-- NETZWERKTECHNIK VERTIEFT -->
-        <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="netzwerk-vertieft">/ Netzwerktechnik (vertieft)</span>
-        <hr>
-        <div class="grid">
-            <div class="container0">
-                <div class="sidebar-sticky-wrapper">
-                    <div class="micrographic">
-                        <div class="micrographic-title">In diesem Abschnitt</div>
-                        <ul class="micrographic-list">
-                            <li><a href="#sub-ipv4-ipv6">IPv4 vs. IPv6</a></li>
-                            <li><a href="#sub-osi-vertieft">OSI-Modell</a></li>
-                            <li><a href="#sub-ports">Wichtige Ports</a></li>
-                            <li><a href="#sub-netz-befehle">Netzwerk-Befehle</a></li>
-                            <li><a href="#sub-netz-hardware">Netzwerkgeräte</a></li>
-                            <li><a href="#sub-vlan">VLAN</a></li>
-                            <li><a href="#sub-vpn">VPN</a></li>
-                            <li><a href="#sub-dhcp-dns">DHCP & DNS</a></li>
-                            <li><a href="#sub-subnetting">Subnetting</a></li>
-                            <li><a href="#sub-nat">NAT</a></li>
-                        </ul>
-                    </div>
-                    <span class="info-text">Protokolle, Adressierung, Routing</span>
-                </div>
-            </div>
-
-            <div class="container-full">
-                <div class="subheadding" id="sub-ipv4-ipv6">IPv4 vs. IPv6</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Kriterium</th>
-                                    <th>IPv4</th>
-                                    <th>IPv6</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Adresslänge</b></td>
-                                    <td>32 Bit</td>
-                                    <td>128 Bit</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Schreibweise</b></td>
-                                    <td>Dezimal, Punkte</td>
-                                    <td>Hexadezimal, Doppelpunkte</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Beispiel</b></td>
-                                    <td>192.168.1.1</td>
-                                    <td>2001:0db8::1</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Adressen</b></td>
-                                    <td>~4,3 Milliarden</td>
-                                    <td>~340 Sextillionen</td>
-                                </tr>
-                                <tr>
-                                    <td><b>NAT nötig?</b></td>
-                                    <td>Häufig</td>
-                                    <td>Nein</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="formel-box">
-                            <div class="formel">Subnetzberechnung IPv4</div>
-                            /24 = 255.255.255.0 → 256 – 2 = <b>254 Hosts</b><br>
-                            /25 = 255.255.255.128 → 128 – 2 = <b>126 Hosts</b><br>
-                            /26 = 255.255.255.192 → 64 – 2 = <b>62 Hosts</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-full">
-                <div class="subheadding" id="sub-osi-vertieft">OSI-Modell</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Schicht</th>
-                                    <th>Name</th>
-                                    <th>Beispiel</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>7</td><td>Anwendung</td><td>HTTP, FTP, SMTP</td></tr>
-                                <tr><td>6</td><td>Darstellung</td><td>SSL/TLS, JPEG</td></tr>
-                                <tr><td>5</td><td>Sitzung</td><td>NetBIOS, RPC</td></tr>
-                                <tr><td>4</td><td>Transport</td><td>TCP, UDP</td></tr>
-                                <tr><td>3</td><td>Vermittlung</td><td>IP, ICMP, Router</td></tr>
-                                <tr><td>2</td><td>Sicherung</td><td>Ethernet, Switch, MAC</td></tr>
-                                <tr><td>1</td><td>Bitübertragung</td><td>Kabel, Hub</td></tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="merksatz">
-                            Merkhilfe: „Alle Priester saufen Tequila nach der Predigt" (Anwendung → Physisch)
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-full">
-                <div class="subheadding" id="sub-ports">Wichtige Ports</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Port</th>
-                                    <th>Dienst</th>
-                                    <th>Protokoll</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>20/21</td><td>FTP</td><td>TCP</td></tr>
-                                <tr><td>22</td><td>SSH</td><td>TCP</td></tr>
-                                <tr><td>23</td><td>Telnet</td><td>TCP</td></tr>
-                                <tr><td>25</td><td>SMTP</td><td>TCP</td></tr>
-                                <tr><td>53</td><td>DNS</td><td>TCP/UDP</td></tr>
-                                <tr><td>67/68</td><td>DHCP</td><td>UDP</td></tr>
-                                <tr><td>80</td><td>HTTP</td><td>TCP</td></tr>
-                                <tr><td>443</td><td>HTTPS</td><td>TCP</td></tr>
-                                <tr><td>3389</td><td>RDP</td><td>TCP</td></tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="pruefungsfalle">
-                            Telnet (23) ist unverschlüsselt – immer SSH (22) bevorzugen!
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Netzwerk-Befehle -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-netz-befehle">Netzwerk-Befehle (Prüfungsrelevant)</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <div class="pruefungsfalle">
-                            <b>Wichtig:</b> Netzwerk-Befehle werden in fast jeder IHK-Prüfung abgefragt!
-                        </div>
-                        
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Befehl</th>
-                                    <th>Zweck</th>
-                                    <th>Wichtige Parameter</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>ipconfig</b></td>
-                                    <td>IP-Konfiguration anzeigen</td>
-                                    <td>/all (Details), /release, /renew (DHCP)</td>
-                                </tr>
-                                <tr>
-                                    <td><b>ping</b></td>
-                                    <td>Erreichbarkeit testen (ICMP)</td>
-                                    <td>-t (dauerhaft), -n (Anzahl)</td>
-                                </tr>
-                                <tr>
-                                    <td><b>nslookup</b></td>
-                                    <td>DNS-Auflösung prüfen</td>
-                                    <td>Hostname oder IP eingeben</td>
-                                </tr>
-                                <tr>
-                                    <td><b>tracert</b></td>
-                                    <td>Route zum Ziel anzeigen</td>
-                                    <td>Zeigt alle Hops (Router)</td>
-                                </tr>
-                                <tr>
-                                    <td><b>arp</b></td>
-                                    <td>ARP-Cache anzeigen (IP↔MAC)</td>
-                                    <td>-a (anzeigen), -d (löschen)</td>
-                                </tr>
-                                <tr>
-                                    <td><b>netstat</b></td>
-                                    <td>Netzwerkverbindungen anzeigen</td>
-                                    <td>-a (alle), -n (numerisch)</td>
-                                </tr>
-                                <tr>
-                                    <td><b>netsh</b></td>
-                                    <td>Netzwerk konfigurieren</td>
-                                    <td>interface ipv4 set address</td>
-                                </tr>
-                                <tr>
-                                    <td><b>getmac</b></td>
-                                    <td>MAC-Adressen anzeigen</td>
-                                    <td>-v (verbose)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <b>APIPA (Automatic Private IP Addressing):</b><br>
-                        Wenn kein DHCP-Server erreichbar ist, vergibt Windows automatisch eine IP aus dem Bereich <b>169.254.x.x</b> (Subnetzmaske 255.255.0.0). Dies ist ein Warnsignal für Netzwerkprobleme!
-                        
-                        <div class="merksatz">
-                            Siehst du eine 169.254.x.x Adresse? → DHCP-Server nicht erreichbar, Kabel prüfen!
-                        </div>
-                        
-                        <b>Typische Fehlerdiagnose:</b>
-                        <ol>
-                            <li><b>ipconfig /all</b> – Prüfen ob gültige IP vorhanden</li>
-                            <li><b>ping 127.0.0.1</b> – Lokaler TCP/IP-Stack funktioniert?</li>
-                            <li><b>ping [Gateway]</b> – Router erreichbar?</li>
-                            <li><b>ping 8.8.8.8</b> – Internet erreichbar?</li>
-                            <li><b>nslookup google.de</b> – DNS-Auflösung funktioniert?</li>
-                        </ol>
-                        
-                        <div class="typische-frage">
-                            „Welches Befehlszeilenkommando zeigt die vollständige IP-Konfiguration eines Windows-Rechners an?"
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="container-full">
-                <div class="subheadding" id="sub-netz-hardware">Netzwerkgeräte im Überblick</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Gerät</th>
-                                    <th>OSI-Schicht</th>
-                                    <th>Funktion</th>
-                                    <th>Adressierung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Hub</b></td>
-                                    <td>1</td>
-                                    <td>Signalverstärker, alle Ports</td>
-                                    <td>Keine</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Switch</b></td>
-                                    <td>2</td>
-                                    <td>Frames weiterleiten</td>
-                                    <td>MAC-Adresse</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Router</b></td>
-                                    <td>3</td>
-                                    <td>Pakete zwischen Netzen routen</td>
-                                    <td>IP-Adresse</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Firewall</b></td>
-                                    <td>3-7</td>
-                                    <td>Pakete filtern, Schutz</td>
-                                    <td>IP, Ports, Protokolle</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Access Point</b></td>
-                                    <td>1-2</td>
-                                    <td>WLAN-Anbindung</td>
-                                    <td>MAC-Adresse</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="typische-frage">
-                            „Erklären Sie den Unterschied zwischen Switch und Router anhand der OSI-Schichten."
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VLAN -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-vlan">VLAN (Virtual Local Area Network)</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>Definition:</b><br>
-                        Logische Segmentierung eines physischen Netzwerks in mehrere virtuelle Netzwerke.
-                        
-                        <b>Vorteile von VLANs:</b>
-                        <ul>
-                            <li><b>Sicherheit:</b> Trennung von Datenverkehr (z.B. Gäste-WLAN vom Firmennetz)</li>
-                            <li><b>Broadcast-Reduzierung:</b> Broadcasts nur innerhalb des VLANs</li>
-                            <li><b>Flexibilität:</b> Geräte können unabhängig vom Standort gruppiert werden</li>
-                            <li><b>Kostenersparnis:</b> Ein physischer Switch für mehrere logische Netze</li>
-                        </ul>
-                        
-                        <b>VLAN-Typen:</b>
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Typ</th>
-                                    <th>Zuordnung durch</th>
-                                    <th>Beispiel</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Port-basiert</b></td>
-                                    <td>Switch-Port</td>
-                                    <td>Port 1-8 = VLAN 10</td>
-                                </tr>
-                                <tr>
-                                    <td><b>MAC-basiert</b></td>
-                                    <td>MAC-Adresse</td>
-                                    <td>Gerät A immer in VLAN 20</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Protokoll-basiert</b></td>
-                                    <td>Protokoll</td>
-                                    <td>IP in VLAN 10, IPX in VLAN 20</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <b>Tagged vs. Untagged:</b>
-                        <ul>
-                            <li><b>Access Port (untagged):</b> Endgeräte, keine VLAN-Info im Frame</li>
-                            <li><b>Trunk Port (tagged):</b> Switch-zu-Switch, VLAN-Tag (802.1Q) im Frame</li>
-                        </ul>
-                        
-                        <div class="merksatz">
-                            VLAN-Kommunikation zwischen VLANs erfordert einen Router (Inter-VLAN-Routing) oder Layer-3-Switch.
-                        </div>
-                        
-                        <div class="typische-frage">
-                            „Nennen Sie zwei Vorteile des Einsatzes von VLANs in einem Unternehmensnetzwerk."
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VPN -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-vpn">VPN (Virtual Private Network)</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>Definition:</b><br>
-                        Verschlüsselte Verbindung über ein unsicheres Netzwerk (z.B. Internet) zur sicheren Anbindung von Standorten oder Mitarbeitern.
-                        
-                        <b>VPN-Typen:</b>
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Typ</th>
-                                    <th>Anwendung</th>
-                                    <th>Beispiel</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Site-to-Site</b></td>
-                                    <td>Standortverbindung</td>
-                                    <td>Zentrale ↔ Filiale</td>
-                                </tr>
-                                <tr>
-                                    <td><b>End-to-Site</b></td>
-                                    <td>Remote-Zugang</td>
-                                    <td>Homeoffice → Firmennetz</td>
-                                </tr>
-                                <tr>
-                                    <td><b>End-to-End</b></td>
-                                    <td>Direkte Verbindung</td>
-                                    <td>Client ↔ Client</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <b>VPN-Protokolle:</b>
-                        <ul>
-                            <li><b>IPsec:</b> Layer 3, häufig für Site-to-Site</li>
-                            <li><b>OpenVPN:</b> Open Source, SSL/TLS-basiert</li>
-                            <li><b>WireGuard:</b> Modern, schnell, einfach</li>
-                            <li><b>L2TP/IPsec:</b> Kombination Layer 2 + 3</li>
-                            <li><b>PPTP:</b> Veraltet, unsicher – nicht mehr verwenden!</li>
-                        </ul>
-                        
-                        <b>Tunneling:</b><br>
-                        Datenpakete werden in VPN-Pakete verpackt (eingekapselt) und verschlüsselt übertragen.
-                        
-                        <div class="pruefungsfalle">
-                            PPTP gilt als unsicher und sollte nicht mehr eingesetzt werden. WireGuard und OpenVPN sind aktuelle Standards.
-                        </div>
-                        
-                        <div class="typische-frage">
-                            „Beschreiben Sie den Unterschied zwischen Site-to-Site- und End-to-Site-VPN."
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DHCP & DNS vertieft -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-dhcp-dns">DHCP & DNS (vertieft)</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>DHCP (Dynamic Host Configuration Protocol):</b><br>
-                        Automatische Vergabe von IP-Konfiguration an Clients.
-                        
-                        <b>DORA-Prozess:</b>
-                        <ol>
-                            <li><b>D</b>iscover – Client sucht DHCP-Server (Broadcast)</li>
-                            <li><b>O</b>ffer – Server bietet IP-Adresse an</li>
-                            <li><b>R</b>equest – Client fordert Adresse an</li>
-                            <li><b>A</b>ck – Server bestätigt</li>
-                        </ol>
-                        
-                        <b>DHCP-Lease enthält:</b>
-                        <ul>
-                            <li>IP-Adresse</li>
-                            <li>Subnetzmaske</li>
-                            <li>Standard-Gateway</li>
-                            <li>DNS-Server</li>
-                            <li>Lease-Dauer</li>
-                        </ul>
-                        
-                        <b>DNS (Domain Name System):</b><br>
-                        Übersetzt Domainnamen in IP-Adressen.
-                        
-                        <b>DNS-Record-Typen:</b>
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Record</th>
-                                    <th>Zweck</th>
-                                    <th>Beispiel</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>A</b></td>
-                                    <td>IPv4-Adresse</td>
-                                    <td>example.com → 192.0.2.1</td>
-                                </tr>
-                                <tr>
-                                    <td><b>AAAA</b></td>
-                                    <td>IPv6-Adresse</td>
-                                    <td>example.com → 2001:db8::1</td>
-                                </tr>
-                                <tr>
-                                    <td><b>CNAME</b></td>
-                                    <td>Alias</td>
-                                    <td>www → example.com</td>
-                                </tr>
-                                <tr>
-                                    <td><b>MX</b></td>
-                                    <td>Mailserver</td>
-                                    <td>mail.example.com</td>
-                                </tr>
-                                <tr>
-                                    <td><b>TXT</b></td>
-                                    <td>Text (SPF, DKIM)</td>
-                                    <td>v=spf1 include:...</td>
-                                </tr>
-                                <tr>
-                                    <td><b>PTR</b></td>
-                                    <td>Reverse-Lookup</td>
-                                    <td>IP → Name</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="typische-frage">
-                            „Beschreiben Sie den DORA-Prozess bei DHCP."
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Subnetting -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-subnetting">Subnetting & CIDR</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>CIDR-Notation:</b><br>
-                        Schreibweise IP/Präfix (z.B. 192.168.1.0/24)
-                        
-                        <b>Wichtige Präfixe und Hosts:</b>
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>CIDR</th>
-                                    <th>Subnetzmaske</th>
-                                    <th>Hosts</th>
-                                    <th>Verwendung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>/8</td>
-                                    <td>255.0.0.0</td>
-                                    <td>16.777.214</td>
-                                    <td>Klasse A</td>
-                                </tr>
-                                <tr>
-                                    <td>/16</td>
-                                    <td>255.255.0.0</td>
-                                    <td>65.534</td>
-                                    <td>Klasse B</td>
-                                </tr>
-                                <tr>
-                                    <td>/24</td>
-                                    <td>255.255.255.0</td>
-                                    <td>254</td>
-                                    <td>Klasse C, Standard</td>
-                                </tr>
-                                <tr>
-                                    <td>/25</td>
-                                    <td>255.255.255.128</td>
-                                    <td>126</td>
-                                    <td>Hälfte eines /24</td>
-                                </tr>
-                                <tr>
-                                    <td>/26</td>
-                                    <td>255.255.255.192</td>
-                                    <td>62</td>
-                                    <td>Viertel eines /24</td>
-                                </tr>
-                                <tr>
-                                    <td>/27</td>
-                                    <td>255.255.255.224</td>
-                                    <td>30</td>
-                                    <td>Kleine Subnetze</td>
-                                </tr>
-                                <tr>
-                                    <td>/28</td>
-                                    <td>255.255.255.240</td>
-                                    <td>14</td>
-                                    <td>Sehr kleine Subnetze</td>
-                                </tr>
-                                <tr>
-                                    <td>/30</td>
-                                    <td>255.255.255.252</td>
-                                    <td>2</td>
-                                    <td>Punkt-zu-Punkt</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="formel-box">
-                            <b>Host-Berechnung:</b><br>
-                            Anzahl Hosts = 2<sup>(32 − Präfix)</sup> − 2<br>
-                            <b>Beispiel /26:</b> 2<sup>6</sup> − 2 = 64 − 2 = 62 Hosts
-                        </div>
-                        
-                        <b>Private IP-Bereiche (RFC 1918):</b>
-                        <ul>
-                            <li><b>10.0.0.0/8:</b> Klasse A privat</li>
-                            <li><b>172.16.0.0/12:</b> Klasse B privat (172.16-31.x.x)</li>
-                            <li><b>192.168.0.0/16:</b> Klasse C privat</li>
-                        </ul>
-                        
-                        <div class="typische-frage">
-                            „Berechnen Sie, wie viele Hosts in einem /27-Netz möglich sind."
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NAT -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-nat">NAT (Network Address Translation)</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>Definition:</b><br>
-                        Übersetzung von privaten IP-Adressen in öffentliche IP-Adressen und umgekehrt.
-                        
-                        <b>NAT-Typen:</b>
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Typ</th>
-                                    <th>Beschreibung</th>
-                                    <th>Anwendung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Static NAT</b></td>
-                                    <td>1:1 Zuordnung privat ↔ öffentlich</td>
-                                    <td>Server mit fester IP</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Dynamic NAT</b></td>
-                                    <td>Pool öffentlicher IPs</td>
-                                    <td>Mehrere Clients, mehrere IPs</td>
-                                </tr>
-                                <tr>
-                                    <td><b>PAT (Overloading)</b></td>
-                                    <td>Viele Clients, eine öffentliche IP</td>
-                                    <td>Heimrouter (häufigste Form)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <b>Port Forwarding:</b><br>
-                        Weiterleitung von eingehenden Verbindungen auf bestimmten Ports an interne Server.
-                        
-                        <div class="merksatz">
-                            PAT ist das, was in jedem Heimrouter stattfindet: Alle Geräte teilen sich eine öffentliche IP.
-                        </div>
-                        
-                        <div class="selbsttest-box">
-                            <div class="selbsttest-frage">Selbsttest: Netzwerktechnik</div>
-                            
-                            <p>Wie viele Hosts sind in einem /24-Netz nutzbar?</p>
-                            <input type="text" class="selbsttest-input" data-correct="254" placeholder="Anzahl Hosts">
-                            <span class="selbsttest-feedback"></span>
-                            
-                            <p>Welche Subnetzmaske hat /27?</p>
-                            <input type="text" class="selbsttest-input" data-correct="255.255.255.224" placeholder="z.B. 255.255.255.0">
-                            <span class="selbsttest-feedback"></span>
-                            
-                            <p>Wie lautet die Formel zur Host-Berechnung?</p>
-                            <input type="text" class="selbsttest-input" data-correct="2^(32-Präfix)-2|2^n-2|2 hoch n minus 2" placeholder="z.B. 2^n-2">
-                            <span class="selbsttest-feedback"></span>
-                            
-                            <p>Welcher NAT-Typ wird im Heimrouter verwendet?</p>
-                            <input type="text" class="selbsttest-input" data-correct="PAT|pat|Port Address Translation|NAPT" placeholder="NAT-Typ">
-                            <span class="selbsttest-feedback"></span>
-                            
-                            <div class="selbsttest-buttons">
-                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
-                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Netzwerk-Vertieft wurde mit Netzwerke Grundlagen zusammengeführt -->
+        <span id="netzwerk-vertieft" style="display:none;"></span>
 
 
         <!-- ═══════════════════════════════════════════════════════════════ -->
