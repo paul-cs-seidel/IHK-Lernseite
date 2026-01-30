@@ -98,6 +98,12 @@
     margin: var(--spacing-sm) var(--spacing-lg);
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .burger-btn:hover {
+        transform: scale(1.1);
+    }
+}
+
 .burger-btn span {
     display: block;
     width: 20px;
