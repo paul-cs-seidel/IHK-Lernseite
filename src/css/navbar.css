@@ -99,7 +99,10 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .burger-btn:hover {
+    .burger-btn:hover span {
+        transform: scale(1.1);
+    }
+    .nav-logo:hover img {
         transform: scale(1.1);
     }
 }
@@ -109,7 +112,7 @@
     width: 20px;
     height: 2px;
     background: var(--color-primary-dark);
-    transition: all var(--transition-slow);
+    transition: transform var(--transition-slow);
 }
 
 /* Burger Animation - X */
