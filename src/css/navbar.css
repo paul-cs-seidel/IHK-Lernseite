@@ -67,8 +67,10 @@
     transition: transform var(--transition-normal);
 }
 
-.nav-logo:hover img {
-    transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+    .nav-logo:hover img {
+        transform: scale(1.1);
+    }
 }
 
 /* ============================
@@ -138,9 +140,9 @@
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
     background: var(--color-surface);
-    -webkit-backdrop-filter: blur(12px) saturate(1.05) brightness(1.05);
-    backdrop-filter: blur(12px) saturate(1.05) brightness(1.05);
-    border-top: 1px solid rgba(160, 160, 160, 0.3);
+    -webkit-backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+    backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+    border-top: 2px solid rgba(160, 160, 160, 0.3);
     box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.08),
       0px 5px 4px rgba(3, 7, 18, 0.06),
       0px 12px 9px rgba(3, 7, 18, 0.05),
@@ -211,10 +213,15 @@
     max-height: 75vh;
     overflow-y: auto;
     background: var(--color-surface);
-    -webkit-backdrop-filter: blur(12px) saturate(1.05) brightness(1.05);
-    backdrop-filter: blur(12px) saturate(1.05) brightness(1.05);
-    border-top: 1px solid rgba(160, 160, 160, 0.3);
+    -webkit-backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+    backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+    border-top: 2px solid rgba(160, 160, 160, 0.3);
     border-radius: var(--radius-md) 0 0 var(--radius-md);
+    box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.08),
+      0px 5px 4px rgba(3, 7, 18, 0.06),
+      0px 12px 9px rgba(3, 7, 18, 0.05),
+      0px 20px 15px rgba(3, 7, 18, 0.03),
+      0px 32px 24px rgba(3, 7, 18, 0.02);
     padding: var(--spacing-sm) 0;
     opacity: 0;
     visibility: hidden;
@@ -222,7 +229,7 @@
     transition: opacity var(--transition-fast), 
                 visibility var(--transition-fast), 
                 transform var(--transition-fast);
-    z-index: 10000;
+    z-index: var(--z-navbar);
     pointer-events: none;
 }
 
@@ -234,17 +241,11 @@
     pointer-events: auto;
 }
 
-/* Highlight active nav link on hover - only on devices that support hover */
+/* Hover effects - only on devices that support hover (not touch) */
 @media (hover: hover) and (pointer: fine) {
-    .nav-item:hover > .nav-bar-links {
-        background-color: rgba(108, 108, 108, 0.3);
-        color: #e5e5e5;
-    }
-}
-/* Disable hover on touch devices */
-@media (hover: hover) and (pointer: fine) {
+    .nav-item:hover > .nav-bar-links,
     .nav-bar-links:hover {
-        background-color: rgba(108, 108, 108, 0.6);
+        background-color: rgba(108, 108, 108, 0.8);
         color: #e5e5e5;
     }
 }
@@ -279,10 +280,13 @@
     text-overflow: ellipsis;
 }
 
-.nav-submenu a:hover {
-    background-color: rgba(108, 108, 108, 0.4);
-    color: #e5e5e5;
-    padding-left: var(--spacing-lg);
+/* Hover only on devices that support it (not touch) */
+@media (hover: hover) and (pointer: fine) {
+    .nav-submenu a:hover {
+        background-color: rgba(108, 108, 108, 0.8);
+        color: #e5e5e5;
+        padding-left: var(--spacing-lg);
+    }
 }
 
 /* Arrow indicator on nav links */
@@ -295,8 +299,10 @@
     font-weight: bold;
 }
 
-.nav-item:hover > .nav-bar-links::before {
-    opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    .nav-item:hover > .nav-bar-links::before {
+        opacity: 1;
+    }
 }
 
 /* Extend hover area to bridge gap between nav link and submenu */
@@ -333,9 +339,10 @@
         border: none;
         border-radius: 0;
         border-top: 1px solid rgba(160, 160, 160, 0.3);
-        background: none !important;
-        -webkit-backdrop-filter: blur(0px) saturate(1) brightness(1) !important;
-        backdrop-filter: blur(0px) saturate(1) brightness(1) !important;
+        background: transparent !important;
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
         max-height: 0;
         overflow: hidden;
         padding: 0;
