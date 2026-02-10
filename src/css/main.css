@@ -36,6 +36,9 @@
 /* 4. Navigation & Burger Menu */
 @import 'navbar.css';
 
+/* 4b. Search */
+@import 'search.css';
+
 /* 5. UI Components */
 @import 'components.css';
 

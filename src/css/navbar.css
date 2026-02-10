@@ -82,7 +82,7 @@
 }
 
 .burger-btn {
-    order: 2;
+    order: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;

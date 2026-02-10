@@ -40,6 +40,19 @@
             <a href="#" class="nav-logo" title="Zum Seitenanfang">
                 <img src="./src/assets/logo.svg" alt="IHK Lernseite Logo">
             </a>
+            <div class="search-container">
+                <button class="search-toggle" id="search-toggle" title="Suche öffnen">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <div class="search-box" id="search-box">
+                    <input type="text" id="search-input" placeholder="Suche..." autocomplete="off">
+                    <button class="search-clear" id="search-clear" title="Suche löschen">×</button>
+                </div>
+                <div class="search-results" id="search-results"></div>
+            </div>
             <div class="nav-links-container">
                 <div class="nav-item">
                     <a class="nav-bar-links" href="#wasIstAp1">AP1</a>
@@ -432,7 +445,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- WAS IST AP1 -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="wasIstAp1">/ Was ist AP1 <span class="badge-relevant">Grundlagen</span></span>
+        <span id="wasIstAp1" data-search-section data-search-tags="AP1, Prüfung, Grundlagen, IT-Arbeitsplatz, Ergonomie, ArbStättV, Schutzmaßnahmen, CIA, Vertraulichkeit, Integrität, Verfügbarkeit">/ Was ist AP1 <span class="badge-relevant">Grundlagen</span></span>
         <hr>
         <div class="grid">
 
@@ -684,7 +697,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TYPISCHE AUFGABENFORMEN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="aufgabenformen">/ Typische Aufgabenformen <span class="badge-relevant">Prüfungsstrategie</span></span>
+        <span id="aufgabenformen" data-search-section data-search-tags="Aufgabenformen, Aufgabentypen, Szenario, Begründung, Multiple Choice, Offene Fragen, Prüfungsstrategie">/ Typische Aufgabenformen <span class="badge-relevant">Prüfungsstrategie</span></span>
         <hr>
         <div class="grid">       
             <div class="container0">   
@@ -875,7 +888,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- PRÜFUNGSKERN: IT-ROLLEN & HANDLUNGSSCHRITTE -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="rollen">/ IT-Rollen & Handlungsschritte <span class="badge-relevant">Prüfungskern</span></span>
+        <span id="rollen" data-search-section data-search-tags="IT-Rollen, Handlungsschritte, Analysieren, Entscheiden, Dokumentieren, AED-Schema">/ IT-Rollen & Handlungsschritte <span class="badge-relevant">Prüfungskern</span></span>
         <hr>
         <div class="grid">       
             <div class="container0">
@@ -1056,7 +1069,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TOP-PRIORITÄT: NETZWERKE GRUNDLAGEN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="Netzwerke">/ Netzwerke Grundlagen <span class="badge-relevant badge-top">TOP-PRIORITÄT</span></span>
+        <span id="Netzwerke" data-search-section data-search-tags="Netzwerke, Topologie, OSI, TCP/IP, IPv4, IPv6, Subnetting, Ports, Protokolle, DHCP, DNS, VPN, VLAN, NAT, Router, Switch, Firewall">/ Netzwerke Grundlagen <span class="badge-relevant badge-top">TOP-PRIORITÄT</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -2727,7 +2740,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TOP-PRIORITÄT: WIRTSCHAFTLICHKEIT -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="wirtschaftlichkeit">/ Wirtschaftlichkeit <span class="badge-relevant badge-top">TOP-PRIORITÄT</span></span>
+        <span id="wirtschaftlichkeit" data-search-section data-search-tags="Wirtschaftlichkeit, Kosten, Nutzwertanalyse, TCO, Amortisation, AfA, Abschreibung, Leasing, Miete, Kauf, Handelskalkulation, BWL, Elektrotechnik">/ Wirtschaftlichkeit <span class="badge-relevant badge-top">TOP-PRIORITÄT</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -3655,7 +3668,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TOP-PRIORITÄT: PROJEKTMANAGEMENT -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="projektmanagement">/ Projektmanagement <span class="badge-relevant badge-top">TOP-PRIORITÄT</span></span>
+        <span id="projektmanagement" data-search-section data-search-tags="Projektmanagement, Projekt, SMART, Magisches Dreieck, Phasen, PSP, Projektstrukturplan, Wasserfall, Agile, Scrum, Kanban, Netzplan, Gantt, Lastenheft, Pflichtenheft">/ Projektmanagement <span class="badge-relevant badge-top">TOP-PRIORITÄT</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -4489,7 +4502,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TEAMARBEIT & KOMMUNIKATION -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="teamarbeit">/ Teamarbeit & Kommunikation <span class="badge-relevant">Prüfungsrelevant</span></span>
+        <span id="teamarbeit" data-search-section data-search-tags="Teamarbeit, Kommunikation, Tuckman, Teamphasen, Vier-Ohren-Modell, Schulz von Thun, Betriebsrat, Arbeitsorganisation">/ Teamarbeit & Kommunikation <span class="badge-relevant">Prüfungsrelevant</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -4880,7 +4893,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- UML-DIAGRAMME & BPMN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="uml-bpmn">/ UML-Diagramme & BPMN <span class="badge-relevant badge-top">NEU AB 2024</span></span>
+        <span id="uml-bpmn" data-search-section data-search-tags="UML, BPMN, Aktivitätsdiagramm, Use-Case, Klassendiagramm, Sequenzdiagramm, Diagramme, Modellierung">/ UML-Diagramme & BPMN <span class="badge-relevant badge-top">NEU AB 2024</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -5735,7 +5748,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- DATENSCHUTZ & DSGVO -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="datenschutz">/ Datenschutz & DSGVO</span>
+        <span id="datenschutz" data-search-section data-search-tags="Datenschutz, DSGVO, Personenbezogene Daten, Betroffenenrechte, TOM, Verarbeitung, Rechtsgrundlagen">/ Datenschutz & DSGVO</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -5951,7 +5964,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- IT-SICHERHEIT -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="itsicherheit">/ IT-Sicherheit</span>
+        <span id="itsicherheit" data-search-section data-search-tags="IT-Sicherheit, CIA, Schutzziele, Bedrohungen, Malware, Phishing, Trojaner, Verschlüsselung, Hash, Authentifizierung, BSI, Backup, Firewall, DMZ, VPN, WLAN">/ IT-Sicherheit</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -6930,7 +6943,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- SPEICHERMEDIEN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="speichermedien">/ Speichermedien</span>
+        <span id="speichermedien" data-search-section data-search-tags="Speichermedien, HDD, SSD, Green-IT, BIOS, UEFI, Speicher">/ Speichermedien</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -7075,7 +7088,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- BETRIEBSSYSTEME & SOFTWAREINSTALLATION -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="betriebssysteme">/ Betriebssysteme & Softwareinstallation</span>
+        <span id="betriebssysteme" data-search-section data-search-tags="Betriebssysteme, OS, Windows, Linux, Lizenzen, Deployment, Installation, Software">/ Betriebssysteme & Softwareinstallation</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -7197,7 +7210,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- DATENBANKMODELLIERUNG -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="datenbanken">/ Datenbankmodellierung</span>
+        <span id="datenbanken" data-search-section data-search-tags="Datenbank, SQL, ER-Modell, Normalisierung, Relational, NoSQL, Redundanzen, Primärschlüssel, Fremdschlüssel">/ Datenbankmodellierung</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -7660,7 +7673,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- MÄRKTE & BEDARFE -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="maerkte">/ Märkte & Bedarfe</span>
+        <span id="maerkte" data-search-section data-search-tags="Märkte, Marktanalyse, Bedarfsermittlung, Technologietrends">/ Märkte & Bedarfe</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -7754,7 +7767,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- MARKETING & ANGEBOTSVERGLEICH -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="angebotsvergleich">/ Marketing & Angebotsvergleich</span>
+        <span id="angebotsvergleich" data-search-section data-search-tags="Angebotsvergleich, Qualitativer Vergleich, Angebote, Beschaffung">/ Marketing & Angebotsvergleich</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -7861,7 +7874,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- HARDWARE & INFRASTRUKTUR -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="hardware">/ Hardware & Infrastruktur</span>
+        <span id="hardware" data-search-section data-search-tags="Hardware, CPU, RAM, Mainboard, Schnittstellen, Server, Anschlüsse, Von-Neumann, RAID, USV, Peripherie, Virtualisierung">/ Hardware & Infrastruktur</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -8897,7 +8910,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- VIRTUALISIERUNG & CLOUD -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="virtualisierung">/ Virtualisierung & Cloud</span>
+        <span id="virtualisierung" data-search-section data-search-tags="Virtualisierung, Cloud, VM, Container, Docker, IaaS, PaaS, SaaS, Hypervisor">/ Virtualisierung & Cloud</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -9046,7 +9059,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- WEBENTWICKLUNG & PROGRAMMIERUNG -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="webentwicklung">/ Webentwicklung & Programmierung <span class="badge-relevant">Prüfungsrelevant</span></span>
+        <span id="webentwicklung" data-search-section data-search-tags="Webentwicklung, HTML, CSS, JavaScript, Programmierung, Schreibtischtest, Pseudocode, Website, Frontend, Backend">/ Webentwicklung & Programmierung <span class="badge-relevant">Prüfungsrelevant</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -9259,7 +9272,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- SOFTWAREENTWICKLUNG -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="softwareentwicklung">/ Softwareentwicklung</span>
+        <span id="softwareentwicklung" data-search-section data-search-tags="Softwareentwicklung, Paradigmen, OOP, Algorithmen, Testverfahren, Unit-Test, Black-Box, White-Box">/ Softwareentwicklung</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -9402,7 +9415,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- QUALITÄTSSICHERUNG -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="qualitaet">/ Qualitätssicherung</span>
+        <span id="qualitaet" data-search-section data-search-tags="Qualität, QM, ISO 9000, Normen, Qualitätsmanagement, Dokumentation">/ Qualitätssicherung</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -9522,7 +9535,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- VERTRÄGE & LEISTUNGSERBRINGUNG -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="vertraege">/ Verträge & Leistungserbringung</span>
+        <span id="vertraege" data-search-section data-search-tags="Verträge, Vertragsarten, SLA, Gewährleistung, Urheberrecht, Arbeitsvertrag, AGB, EVB-IT">/ Verträge & Leistungserbringung</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -9911,7 +9924,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- LEISTUNGSERBRINGUNG & QUALITÄTSSICHERUNG -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="leistungserbringung">/ Leistungserbringung & Qualität</span>
+        <span id="leistungserbringung" data-search-section data-search-tags="Leistungserbringung, Abnahme, Soll-Ist-Vergleich, Organisation, IT-Support, PDCA, Testverfahren">/ Leistungserbringung & Qualität</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -10362,7 +10375,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- CHANGE MANAGEMENT -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="changemanagement">/ Change Management</span>
+        <span id="changemanagement" data-search-section data-search-tags="Change Management, ITIL, Lewin, Kaizen, Erfolgsfaktoren, Veränderung">/ Change Management</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -10594,7 +10607,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- MARKETING & MÄRKTE -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="marketing">/ Marketing & Märkte</span>
+        <span id="marketing" data-search-section data-search-tags="Marketing, Marktformen, Cross-Selling, VWL, ABC-Analyse, Produktlebenszyklus, Marketing-Mix, 4P">/ Marketing & Märkte</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -10970,7 +10983,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- KÜNSTLICHE INTELLIGENZ (KI) -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="ki">/ Künstliche Intelligenz (KI) <span class="badge-relevant badge-top">NEU AB 2024</span></span>
+        <span id="ki" data-search-section data-search-tags="KI, Künstliche Intelligenz, Machine Learning, Chatbots, Ethik, AI">/ Künstliche Intelligenz (KI) <span class="badge-relevant badge-top">NEU AB 2024</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -11322,7 +11335,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- PRÜFUNGSVORBEREITUNG - SCHNELLCHECK -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="pruefungscheck">/ Prüfungs-Schnellcheck <span class="badge-top">25.02.2026</span></span>
+        <span id="pruefungscheck" data-search-section data-search-tags="Prüfung, Schnellcheck, Top 10, Formeln, Last Minute, Häufige Fehler, Zusammenfassung">/ Prüfungs-Schnellcheck <span class="badge-top">25.02.2026</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -11562,7 +11575,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- ÜBUNGSAUFGABEN MIT LÖSUNGEN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="uebungen">/ Übungsaufgaben mit Lösungen <span class="badge-relevant">PRAXIS</span></span>
+        <span id="uebungen" data-search-section data-search-tags="Übungen, Aufgaben, Netzplan, Subnetting, Nutzwert, OSI, Schreibtischtest, Verschlüsselung, DSGVO, Checkliste">/ Übungsaufgaben mit Lösungen <span class="badge-relevant">PRAXIS</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -12330,7 +12343,7 @@ Funktion bewertung_webseite(ladezeit, html_valid, mobile_freundlich, seo_optimie
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- PRÜFUNGSSIMULATION -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="pruefungssimulation">Prüfungssimulation</span>
+        <span id="pruefungssimulation" data-search-section data-search-tags="Prüfungssimulation, Mini-Prüfung, Szenario, Begründungen, Simulation">Prüfungssimulation</span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -12835,7 +12848,7 @@ Funktion bewertung_webseite(ladezeit, html_valid, mobile_freundlich, seo_optimie
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TOOLS & EXTRAS -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="topic-rechner">/ Tools & Extras <span class="badge-relevant">Rechner</span></span>
+        <span id="topic-rechner" data-search-section data-search-tags="Tools, Rechner, Pseudocode, Troubleshooting, Glossar, Abkürzungen, Prüfungstipps, Kaufvertrag, BGB">/ Tools & Extras <span class="badge-relevant">Rechner</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
@@ -13942,7 +13955,7 @@ Address: 192.168.1.1
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- FALLSTUDIE - PRAXISFALL -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="fallstudie">/ Praxis-Fallstudie <span class="badge-relevant badge-top">INTERAKTIV</span></span>
+        <span id="fallstudie" data-search-section data-search-tags="Fallstudie, Praxis, TechStart, DataFlow, MedTech, Interaktiv, Case Study">/ Praxis-Fallstudie <span class="badge-relevant badge-top">INTERAKTIV</span></span>
         <hr>
         
         <div class="case-study" id="Fallstudien">
