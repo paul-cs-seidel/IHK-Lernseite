@@ -219,7 +219,7 @@
     border: 2px solid var(--color-border);
     font-family: var(--font-family-mono);
     font-size: var(--font-size-md);
-    background: var(--color-background);
+    background: transparent;
     margin-bottom: var(--spacing-xs);
     transition: border-color var(--transition-fast);
 }
@@ -389,6 +389,66 @@
     font-family: var(--font-family-mono);
     font-size: 0.9em;
     line-height: 1.8;
+}
+
+/* Rechner Grid-Layout mit Formel-Panel */
+.rechner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.rechner-eingabe {
+    padding-right: var(--spacing-lg);
+}
+
+.rechner-formeln {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--spacing-xl);
+}
+
+.rechner-formeln h4 {
+    margin: 0 0 var(--spacing-md);
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+    color: var(--color-primary);
+}
+
+.rechner-formeln .formel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-family-mono);
+    font-size: 0.85em;
+    line-height: 1.6;
+}
+
+.rechner-formeln .formel-titel {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+}
+
+.rechner-formeln .formel code {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    padding: 2px 6px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 900px) {
+    .rechner-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rechner-formeln {
+        border-left: none;
+        border-top: 2px solid var(--color-border);
+        padding-left: 0;
+        padding-top: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+    }
 }
 
 /* ============================

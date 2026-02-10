@@ -491,3 +491,479 @@
         padding: var(--spacing-2xl) 0;
     }
 }
+
+/* ============================
+ * FALLSTUDIE / CASE STUDY
+ * ============================ */
+
+.case-study {
+    margin: var(--spacing-3xl) 0;
+    border: 3px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.case-study-header {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    padding: var(--spacing-2xl);
+}
+
+.case-study-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(255,255,255,0.2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    margin-bottom: var(--spacing-md);
+}
+
+.case-study-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.case-study-company {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+}
+
+/* Fortschrittsanzeige */
+.case-progress {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    background: rgba(0,0,0,0.03);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.case-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.case-progress-label {
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: var(--font-size-sm);
+}
+
+.case-progress-points {
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-bold);
+}
+
+.case-progress-bar {
+    height: 8px;
+    background: var(--color-border-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.case-progress-fill {
+    height: 100%;
+    background: var(--color-primary);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* Szenario Box */
+.case-scenario {
+    padding: var(--spacing-2xl);
+    border-bottom: 2px dashed var(--color-border-dotted);
+}
+
+.case-scenario-title {
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+}
+
+.case-scenario-content {
+    line-height: 1.8;
+}
+
+.case-scenario-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.case-highlight {
+    background: rgba(37,37,37,0.08);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 2px;
+    font-weight: var(--font-weight-medium);
+}
+
+.case-data-box {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    border-radius: var(--radius-sm);
+}
+
+.case-data-title {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Aufgaben/Missionen */
+.case-missions {
+    padding: var(--spacing-2xl);
+}
+
+.case-mission {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-xl);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.case-mission.completed {
+    border-color: var(--color-success);
+    opacity: 0.7;
+}
+
+.case-mission.active {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.case-mission-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: rgba(0,0,0,0.02);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.case-mission-header:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.case-mission-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    font-weight: var(--font-weight-bold);
+    border-radius: 50%;
+    font-family: var(--font-family-mono);
+}
+
+.case-mission.completed .case-mission-number {
+    background: var(--color-success);
+}
+
+.case-mission.completed .case-mission-number::after {
+    content: "✓";
+}
+
+.case-mission.completed .case-mission-number span {
+    display: none;
+}
+
+.case-mission-info {
+    flex: 1;
+}
+
+.case-mission-title {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-2xs);
+}
+
+.case-mission-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+.case-mission-tag {
+    padding: var(--spacing-2xs) var(--spacing-sm);
+    background: rgba(0,0,0,0.05);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+}
+
+.case-mission-points {
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-semibold);
+}
+
+.case-mission-content {
+    display: none;
+    padding: var(--spacing-xl);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.case-mission.active .case-mission-content {
+    display: block;
+}
+
+.case-mission-question {
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+
+.case-mission-hint {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-left: 3px solid var(--color-border);
+    background: rgba(0,0,0,0.02);
+    margin: var(--spacing-lg) 0;
+    font-size: var(--font-size-sm);
+}
+
+.case-mission-hint strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: var(--font-size-xs);
+}
+
+/* Antwortfelder */
+.case-answer-group {
+    margin: var(--spacing-lg) 0;
+}
+
+.case-answer-label {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+}
+
+.case-answer-input {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: var(--font-size-md);
+    transition: border-color var(--transition-fast);
+    background: transparent;
+}
+
+.case-answer-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.case-answer-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Multiple Choice */
+.case-mc-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.case-mc-option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.case-mc-option:hover {
+    border-color: var(--color-primary);
+    background: rgba(0,0,0,0.02);
+}
+
+.case-mc-option.selected {
+    border-color: var(--color-primary);
+    background: rgba(37,37,37,0.05);
+}
+
+.case-mc-option.correct {
+    border-color: var(--color-success);
+    background: rgba(39,174,96,0.1);
+}
+
+.case-mc-option.wrong {
+    border-color: var(--color-error);
+    background: rgba(192,57,43,0.1);
+}
+
+.case-mc-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.case-mc-option.selected .case-mc-checkbox {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-inverted);
+}
+
+.case-mc-option.selected .case-mc-checkbox::after {
+    content: "✓";
+}
+
+/* Buttons */
+.case-mission-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px dashed var(--color-border-dotted);
+}
+
+.case-btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    border: 2px solid var(--color-border);
+    background: none;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.case-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    border-color: var(--color-primary);
+}
+
+.case-btn-primary {
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    border-color: var(--color-primary);
+}
+
+.case-btn-primary:hover {
+    background: transparent;
+    color: var(--color-text);
+}
+
+.case-btn-hint {
+    margin-left: auto;
+}
+
+/* Feedback */
+.case-feedback {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    display: none;
+}
+
+.case-feedback.show {
+    display: block;
+}
+
+.case-feedback.success {
+    background: rgba(39,174,96,0.1);
+    border: 2px solid var(--color-success);
+}
+
+.case-feedback.error {
+    background: rgba(192,57,43,0.1);
+    border: 2px solid var(--color-error);
+}
+
+.case-feedback-title {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.case-feedback.success .case-feedback-title::before {
+    content: "✓ ";
+    color: var(--color-success);
+}
+
+.case-feedback.error .case-feedback-title::before {
+    content: "✗ ";
+    color: var(--color-error);
+}
+
+/* Ergebnis */
+.case-result {
+    padding: var(--spacing-2xl);
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+    text-align: center;
+    display: none;
+}
+
+.case-result.show {
+    display: block;
+}
+
+.case-result-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+}
+
+.case-result-score {
+    font-size: var(--font-size-3xl);
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-lg);
+}
+
+.case-result-grade {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .case-study-header,
+    .case-scenario,
+    .case-missions {
+        padding: var(--spacing-lg);
+    }
+    
+    .case-mission-header {
+        flex-wrap: wrap;
+    }
+    
+    .case-mission-meta {
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .case-mission-actions {
+        flex-direction: column;
+    }
+    
+    .case-btn-hint {
+        margin-left: 0;
+    }
+}

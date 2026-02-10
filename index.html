@@ -348,7 +348,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-bar-links" href="#pruefungscheck">Prüfung</a>
+                    <a class="nav-bar-links" href="#pruefungscheck">Check</a>
                     <div class="nav-submenu">
                         <div class="nav-submenu-title">Prüfungs-Check</div>
                         <a href="#sub-top10">Top 10 Themen</a>
@@ -379,6 +379,7 @@
                         <a href="#sub-mini-pruefung">Mini-Prüfung</a>
                         <a href="#sub-szenario-aufgaben">Szenario-Aufgaben</a>
                         <a href="#sub-begruendungsaufgaben">Begründungen</a>
+                        <a href="#fallstudie">Praxis-Fallstudien</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -391,6 +392,15 @@
                         <a href="#sub-abkuerzungen">Glossar</a>
                         <a href="#sub-tipps-strategie">Prüfungstipps</a>
                         <a href="#sub-bgb-kaufvertrag">Kaufvertrag</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-bar-links" href="#fallstudie">Fallstudien</a>
+                    <div class="nav-submenu">
+                        <div class="nav-submenu-title">Fallstudien</div>
+                        <a href="#Fallstudien">TechStart GmbH</a>
+                        <a href="#case-dataflow">DataFlow AG</a>
+                        <a href="#case-medtech">MedTech Solutions</a>
                     </div>
                 </div>
             </div>
@@ -12856,38 +12866,109 @@ Funktion bewertung_webseite(ladezeit, html_valid, mobile_freundlich, seo_optimie
                         <div class="rechenaufgabe-box">
                             <div class="aufgabe-header">Subnetting-Rechner</div>
                             <div class="aufgabe-content">
-                                <label><b>Präfix (0-32):</b></label><br>
-                                <input type="number" id="subnet-praefix" min="0" max="32" value="24" class="selbsttest-input" style="width: 100px;">
-                                <button class="selbsttest-btn" onclick="berechneSubnetting()">BERECHNEN</button>
-                                <div id="subnet-result" style="margin-top: 15px;"></div>
+                                <div class="rechner-grid">
+                                    <div class="rechner-eingabe">
+                                        <label><b>Präfix (0-32):</b></label><br>
+                                        <input type="number" id="subnet-praefix" min="0" max="32" value="24" class="selbsttest-input" style="width: 100px;">
+                                        <button class="selbsttest-btn" onclick="berechneSubnetting()">BERECHNEN</button>
+                                        <div id="subnet-result" style="margin-top: 15px;"></div>
+                                    </div>
+                                    <div class="rechner-formeln">
+                                        <h4>Formeln & Rechenweg</h4>
+                                        <div class="formel">
+                                            <div class="formel-titel">Host-Bits berechnen</div>
+                                            <code>Host-Bits = 32 - Präfix</code><br>
+                                            z.B. /24: 32 - 24 = <b>8 Host-Bits</b>
+                                        </div>
+                                        <div class="formel">
+                                            <div class="formel-titel">Anzahl Hosts</div>
+                                            <code>Hosts = 2^Host-Bits - 2</code><br>
+                                            z.B. /24: 2⁸ - 2 = <b>254 Hosts</b><br>
+                                            <small>(-2 für Netz- und Broadcast-Adresse)</small>
+                                        </div>
+                                        <div class="formel">
+                                            <div class="formel-titel">Subnetzmaske</div>
+                                            Präfix in Binär umwandeln:<br>
+                                            /24 = <code>11111111.11111111.11111111.00000000</code><br>
+                                            = 255.255.255.0
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="rechenaufgabe-box">
                             <div class="aufgabe-header">AfA-Rechner (lineare Abschreibung)</div>
                             <div class="aufgabe-content">
-                                <label><b>Anschaffungskosten (€):</b></label><br>
-                                <input type="number" id="afa-anschaffung" value="12000" class="selbsttest-input" style="width: 150px;"><br><br>
-                                <label><b>Nutzungsdauer (Jahre):</b></label><br>
-                                <input type="number" id="afa-nutzung" min="1" value="3" class="selbsttest-input" style="width: 100px;"><br><br>
-                                <label><b>Restwert (€):</b></label><br>
-                                <input type="number" id="afa-restwert" value="0" class="selbsttest-input" style="width: 150px;">
-                                <button class="selbsttest-btn" onclick="berechneAfA()">BERECHNEN</button>
-                                <div id="afa-result" style="margin-top: 15px;"></div>
+                                <div class="rechner-grid">
+                                    <div class="rechner-eingabe">
+                                        <label><b>Anschaffungskosten (€):</b></label><br>
+                                        <input type="number" id="afa-anschaffung" value="12000" class="selbsttest-input" style="width: 150px;"><br><br>
+                                        <label><b>Nutzungsdauer (Jahre):</b></label><br>
+                                        <input type="number" id="afa-nutzung" min="1" value="3" class="selbsttest-input" style="width: 100px;"><br><br>
+                                        <label><b>Restwert (€):</b></label><br>
+                                        <input type="number" id="afa-restwert" value="0" class="selbsttest-input" style="width: 150px;">
+                                        <button class="selbsttest-btn" onclick="berechneAfA()">BERECHNEN</button>
+                                        <div id="afa-result" style="margin-top: 15px;"></div>
+                                    </div>
+                                    <div class="rechner-formeln">
+                                        <h4>Formeln & Rechenweg</h4>
+                                        <div class="formel">
+                                            <div class="formel-titel">Lineare Abschreibung (AfA)</div>
+                                            <code>AfA = (AK - RW) ÷ ND</code><br>
+                                            AK = Anschaffungskosten<br>
+                                            RW = Restwert<br>
+                                            ND = Nutzungsdauer
+                                        </div>
+                                        <div class="formel">
+                                            <div class="formel-titel">Beispiel</div>
+                                            AK = 12.000 €, ND = 3 Jahre, RW = 0 €<br>
+                                            <code>AfA = (12.000 - 0) ÷ 3</code><br>
+                                            = <b>4.000 € pro Jahr</b>
+                                        </div>
+                                        <div class="formel">
+                                            <div class="formel-titel">Abschreibungssatz</div>
+                                            <code>Satz = 100% ÷ ND</code><br>
+                                            z.B. 3 Jahre: 100% ÷ 3 = <b>33,33%</b>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="rechenaufgabe-box">
                             <div class="aufgabe-header">Break-Even-Rechner</div>
                             <div class="aufgabe-content">
-                                <label><b>Fixkosten gesamt (€):</b></label><br>
-                                <input type="number" id="bep-fixkosten" value="50000" class="selbsttest-input" style="width: 150px;"><br><br>
-                                <label><b>Verkaufspreis pro Stück (€):</b></label><br>
-                                <input type="number" id="bep-preis" value="120" class="selbsttest-input" style="width: 150px;"><br><br>
-                                <label><b>Variable Kosten pro Stück (€):</b></label><br>
-                                <input type="number" id="bep-varkosten" value="70" class="selbsttest-input" style="width: 150px;">
-                                <button class="selbsttest-btn" onclick="berechneBreakEven()">BERECHNEN</button>
-                                <div id="bep-result" style="margin-top: 15px;"></div>
+                                <div class="rechner-grid">
+                                    <div class="rechner-eingabe">
+                                        <label><b>Fixkosten gesamt (€):</b></label><br>
+                                        <input type="number" id="bep-fixkosten" value="50000" class="selbsttest-input" style="width: 150px;"><br><br>
+                                        <label><b>Verkaufspreis pro Stück (€):</b></label><br>
+                                        <input type="number" id="bep-preis" value="120" class="selbsttest-input" style="width: 150px;"><br><br>
+                                        <label><b>Variable Kosten pro Stück (€):</b></label><br>
+                                        <input type="number" id="bep-varkosten" value="70" class="selbsttest-input" style="width: 150px;">
+                                        <button class="selbsttest-btn" onclick="berechneBreakEven()">BERECHNEN</button>
+                                        <div id="bep-result" style="margin-top: 15px;"></div>
+                                    </div>
+                                    <div class="rechner-formeln">
+                                        <h4>Formeln & Rechenweg</h4>
+                                        <div class="formel">
+                                            <div class="formel-titel">1. Deckungsbeitrag (db)</div>
+                                            <code>db = Verkaufspreis - variable Kosten</code><br>
+                                            z.B. 120 € - 70 € = <b>50 €</b>
+                                        </div>
+                                        <div class="formel">
+                                            <div class="formel-titel">2. Break-Even-Point (Menge)</div>
+                                            <code>BEP = Fixkosten ÷ db</code><br>
+                                            z.B. 50.000 € ÷ 50 € = <b>1.000 Stück</b>
+                                        </div>
+                                        <div class="formel">
+                                            <div class="formel-titel">3. Umsatz am BEP</div>
+                                            <code>Umsatz = BEP × Verkaufspreis</code><br>
+                                            z.B. 1.000 × 120 € = <b>120.000 €</b>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -13028,7 +13109,7 @@ AUSGABE summe
                                 </tbody>
                             </table>
                             
-                            <div class="aufklapp-loesung">
+                            <div class="loesung-box">
                                 <div class="loesung-header">
                                     <span>Lösung anzeigen</span>
                                     <span class="loesung-toggle">▼</span>
@@ -13243,7 +13324,7 @@ Zeitüberschreitung der Anforderung
                                 </div>
                             </div>
                             
-                            <div class="aufklapp-loesung">
+                            <div class="loesung-box">
                                 <div class="loesung-header">
                                     <span>Lösung anzeigen</span>
                                     <span class="loesung-toggle">▼</span>
@@ -13292,7 +13373,7 @@ Address: 192.168.1.1
                                 </div>
                             </div>
                             
-                            <div class="aufklapp-loesung">
+                            <div class="loesung-box">
                                 <div class="loesung-header">
                                     <span>Lösung anzeigen</span>
                                     <span class="loesung-toggle">▼</span>
@@ -13857,8 +13938,1039 @@ Address: 192.168.1.1
             </div>
         </div>
 
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- FALLSTUDIE - PRAXISFALL -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <span id="fallstudie">/ Praxis-Fallstudie <span class="badge-relevant badge-top">INTERAKTIV</span></span>
+        <hr>
+        
+        <div class="case-study" id="Fallstudien">
+            <!-- Header -->
+            <div class="case-study-header">
+                <span class="case-study-badge">[INTERAKTIV] Fallstudie 1</span>
+                <h2 class="case-study-title">IT-Arbeitsplatz einrichten bei TechStart GmbH</h2>
+                <p class="case-study-company">Fiktives Szenario wie in der IHK AP1-Prüfung</p>
+            </div>
+            
+            <!-- Fortschrittsanzeige -->
+            <div class="case-progress">
+                <div class="case-progress-header">
+                    <span class="case-progress-label">Dein Fortschritt</span>
+                    <span class="case-progress-points" id="case-points">0 / 100 Punkte</span>
+                </div>
+                <div class="case-progress-bar">
+                    <div class="case-progress-fill" id="case-progress-fill"></div>
+                </div>
+            </div>
+            
+            <!-- Szenario -->
+            <div class="case-scenario">
+                <div class="case-scenario-title">[SZENARIO] Ausgangssituation</div>
+                <div class="case-scenario-content">
+                    <p>
+                        Du bist Auszubildender im IT-Bereich bei der <span class="case-highlight">TechStart GmbH</span>, einem mittelständischen Softwareentwicklungsunternehmen mit <span class="case-highlight">85 Mitarbeitern</span> in München. Das Unternehmen entwickelt webbasierte ERP-Lösungen für kleine und mittlere Unternehmen.
+                    </p>
+                    <p>
+                        Die Geschäftsführerin Frau Dr. Schneider plant die Einstellung von <span class="case-highlight">5 neuen Entwicklern</span>, die im <span class="case-highlight">Hybrid-Modell</span> arbeiten sollen (3 Tage Büro, 2 Tage Home-Office). Du wirst beauftragt, die IT-Infrastruktur für diese neuen Arbeitsplätze zu planen und entsprechende Empfehlungen auszuarbeiten.
+                    </p>
+                    
+                    <div class="case-data-box">
+                        <div class="case-data-title">[DATEN] Rahmendaten</div>
+                        <table class="vergleichs-tabelle">
+                            <tr>
+                                <td><b>Budget pro Arbeitsplatz:</b></td>
+                                <td>2.500 € (Hardware) + 500 € (Software-Lizenzen)</td>
+                            </tr>
+                            <tr>
+                                <td><b>Zeitrahmen:</b></td>
+                                <td>Einrichtung muss in 6 Wochen abgeschlossen sein</td>
+                            </tr>
+                            <tr>
+                                <td><b>Bestehendes Netzwerk:</b></td>
+                                <td>192.168.10.0/24, DHCP über Windows Server 2022</td>
+                            </tr>
+                            <tr>
+                                <td><b>Sicherheitsanforderung:</b></td>
+                                <td>ISO 27001-Zertifizierung wird angestrebt</td>
+                            </tr>
+                            <tr>
+                                <td><b>Datenschutz:</b></td>
+                                <td>Verarbeitung personenbezogener Kundendaten (DSGVO relevant)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Missionen/Aufgaben -->
+            <div class="case-missions">
+                
+                <!-- Mission 1: Netzwerk -->
+                <div class="case-mission active" id="mission-1" data-points="20">
+                    <div class="case-mission-header" onclick="toggleMission(1)">
+                        <div class="case-mission-number"><span>1</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Netzwerk-Konfiguration</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Netzwerk</span>
+                                <span class="case-mission-tag">Subnetting</span>
+                                <span class="case-mission-points">20 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Das bestehende Netzwerk <b>192.168.10.0/24</b> soll für die neuen Entwickler-Arbeitsplätze genutzt werden. Aktuell sind 60 IP-Adressen vergeben.</p>
+                            <p><b>Aufgabe:</b> Berechne, ob das Subnetz ausreichend Kapazität hat und welche IP-Adressen für die 5 neuen Arbeitsplätze verfügbar wären.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Wie viele Host-Adressen bietet ein /24-Netzwerk?</label>
+                            <input type="text" class="case-answer-input" id="m1-hosts" placeholder="Anzahl Hosts..." data-correct="254">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Wie viele IP-Adressen sind noch verfügbar (bei 60 vergebenen)?</label>
+                            <input type="text" class="case-answer-input" id="m1-available" placeholder="Verfügbare IPs..." data-correct="194">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche ist die Netzwerkadresse des Subnetzes?</label>
+                            <input type="text" class="case-answer-input" id="m1-network" placeholder="Netzwerkadresse..." data-correct="192.168.10.0">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche ist die Broadcast-Adresse?</label>
+                            <input type="text" class="case-answer-input" id="m1-broadcast" placeholder="Broadcast..." data-correct="192.168.10.255">
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Prüfungstipp:</strong>
+                            Bei /24 ist die Subnetzmaske 255.255.255.0. Das bedeutet: 2^8 = 256 Adressen, minus Netzwerk- und Broadcast-Adresse = 254 nutzbare Host-Adressen.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback-1"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission(1)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint(1)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 2: Hardware-Auswahl -->
+                <div class="case-mission" id="mission-2" data-points="20">
+                    <div class="case-mission-header" onclick="toggleMission(2)">
+                        <div class="case-mission-number"><span>2</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Hardware-Auswahl & Wirtschaftlichkeit</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Hardware</span>
+                                <span class="case-mission-tag">Wirtschaftlichkeit</span>
+                                <span class="case-mission-points">20 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Für die Entwickler-Arbeitsplätze stehen zwei Hardware-Optionen zur Auswahl:</p>
+                            
+                            <table class="vergleichs-tabelle">
+                                <thead>
+                                    <tr>
+                                        <th>Kriterium</th>
+                                        <th>Option A: Notebook</th>
+                                        <th>Option B: Desktop-PC</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Anschaffungspreis</td>
+                                        <td>1.800 €</td>
+                                        <td>1.200 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monitor (extern)</td>
+                                        <td>400 €</td>
+                                        <td>400 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Docking Station</td>
+                                        <td>200 €</td>
+                                        <td>nicht nötig</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobilität</td>
+                                        <td>Ja (Home-Office)</td>
+                                        <td>Nein</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stromverbrauch/Jahr</td>
+                                        <td>ca. 50 €</td>
+                                        <td>ca. 120 €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die Gesamtkosten pro Arbeitsplatz für Option A (Notebook):</label>
+                            <input type="text" class="case-answer-input" id="m2-costA" placeholder="Gesamtkosten Option A..." data-correct="2400|2.400|2400€|2.400€|2400 €|2.400 €">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die Gesamtkosten pro Arbeitsplatz für Option B (Desktop):</label>
+                            <input type="text" class="case-answer-input" id="m2-costB" placeholder="Gesamtkosten Option B..." data-correct="1600|1.600|1600€|1.600€|1600 €|1.600 €">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Option empfiehlst du für das Hybrid-Modell und warum? (Freitextantwort)</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m2-recommendation" placeholder="Deine Begründung..."></textarea>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Zusammenhang verstehen:</strong>
+                            Bei der IHK geht es nie nur um den Preis! Berücksichtige: Anforderungen des Szenarios (Hybrid-Modell!), TCO (Total Cost of Ownership inkl. Stromkosten über Jahre), und die Begründung muss zum Szenario passen.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback-2"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission(2)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint(2)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 3: IT-Sicherheit -->
+                <div class="case-mission" id="mission-3" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission(3)">
+                        <div class="case-mission-number"><span>3</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">IT-Sicherheit & Home-Office</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Sicherheit</span>
+                                <span class="case-mission-tag">CIA</span>
+                                <span class="case-mission-tag">VPN</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Die Entwickler arbeiten an sensiblen Kundenprojekten und müssen auch im Home-Office sicher auf das Firmennetzwerk zugreifen können. Du sollst Sicherheitsmaßnahmen vorschlagen.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welches Schutzziel der CIA-Triade ist beim Fernzugriff auf Kundendaten am kritischsten?</label>
+                            <div class="case-mc-options" id="m3-cia">
+                                <div class="case-mc-option" data-value="c" onclick="selectMcOption(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span><b>Confidentiality</b> – Vertraulichkeit der Daten</span>
+                                </div>
+                                <div class="case-mc-option" data-value="i" onclick="selectMcOption(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span><b>Integrity</b> – Unveränderbarkeit der Daten</span>
+                                </div>
+                                <div class="case-mc-option" data-value="a" onclick="selectMcOption(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span><b>Availability</b> – Verfügbarkeit der Systeme</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Technologie ermöglicht einen sicheren, verschlüsselten Tunnel ins Firmennetzwerk?</label>
+                            <input type="text" class="case-answer-input" id="m3-vpn" placeholder="Technologie..." data-correct="VPN|Virtual Private Network">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Nenne 3 technische UND 2 organisatorische Maßnahmen für sichere Home-Office-Arbeitsplätze:</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m3-measures" placeholder="Technische Maßnahmen:&#10;1. ...&#10;2. ...&#10;3. ...&#10;&#10;Organisatorische Maßnahmen:&#10;1. ...&#10;2. ..."></textarea>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Typische IHK-Prüfungsfrage:</strong>
+                            „Nennen Sie technische und organisatorische Maßnahmen..." – hier erwarten Prüfer konkrete Beispiele aus beiden Kategorien. Technisch: VPN, Festplattenverschlüsselung, Firewall, 2FA. Organisatorisch: Passwortrichtlinie, Clean Desk Policy, Schulungen.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback-3"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission(3)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint(3)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 4: DSGVO -->
+                <div class="case-mission" id="mission-4" data-points="20">
+                    <div class="case-mission-header" onclick="toggleMission(4)">
+                        <div class="case-mission-number"><span>4</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Datenschutz & DSGVO</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">DSGVO</span>
+                                <span class="case-mission-tag">TOM</span>
+                                <span class="case-mission-points">20 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Die TechStart GmbH verarbeitet personenbezogene Daten ihrer Kunden (Namen, E-Mail-Adressen, Vertragsdaten). Die neuen Entwickler werden Zugriff auf diese Daten haben.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Rechtsgrundlage nach Art. 6 DSGVO rechtfertigt die Verarbeitung der Kundendaten am wahrscheinlichsten?</label>
+                            <div class="case-mc-options" id="m4-legal">
+                                <div class="case-mc-option" data-value="a" onclick="selectMcOption(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Einwilligung der betroffenen Person</span>
+                                </div>
+                                <div class="case-mc-option" data-value="b" onclick="selectMcOption(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Vertragserfüllung – Daten werden zur Vertragsabwicklung benötigt</span>
+                                </div>
+                                <div class="case-mc-option" data-value="c" onclick="selectMcOption(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Berechtigtes Interesse des Unternehmens</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Was bedeutet die Abkürzung „TOM" im Datenschutz-Kontext?</label>
+                            <input type="text" class="case-answer-input" id="m4-tom" placeholder="TOM steht für..." data-correct="Technisch-organisatorische Maßnahmen|Technische und organisatorische Maßnahmen|technisch organisatorische Maßnahmen">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Ein Kunde fordert Auskunft über seine gespeicherten Daten. Welches Betroffenenrecht übt er aus?</label>
+                            <input type="text" class="case-answer-input" id="m4-right" placeholder="Recht auf..." data-correct="Auskunft|Auskunftsrecht|Recht auf Auskunft">
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Zusammenhang DSGVO / IT-Sicherheit:</strong>
+                            Die TOM nach Art. 32 DSGVO sind die Brücke zwischen Datenschutz und IT-Sicherheit. Verschlüsselung, Zugriffskontrolle, Backup – diese Maßnahmen erfüllen sowohl CIA-Schutzziele als auch DSGVO-Anforderungen!
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback-4"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission(4)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint(4)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 5: Projektplanung -->
+                <div class="case-mission" id="mission-5" data-points="15">
+                    <div class="case-mission-header" onclick="toggleMission(5)">
+                        <div class="case-mission-number"><span>5</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Projektplanung & Abschluss</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Projektmanagement</span>
+                                <span class="case-mission-tag">Dokumentation</span>
+                                <span class="case-mission-points">15 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Die Einrichtung der 5 Arbeitsplätze soll als kleines Projekt geplant werden. Du sollst die wichtigsten Phasen und Dokumente identifizieren.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welches Dokument beschreibt die Anforderungen aus Kundensicht (hier: Frau Dr. Schneider)?</label>
+                            <input type="text" class="case-answer-input" id="m5-lasten" placeholder="Dokument..." data-correct="Lastenheft|das Lastenheft">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welches Dokument beschreibt, WIE du als IT-Dienstleister die Anforderungen umsetzt?</label>
+                            <input type="text" class="case-answer-input" id="m5-pflichten" placeholder="Dokument..." data-correct="Pflichtenheft|das Pflichtenheft">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Ordne die Projektphasen in die richtige Reihenfolge (1-4):</label>
+                            <div class="case-mc-options" id="m5-phases">
+                                <div class="case-mc-option" style="cursor: default;">
+                                    <input type="number" min="1" max="4" class="case-answer-input" style="width: 50px; text-align: center;" id="m5-p1" data-correct="2">
+                                    <span>Planungsphase</span>
+                                </div>
+                                <div class="case-mc-option" style="cursor: default;">
+                                    <input type="number" min="1" max="4" class="case-answer-input" style="width: 50px; text-align: center;" id="m5-p2" data-correct="3">
+                                    <span>Durchführungsphase</span>
+                                </div>
+                                <div class="case-mc-option" style="cursor: default;">
+                                    <input type="number" min="1" max="4" class="case-answer-input" style="width: 50px; text-align: center;" id="m5-p3" data-correct="1">
+                                    <span>Definitionsphase</span>
+                                </div>
+                                <div class="case-mc-option" style="cursor: default;">
+                                    <input type="number" min="1" max="4" class="case-answer-input" style="width: 50px; text-align: center;" id="m5-p4" data-correct="4">
+                                    <span>Abschlussphase</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Merksatz:</strong>
+                            „Kunde = Last, Dienstleister = Pflicht" – Das Lastenheft kommt vom Auftraggeber, das Pflichtenheft vom Auftragnehmer. 4-Phasen: Definition → Planung → Durchführung → Abschluss.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback-5"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission(5)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint(5)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Endergebnis -->
+            <div class="case-result" id="case-result">
+                <div class="case-result-title">Fallstudie abgeschlossen!</div>
+                <div class="case-result-score" id="case-final-score">0 / 100 Punkte</div>
+                <div class="case-result-grade" id="case-grade"></div>
+                <button class="case-btn" style="margin-top: var(--spacing-xl); background: rgba(255,255,255,0.2);" onclick="resetCaseStudy('techstart')">Fallstudie zurücksetzen</button>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- FALLSTUDIE 2 - NETZWERK-MIGRATION -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div class="case-study" id="case-dataflow">
+            <!-- Header -->
+            <div class="case-study-header">
+                <span class="case-study-badge">[INTERAKTIV] Fallstudie 2</span>
+                <h2 class="case-study-title">Netzwerk-Migration bei DataFlow AG</h2>
+                <p class="case-study-company">Schwerpunkt: Netzwerk, Sicherheit, Projektplanung</p>
+            </div>
+            
+            <!-- Fortschrittsanzeige -->
+            <div class="case-progress">
+                <div class="case-progress-header">
+                    <span class="case-progress-label">Dein Fortschritt</span>
+                    <span class="case-progress-points" id="case2-points">0 / 100 Punkte</span>
+                </div>
+                <div class="case-progress-bar">
+                    <div class="case-progress-fill" id="case2-progress-fill"></div>
+                </div>
+            </div>
+            
+            <!-- Szenario -->
+            <div class="case-scenario">
+                <div class="case-scenario-title">[SZENARIO] Ausgangssituation</div>
+                <div class="case-scenario-content">
+                    <p>
+                        Du arbeitest als IT-Systemintegrator bei der <span class="case-highlight">DataFlow AG</span>, einem Logistikunternehmen mit <span class="case-highlight">250 Mitarbeitern</span> an 3 Standorten (Hauptsitz Hamburg, Niederlassungen in Berlin und München).
+                    </p>
+                    <p>
+                        Das Management hat beschlossen, die <span class="case-highlight">veraltete Netzwerkinfrastruktur</span> zu modernisieren. Derzeit nutzen alle Standorte separate Netzwerke ohne einheitliche Struktur. Ziel ist ein <span class="case-highlight">standortübergreifendes Unternehmensnetzwerk</span> mit zentraler Administration.
+                    </p>
+                    
+                    <div class="case-data-box">
+                        <div class="case-data-title">[DATEN] Rahmendaten</div>
+                        <table class="vergleichs-tabelle">
+                            <tr>
+                                <td><b>Standort Hamburg:</b></td>
+                                <td>150 Clients, 10 Server, aktuell 192.168.1.0/24</td>
+                            </tr>
+                            <tr>
+                                <td><b>Standort Berlin:</b></td>
+                                <td>60 Clients, 2 Server, aktuell 192.168.1.0/24 (Konflikt!)</td>
+                            </tr>
+                            <tr>
+                                <td><b>Standort München:</b></td>
+                                <td>40 Clients, 1 Server, aktuell 10.0.0.0/24</td>
+                            </tr>
+                            <tr>
+                                <td><b>Budget:</b></td>
+                                <td>75.000 € für Hardware und Dienstleistungen</td>
+                            </tr>
+                            <tr>
+                                <td><b>Zeitrahmen:</b></td>
+                                <td>Migration muss in 3 Monaten abgeschlossen sein</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Missionen/Aufgaben -->
+            <div class="case-missions">
+                
+                <!-- Mission 1: IP-Planung -->
+                <div class="case-mission active" id="mission2-1" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission2(1)">
+                        <div class="case-mission-number"><span>1</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">IP-Adressplanung</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Subnetting</span>
+                                <span class="case-mission-tag">VLSM</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Du sollst ein neues IP-Adressschema für alle drei Standorte entwickeln. Das Unternehmen hat den privaten Adressbereich <b>172.16.0.0/16</b> zugewiesen bekommen.</p>
+                            <p><b>Aufgabe:</b> Plane die Subnetze so, dass jeder Standort einen eigenen Adressbereich erhält und genügend Reserven für Wachstum vorhanden sind.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Warum ist der aktuelle Zustand (HH und Berlin beide 192.168.1.0/24) problematisch?</label>
+                            <input type="text" class="case-answer-input" id="m2-1-problem" placeholder="Problem..." data-correct="IP-Konflikt|Adresskonflikt|gleiche Adressen|Routing|nicht routbar">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Subnetz für Hamburg (150 Clients + Reserve): Welches /xx wählst du aus 172.16.0.0?</label>
+                            <input type="text" class="case-answer-input" id="m2-1-hh" placeholder="/xx..." data-correct="/24|24|/23|23">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welchen IP-Bereich schlägst du für Hamburg vor?</label>
+                            <input type="text" class="case-answer-input" id="m2-1-hh-range" placeholder="172.16.x.0/xx..." data-correct="172.16.1.0/24|172.16.0.0/24|172.16.1.0/23|172.16.0.0/23">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Technologie verbindet die Standorte sicher über das Internet?</label>
+                            <input type="text" class="case-answer-input" id="m2-1-vpn" placeholder="Technologie..." data-correct="VPN|Site-to-Site VPN|IPsec VPN|S2S VPN">
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Subnetting-Strategie:</strong>
+                            Bei 150 Hosts brauchst du mindestens /24 (254 Hosts). Für Wachstum /23 (510 Hosts). Standorte sollten in unterschiedlichen Subnetzbereichen liegen (z.B. 172.16.1.0, 172.16.2.0, 172.16.3.0).
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback2-1"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission2(1)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint2(1)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 2: Sicherheit -->
+                <div class="case-mission" id="mission2-2" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission2(2)">
+                        <div class="case-mission-number"><span>2</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Netzwerksicherheit</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Firewall</span>
+                                <span class="case-mission-tag">VLAN</span>
+                                <span class="case-mission-tag">DMZ</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Am Hauptstandort Hamburg soll ein Webserver für Kunden erreichbar sein. Gleichzeitig müssen die internen Systeme geschützt werden.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">In welche Zone sollte der Webserver platziert werden?</label>
+                            <input type="text" class="case-answer-input" id="m2-2-dmz" placeholder="Zone..." data-correct="DMZ|Demilitarisierte Zone|demilitarized zone">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Portnummern müssen für HTTP und HTTPS in der Firewall freigegeben werden?</label>
+                            <input type="text" class="case-answer-input" id="m2-2-ports" placeholder="Ports..." data-correct="80 und 443|80, 443|80/443|443 und 80">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Mit welcher Technologie kannst du das Netzwerk in logische Segmente trennen (z.B. Buchhaltung, Lager, Verwaltung)?</label>
+                            <input type="text" class="case-answer-input" id="m2-2-vlan" placeholder="Technologie..." data-correct="VLAN|Virtual LAN|Virtual Local Area Network">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Auf welcher OSI-Schicht arbeitet eine Firewall, die Pakete nach IP und Port filtert?</label>
+                            <input type="text" class="case-answer-input" id="m2-2-osi" placeholder="Schicht..." data-correct="3|3 und 4|Schicht 3|Layer 3|Vermittlung|Netzwerkschicht|3-4">
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] DMZ-Konzept:</strong>
+                            Die DMZ ist ein separates Netzwerksegment zwischen internem Netz und Internet. Server dort sind von außen erreichbar, aber durch zweite Firewall vom internen Netz getrennt.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback2-2"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission2(2)">Antworten prüfen</button>
+                            <button class="calc-btn case-btn-hint" onclick="showHint2(2)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 3: Hardware -->
+                <div class="case-mission" id="mission2-3" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission2(3)">
+                        <div class="case-mission-number"><span>3</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Hardware-Beschaffung</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Switch</span>
+                                <span class="case-mission-tag">Router</span>
+                                <span class="case-mission-tag">Wirtschaftlichkeit</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Für Hamburg werden neue Netzwerkkomponenten benötigt:</p>
+                            <table class="vergleichs-tabelle">
+                                <thead>
+                                    <tr><th>Komponente</th><th>Anbieter A</th><th>Anbieter B</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Managed Switch 48-Port</td><td>1.200 €</td><td>1.350 €</td></tr>
+                                    <tr><td>Router mit VPN</td><td>2.800 €</td><td>2.500 €</td></tr>
+                                    <tr><td>Firewall (UTM)</td><td>3.500 €</td><td>3.200 €</td></tr>
+                                    <tr><td>Support (3 Jahre)</td><td>inklusive</td><td>+800 €</td></tr>
+                                    <tr><td>Lieferzeit</td><td>2 Wochen</td><td>4 Wochen</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die Gesamtkosten für Anbieter A:</label>
+                            <input type="text" class="case-answer-input" id="m2-3-costA" placeholder="Kosten A..." data-correct="7500|7.500|7500€|7.500€">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die Gesamtkosten für Anbieter B (inkl. Support):</label>
+                            <input type="text" class="case-answer-input" id="m2-3-costB" placeholder="Kosten B..." data-correct="7850|7.850|7850€|7.850€">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welchen Anbieter empfiehlst du und warum? (Beachte den Zeitrahmen!)</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m2-3-recommend" placeholder="Empfehlung mit Begründung..."></textarea>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Angebotsvergleich:</strong>
+                            Nicht nur auf den Preis schauen! TCO, Lieferzeit, Support, Kompatibilität sind wichtige Faktoren. Bei engen Zeitplänen kann kürzere Lieferzeit wichtiger sein als geringe Preisdifferenz.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback2-3"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission2(3)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint2(3)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 4: Projektplanung -->
+                <div class="case-mission" id="mission2-4" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission2(4)">
+                        <div class="case-mission-number"><span>4</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Projektplanung & Risiken</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Netzplan</span>
+                                <span class="case-mission-tag">Risikomanagement</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Die Migration soll geplant werden. Folgende Arbeitspakete wurden identifiziert:</p>
+                            <ul>
+                                <li>A: Planung & Design (2 Wochen)</li>
+                                <li>B: Hardware-Beschaffung (3 Wochen, nach A)</li>
+                                <li>C: Verkabelung Hamburg (1 Woche, nach B)</li>
+                                <li>D: Konfiguration Router/Firewall (2 Wochen, nach B)</li>
+                                <li>E: VPN-Einrichtung (1 Woche, nach D)</li>
+                                <li>F: Migration Clients (2 Wochen, nach C und E)</li>
+                                <li>G: Test & Abnahme (1 Woche, nach F)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Wie lange dauert das Projekt mindestens (kritischer Pfad)?</label>
+                            <input type="text" class="case-answer-input" id="m2-4-duration" placeholder="Wochen..." data-correct="11|11 Wochen|elf">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welcher Pfad ist der kritische Pfad? (Buchstaben mit Pfeilen)</label>
+                            <input type="text" class="case-answer-input" id="m2-4-path" placeholder="A -> B -> ..." data-correct="A-B-D-E-F-G|A->B->D->E->F->G|ABDEFG">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Hat Arbeitspaket C Pufferzeit? Wenn ja, wie viele Wochen?</label>
+                            <input type="text" class="case-answer-input" id="m2-4-buffer" placeholder="Puffer in Wochen..." data-correct="2|2 Wochen|ja, 2">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Nenne ein Risiko bei der Migration und eine Gegenmaßnahme:</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m2-4-risk" placeholder="Risiko: ...&#10;Gegenmaßnahme: ..."></textarea>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Kritischer Pfad:</strong>
+                            Der kritische Pfad ist die längste Kette ohne Pufferzeit. A(2) + B(3) + D(2) + E(1) + F(2) + G(1) = 11 Wochen. C kann parallel zu D+E laufen und hat Puffer.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback2-4"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission2(4)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint2(4)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Endergebnis -->
+            <div class="case-result" id="case2-result">
+                <div class="case-result-title">Fallstudie abgeschlossen!</div>
+                <div class="case-result-score" id="case2-final-score">0 / 100 Punkte</div>
+                <div class="case-result-grade" id="case2-grade"></div>
+                <button class="case-btn" style="margin-top: var(--spacing-xl); background: rgba(255,255,255,0.2);" onclick="resetCaseStudy('dataflow')">Fallstudie zurücksetzen</button>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- FALLSTUDIE 3 - DSGVO & WIRTSCHAFT -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div class="case-study" id="case-medtech">
+            <!-- Header -->
+            <div class="case-study-header">
+                <span class="case-study-badge">[INTERAKTIV] Fallstudie 3</span>
+                <h2 class="case-study-title">Datenschutz-Audit bei MedTech Solutions</h2>
+                <p class="case-study-company">Schwerpunkt: DSGVO, Wirtschaftlichkeit, Qualitätsmanagement</p>
+            </div>
+            
+            <!-- Fortschrittsanzeige -->
+            <div class="case-progress">
+                <div class="case-progress-header">
+                    <span class="case-progress-label">Dein Fortschritt</span>
+                    <span class="case-progress-points" id="case3-points">0 / 100 Punkte</span>
+                </div>
+                <div class="case-progress-bar">
+                    <div class="case-progress-fill" id="case3-progress-fill"></div>
+                </div>
+            </div>
+            
+            <!-- Szenario -->
+            <div class="case-scenario">
+                <div class="case-scenario-title">[SZENARIO] Ausgangssituation</div>
+                <div class="case-scenario-content">
+                    <p>
+                        Du bist IT-Fachkraft bei <span class="case-highlight">MedTech Solutions GmbH</span>, einem Unternehmen für medizinische Software mit <span class="case-highlight">45 Mitarbeitern</span>. Das Unternehmen entwickelt eine Patientenverwaltungssoftware, die von <span class="case-highlight">Arztpraxen und kleinen Kliniken</span> genutzt wird.
+                    </p>
+                    <p>
+                        Ein <span class="case-highlight">Datenschutz-Audit</span> steht bevor. Der Geschäftsführer Herr Weber bittet dich, die IT-Systeme auf DSGVO-Konformität zu prüfen und ggf. Verbesserungen vorzuschlagen. Außerdem soll ein <span class="case-highlight">neues Backup-System</span> angeschafft werden.
+                    </p>
+                    
+                    <div class="case-data-box">
+                        <div class="case-data-title">[DATEN] Rahmendaten</div>
+                        <table class="vergleichs-tabelle">
+                            <tr>
+                                <td><b>Verarbeitete Daten:</b></td>
+                                <td>Name, Adresse, Geburtsdatum, Krankenversicherung, Diagnosen</td>
+                            </tr>
+                            <tr>
+                                <td><b>Anzahl Datensätze:</b></td>
+                                <td>ca. 50.000 Patientendaten</td>
+                            </tr>
+                            <tr>
+                                <td><b>Aktuelles Backup:</b></td>
+                                <td>Wöchentlich auf externe Festplatte, keine Verschlüsselung</td>
+                            </tr>
+                            <tr>
+                                <td><b>Budget Backup-System:</b></td>
+                                <td>15.000 € einmalig + max. 500 €/Monat laufend</td>
+                            </tr>
+                            <tr>
+                                <td><b>Nutzungsdauer Hardware:</b></td>
+                                <td>5 Jahre (für AfA-Berechnung)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Missionen/Aufgaben -->
+            <div class="case-missions">
+                
+                <!-- Mission 1: DSGVO-Analyse -->
+                <div class="case-mission active" id="mission3-1" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission3(1)">
+                        <div class="case-mission-number"><span>1</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">DSGVO-Analyse</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">DSGVO</span>
+                                <span class="case-mission-tag">Gesundheitsdaten</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Die verarbeiteten Patientendaten erfordern besonderen Schutz nach DSGVO.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Unter welchen Artikel der DSGVO fallen Gesundheitsdaten (besondere Kategorien)?</label>
+                            <input type="text" class="case-answer-input" id="m3-1-article" placeholder="Art. ..." data-correct="Art. 9|Artikel 9|9|Art 9">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Rechtsgrundlage erlaubt die Verarbeitung von Patientendaten durch Arztpraxen?</label>
+                            <div class="case-mc-options" id="m3-1-legal">
+                                <div class="case-mc-option" data-value="a" onclick="selectMcOption3(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Einwilligung des Patienten</span>
+                                </div>
+                                <div class="case-mc-option" data-value="b" onclick="selectMcOption3(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Behandlungsvertrag (Vertragserfüllung)</span>
+                                </div>
+                                <div class="case-mc-option" data-value="c" onclick="selectMcOption3(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Berechtigtes Interesse der Praxis</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Das aktuelle Backup ist unverschlüsselt. Welches Schutzziel wird dadurch verletzt?</label>
+                            <input type="text" class="case-answer-input" id="m3-1-cia" placeholder="Schutzziel..." data-correct="Vertraulichkeit|Confidentiality|C">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Nenne 3 technisch-organisatorische Maßnahmen (TOM), die für Gesundheitsdaten erforderlich sind:</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m3-1-tom" placeholder="1. ...&#10;2. ...&#10;3. ..."></textarea>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Gesundheitsdaten:</strong>
+                            Art. 9 DSGVO regelt besondere Kategorien personenbezogener Daten. Die Verarbeitung ist grundsätzlich verboten, außer es greift eine Ausnahme wie Behandlungsvertrag (Art. 9 Abs. 2 lit. h).
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback3-1"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission3(1)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint3(1)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 2: Backup-Konzept -->
+                <div class="case-mission" id="mission3-2" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission3(2)">
+                        <div class="case-mission-number"><span>2</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Backup-Konzept</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">Backup</span>
+                                <span class="case-mission-tag">3-2-1 Regel</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Ein professionelles Backup-Konzept soll entwickelt werden.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Was bedeutet die "3-2-1-Regel" beim Backup?</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m3-2-rule" placeholder="3 = ...&#10;2 = ...&#10;1 = ..."></textarea>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Bei täglichem inkrementellem Backup und wöchentlichem Vollbackup: Wie viele Bänder/Medien brauchst du für eine Woche (So Voll, Mo-Sa inkrementell)?</label>
+                            <input type="text" class="case-answer-input" id="m3-2-media" placeholder="Anzahl..." data-correct="7|sieben">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welches Backup-Verfahren sichert nur die Änderungen seit dem letzten Vollbackup?</label>
+                            <div class="case-mc-options" id="m3-2-type">
+                                <div class="case-mc-option" data-value="a" onclick="selectMcOption3(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Inkrementell</span>
+                                </div>
+                                <div class="case-mc-option" data-value="b" onclick="selectMcOption3(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Differentiell</span>
+                                </div>
+                                <div class="case-mc-option" data-value="c" onclick="selectMcOption3(this)">
+                                    <div class="case-mc-checkbox"></div>
+                                    <span>Vollbackup</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Warum ist ein Offsite-Backup wichtig?</label>
+                            <input type="text" class="case-answer-input" id="m3-2-offsite" placeholder="Grund..." data-correct="Brand|Diebstahl|Katastrophe|Gebäudeschaden|Einbruch|Feuer|Standort">
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] Backup-Arten:</strong>
+                            Inkrementell = nur Änderungen seit letztem Backup (schnell, aber Restore braucht alle). Differentiell = Änderungen seit letztem Vollbackup (mehr Speicher, aber schnellerer Restore).
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback3-2"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission3(2)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint3(2)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 3: Wirtschaftlichkeit -->
+                <div class="case-mission" id="mission3-3" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission3(3)">
+                        <div class="case-mission-number"><span>3</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Wirtschaftlichkeitsberechnung</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">AfA</span>
+                                <span class="case-mission-tag">TCO</span>
+                                <span class="case-mission-tag">Make-or-Buy</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Zwei Backup-Lösungen stehen zur Auswahl:</p>
+                            <table class="vergleichs-tabelle">
+                                <thead>
+                                    <tr><th>Kriterium</th><th>Option A: NAS-System</th><th>Option B: Cloud-Backup</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Anschaffung</td><td>12.000 €</td><td>0 €</td></tr>
+                                    <tr><td>Monatliche Kosten</td><td>50 € (Strom, Wartung)</td><td>400 € (Abo)</td></tr>
+                                    <tr><td>Verschlüsselung</td><td>Zusatzmodul 500 €</td><td>inklusive</td></tr>
+                                    <tr><td>Offsite-Kopie</td><td>manuell extern lagern</td><td>automatisch (Rechenzentrum)</td></tr>
+                                </tbody>
+                            </table>
+                            <p>Nutzungsdauer: 5 Jahre</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die jährliche AfA für Option A (linear, Restwert 0):</label>
+                            <input type="text" class="case-answer-input" id="m3-3-afa" placeholder="AfA pro Jahr..." data-correct="2500|2.500|2500€|2.500€|2400|2.400">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die Gesamtkosten (TCO) für Option A über 5 Jahre:</label>
+                            <input type="text" class="case-answer-input" id="m3-3-tcoA" placeholder="TCO A..." data-correct="15500|15.500|15500€|15.500€">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Berechne die Gesamtkosten (TCO) für Option B über 5 Jahre:</label>
+                            <input type="text" class="case-answer-input" id="m3-3-tcoB" placeholder="TCO B..." data-correct="24000|24.000|24000€|24.000€">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche Option empfiehlst du? Begründe unter Berücksichtigung von DSGVO und Gesundheitsdaten:</label>
+                            <textarea class="case-answer-input case-answer-textarea" id="m3-3-recommend" placeholder="Empfehlung mit Begründung..."></textarea>
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] TCO-Berechnung:</strong>
+                            TCO = Anschaffung + (monatliche Kosten × 12 × Jahre) + Zusatzmodule. Bei Cloud: monatlich × 12 × 5 = 24.000 €. Bei NAS: 12.000 + 500 + (50 × 60) = 15.500 €.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback3-3"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission3(3)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint3(3)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mission 4: Qualitätsmanagement -->
+                <div class="case-mission" id="mission3-4" data-points="25">
+                    <div class="case-mission-header" onclick="toggleMission3(4)">
+                        <div class="case-mission-number"><span>4</span></div>
+                        <div class="case-mission-info">
+                            <div class="case-mission-title">Qualität & Dokumentation</div>
+                            <div class="case-mission-meta">
+                                <span class="case-mission-tag">QM</span>
+                                <span class="case-mission-tag">PDCA</span>
+                                <span class="case-mission-tag">Normen</span>
+                                <span class="case-mission-points">25 Punkte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-mission-content">
+                        <div class="case-mission-question">
+                            <p>Für das Audit muss die Qualitätssicherung dokumentiert werden.</p>
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Wofür stehen die Buchstaben im PDCA-Zyklus?</label>
+                            <input type="text" class="case-answer-input" id="m3-4-pdca" placeholder="P=..., D=..., C=..., A=..." data-correct="Plan Do Check Act|Planen Durchführen Kontrollieren Agieren|Plan-Do-Check-Act">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welche ISO-Norm beschreibt Anforderungen an Qualitätsmanagementsysteme?</label>
+                            <input type="text" class="case-answer-input" id="m3-4-iso" placeholder="ISO ..." data-correct="ISO 9001|9001|ISO9001">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Welches Dokument regelt die Pflichten eines externen IT-Dienstleisters für Wartung und Support?</label>
+                            <input type="text" class="case-answer-input" id="m3-4-sla" placeholder="Dokument..." data-correct="SLA|Service Level Agreement|Service-Level-Agreement">
+                        </div>
+                        
+                        <div class="case-answer-group">
+                            <label class="case-answer-label">Was muss bei einem externen Cloud-Anbieter für Backup zusätzlich abgeschlossen werden (DSGVO)?</label>
+                            <input type="text" class="case-answer-input" id="m3-4-avv" placeholder="Vertrag..." data-correct="AVV|Auftragsverarbeitungsvertrag|AV-Vertrag|Auftragsverarbeitung">
+                        </div>
+                        
+                        <div class="case-mission-hint">
+                            <strong>[TIPP] DSGVO & Cloud:</strong>
+                            Bei Auftragsverarbeitung (Cloud-Dienste) muss nach Art. 28 DSGVO ein AVV (Auftragsverarbeitungsvertrag) abgeschlossen werden. Der Cloud-Anbieter wird zum Auftragsverarbeiter.
+                        </div>
+                        
+                        <div class="case-feedback" id="feedback3-4"></div>
+                        
+                        <div class="case-mission-actions">
+                            <button class="case-btn case-btn-primary" onclick="checkMission3(4)">Antworten prüfen</button>
+                            <button class="case-btn case-btn-hint" onclick="showHint3(4)">Hinweis anzeigen</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Endergebnis -->
+            <div class="case-result" id="case3-result">
+                <div class="case-result-title">Fallstudie abgeschlossen!</div>
+                <div class="case-result-score" id="case3-final-score">0 / 100 Punkte</div>
+                <div class="case-result-grade" id="case3-grade"></div>
+                <button class="case-btn" style="margin-top: var(--spacing-xl); background: rgba(255,255,255,0.2);" onclick="resetCaseStudy('medtech')">Fallstudie zurücksetzen</button>
+            </div>
+        </div>
+
         <!-- Timer Start Button (Fixed) -->
         <button id="open-timer-btn" class="timer-start-btn" title="Prüfungs-Timer starten">TIMER</button>
+        
+        <!-- Calculator Button (Fixed) -->
+        <button id="open-calc-btn" class="calc-btn" title="IT-Rechner öffnen">RECHNER</button>
         
         <!-- Timer Box -->
         <div id="timer-box" class="timer-box hidden">
@@ -13876,6 +14988,114 @@ Address: 192.168.1.1
                 <button id="timer-start" class="timer-btn timer-start">Start</button>
                 <button id="timer-pause" class="timer-btn timer-pause">Pause</button>
                 <button id="timer-reset" class="timer-btn timer-reset">Reset</button>
+            </div>
+        </div>
+        
+        <!-- IT-Rechner Box -->
+        <div id="calc-box" class="calc-box hidden">
+            <div class="calc-header">
+                IT-Rechner (IHK)
+                <button id="calc-close" class="calc-close-btn">×</button>
+            </div>
+            
+            <div class="calc-mode-btns">
+                <button class="calc-mode-btn active" data-mode="convert">Umrechnung</button>
+                <button class="calc-mode-btn" data-mode="calc">Rechner</button>
+                <button class="calc-mode-btn" data-mode="subnet">Subnetz</button>
+            </div>
+            
+            <!-- Umrechnungs-Modus -->
+            <div class="calc-display" id="calc-convert-mode">
+                <div class="calc-input-group">
+                    <span class="calc-input-label">DEC</span>
+                    <input type="text" class="calc-input" id="calc-dec" placeholder="Dezimal eingeben...">
+                </div>
+                <div class="calc-input-group">
+                    <span class="calc-input-label">BIN</span>
+                    <input type="text" class="calc-input" id="calc-bin" placeholder="Binär...">
+                </div>
+                <div class="calc-input-group">
+                    <span class="calc-input-label">HEX</span>
+                    <input type="text" class="calc-input" id="calc-hex" placeholder="Hexadezimal...">
+                </div>
+                <div class="calc-input-group">
+                    <span class="calc-input-label">OCT</span>
+                    <input type="text" class="calc-input" id="calc-oct" placeholder="Oktal...">
+                </div>
+            </div>
+            
+            <!-- Rechner-Modus -->
+            <div class="calc-display" id="calc-calc-mode" style="display:none;">
+                <div class="calc-input-group">
+                    <input type="text" class="calc-input" id="calc-expression" placeholder="Rechnung eingeben..." style="font-size: 1.2em;">
+                </div>
+                <div class="calc-result" id="calc-result-display">
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Ergebnis</span>
+                        <span class="calc-result-value" id="calc-result-value">—</span>
+                    </div>
+                </div>
+                <div class="calc-keypad">
+                    <button class="calc-key" onclick="calcKey('7')">7</button>
+                    <button class="calc-key" onclick="calcKey('8')">8</button>
+                    <button class="calc-key" onclick="calcKey('9')">9</button>
+                    <button class="calc-key calc-op" onclick="calcKey('/')">/</button>
+                    <button class="calc-key" onclick="calcKey('4')">4</button>
+                    <button class="calc-key" onclick="calcKey('5')">5</button>
+                    <button class="calc-key" onclick="calcKey('6')">6</button>
+                    <button class="calc-key calc-op" onclick="calcKey('*')">*</button>
+                    <button class="calc-key" onclick="calcKey('1')">1</button>
+                    <button class="calc-key" onclick="calcKey('2')">2</button>
+                    <button class="calc-key" onclick="calcKey('3')">3</button>
+                    <button class="calc-key calc-op" onclick="calcKey('-')">-</button>
+                    <button class="calc-key" onclick="calcKey('0')">0</button>
+                    <button class="calc-key" onclick="calcKey('.')">.</button>
+                    <button class="calc-key calc-equals" onclick="calcEvaluate()">=</button>
+                    <button class="calc-key calc-op" onclick="calcKey('+')">+</button>
+                    <button class="calc-key calc-clear" onclick="calcClear()">C</button>
+                    <button class="calc-key" onclick="calcKey('(')">(</button>
+                    <button class="calc-key" onclick="calcKey(')')">)</button>
+                    <button class="calc-key calc-op" onclick="calcKey('**')">^</button>
+                </div>
+            </div>
+            
+            <!-- Subnetz-Modus -->
+            <div class="calc-display" id="calc-subnet-mode" style="display:none;">
+                <div class="calc-input-group">
+                    <span class="calc-input-label">IP</span>
+                    <input type="text" class="calc-input" id="calc-subnet-ip" placeholder="z.B. 192.168.1.0">
+                </div>
+                <div class="calc-input-group">
+                    <span class="calc-input-label">CIDR</span>
+                    <input type="text" class="calc-input" id="calc-subnet-cidr" placeholder="z.B. 24">
+                </div>
+                <button class="calc-key" style="width: 100%; margin-top: 10px;" onclick="calcSubnet()">Berechnen</button>
+                <div class="calc-result" id="calc-subnet-result">
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Netzadresse</span>
+                        <span class="calc-result-value" id="subnet-network">—</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Broadcast</span>
+                        <span class="calc-result-value" id="subnet-broadcast">—</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Subnetzmaske</span>
+                        <span class="calc-result-value" id="subnet-mask">—</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Hosts</span>
+                        <span class="calc-result-value" id="subnet-hosts">—</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Erster Host</span>
+                        <span class="calc-result-value" id="subnet-first">—</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Letzter Host</span>
+                        <span class="calc-result-value" id="subnet-last">—</span>
+                    </div>
+                </div>
             </div>
         </div>
 
