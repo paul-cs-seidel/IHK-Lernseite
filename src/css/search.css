@@ -67,13 +67,13 @@
     right: 50px;
     top: 0;
     height: 40px;
-    background: var(--bg-card);
+    background: transparent;
     border-radius: var(--radius-sm);
     padding: 0 var(--spacing-xs);
     z-index: var(--z-dropdown);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    animation: fadeIn 0.2s ease-out;
+    animation: fadeIn 0.5s ease-out;
 }
 
 .search-box.active {
@@ -81,7 +81,7 @@
 }
 
 .search-box input {
-    width: 200px;
+    width: 268px;
     padding: var(--spacing-xs) var(--spacing-sm);
     border: none;
     background: transparent;
@@ -125,15 +125,16 @@
     top: 50px;
     right: 50px;
     width: 300px;
-    max-height: 400px;
+    max-height: 60vh;
     overflow-y: auto;
-    background: var(--bg-card);
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    background: transparent;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
     z-index: var(--z-dropdown);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    animation: fadeIn 0.2s ease-out;
+    animation: fadeIn 0.5s ease-out;
 }
 
 .search-results.active {
@@ -161,10 +162,17 @@
     border-bottom: none;
 }
 
-.search-result-item:hover {
-    background: var(--bg-surface);
-    padding-left: calc(var(--spacing-md) + 4px);
-    border-left: 3px solid var(--accent-primary);
+@media (hover: hover) and (pointer: fine) {
+    .search-result-item:hover {
+        background-color: rgba(108, 108, 108, 0.8);
+        color: var(--color-text-inverted);
+        padding-left: var(--spacing-lg);
+    }
+    
+    .search-result-item:hover .search-result-title,
+    .search-result-item:hover .search-result-tags {
+        color: var(--color-text-inverted);
+    }
 }
 
 .search-result-title {
@@ -212,15 +220,6 @@
     animation: highlightPulse 1s ease-out;
 }
 
-@keyframes highlightPulse {
-    0% {
-        box-shadow: 0 0 0 4px var(--accent-primary);
-    }
-    100% {
-        box-shadow: none;
-    }
-}
-
 /* Hide non-matching sections when filtering */
 [data-search-section].search-hidden {
     display: none !important;
@@ -237,10 +236,22 @@
     
     .search-box {
         position: fixed;
-        left: var(--spacing-md);
-        right: var(--spacing-md);
+        left: 2.5vw;
+        right: 2.5vw;
         top: 60px;
         width: auto;
+        height: auto;
+        padding: var(--spacing-sm) var(--spacing-md);
+        background: var(--color-surface);
+        -webkit-backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+        backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+        border-top: 2px solid rgba(160, 160, 160, 0.3);
+        border-radius: var(--radius-md);
+        box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.08),
+          0px 5px 4px rgba(3, 7, 18, 0.06),
+          0px 12px 9px rgba(3, 7, 18, 0.05),
+          0px 20px 15px rgba(3, 7, 18, 0.03),
+          0px 32px 24px rgba(3, 7, 18, 0.02);
     }
     
     .search-box input {
@@ -249,10 +260,20 @@
     
     .search-results {
         position: fixed;
-        left: var(--spacing-md);
-        right: var(--spacing-md);
-        top: 110px;
+        left: 2.5vw;
+        right: 2.5vw;
+        top: 120px;
         width: auto;
+        max-height: 70vh;
+        background: var(--color-surface);
+        -webkit-backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+        backdrop-filter: blur(8px) saturate(1.05) brightness(1.05);
+        border-top: 2px solid rgba(160, 160, 160, 0.3);
+        box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.08),
+          0px 5px 4px rgba(3, 7, 18, 0.06),
+          0px 12px 9px rgba(3, 7, 18, 0.05),
+          0px 20px 15px rgba(3, 7, 18, 0.03),
+          0px 32px 24px rgba(3, 7, 18, 0.02);
     }
 }
 
