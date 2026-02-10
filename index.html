@@ -48,6 +48,7 @@
                         <a href="#sub-was-ist-ap1">Was ist die AP1?</a>
                         <a href="#sub-pruefungsinhalte">Prüfungsinhalte AP1</a>
                         <a href="#sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</a>
+                        <a href="#sub-ergonomie">Ergonomie (ArbStättV)</a>
                         <a href="#sub-massnahmen">Technische Schutzmaßnahmen</a>
                         <a href="#sub-org-massnahmen">Organisatorische Maßnahmen</a>
                     </div>
@@ -94,6 +95,7 @@
                         <a href="#sub-vlan">VLAN</a>
                         <a href="#sub-vpn">VPN</a>
                         <a href="#sub-dhcp-dns">DHCP & DNS</a>
+                        <a href="#sub-dsl">DSL-Technologien</a>
                         <a href="#sub-nat">NAT</a>
                     </div>
                 </div>
@@ -140,6 +142,7 @@
                         <a href="#sub-tuckman">Teamphasen (Tuckman)</a>
                         <a href="#sub-reflexion">Reflexion & Retrospektive</a>
                         <a href="#sub-kommunikation">Kommunikation</a>
+                        <a href="#sub-vier-ohren">Vier-Ohren-Modell</a>
                         <a href="#sub-arbeitsorganisation">Arbeitsorganisation</a>
                         <a href="#sub-betriebsrat">Betriebsrat & Recht</a>
                     </div>
@@ -179,6 +182,7 @@
                         <a href="#sub-verschluesselung">Verschlüsselung</a>
                         <a href="#sub-hashwerte">Hash-Werte</a>
                         <a href="#sub-bsi-grundschutz">BSI-Grundschutz</a>
+                        <a href="#sub-wlan-sicherheit">WLAN-Absicherung</a>
                         <a href="#sub-backup-konzepte">Backup-Konzepte</a>
                         <a href="#sub-firewall-typen">Firewall & DMZ</a>
                         <a href="#sub-digitale-signatur">Signaturen</a>
@@ -189,6 +193,8 @@
                     <div class="nav-submenu">
                         <div class="nav-submenu-title">Speichermedien</div>
                         <a href="#sub-speicherarten">HDD vs. SSD</a>
+                        <a href="#sub-green-it">Green-IT</a>
+                        <a href="#sub-bios-uefi">BIOS vs. UEFI</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -322,6 +328,7 @@
                     <div class="nav-submenu">
                         <div class="nav-submenu-title">Marketing & Märkte</div>
                         <a href="#sub-marktformen">Marktformen</a>
+                        <a href="#sub-cross-selling">Cross-Selling</a>
                         <a href="#sub-vwl-sektoren">VWL-Sektoren</a>
                         <a href="#sub-abc-analyse">ABC-Analyse</a>
                         <a href="#sub-produktlebenszyklus">Produktlebenszyklus</a>
@@ -528,6 +535,59 @@
                         
                         <div class="typische-frage">
                             „Nennen Sie drei Maßnahmen zur Absicherung eines IT-Arbeitsplatzes."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ergonomischer Arbeitsplatz -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ergonomie">Ergonomischer Arbeitsplatz (ArbStättV)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Anforderungen an einen ergonomischen PC-Arbeitsplatz:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Bereich</th>
+                                    <th>Anforderung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Monitor</b></td>
+                                    <td>Oberste Zeile leicht unter Sehachse, Mindestabstand 50 cm, frei von Blendungen</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Körperhaltung</b></td>
+                                    <td>90°-Winkel zwischen Ober-/Unterarm sowie Ober-/Unterschenkel</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Bewegung</b></td>
+                                    <td>Genügend Beinfreiheit, natürliche Körperhaltung möglich</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Flexibilität</b></td>
+                                    <td>Bildschirm frei stehend, leicht dreh- und neigbar</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Arbeitsstättenverordnung (ArbStättV) - Bildschirm & Tastatur:</b>
+                        <ul>
+                            <li><b>Bildschirm:</b> Zeichen scharf, deutlich, ausreichend groß; flimmerfrei; Helligkeit/Kontrast einstellbar</li>
+                            <li><b>Tastatur:</b> Vom Bildschirmgerät getrennt; reflexionsarme Oberfläche; lesbare Beschriftung</li>
+                            <li><b>Notebooks:</b> Erfüllen ArbStättV nur mit externer Peripherie (Tastatur, Maus, ggf. Monitor)</li>
+                        </ul>
+                        
+                        <div class="pruefungsfalle">
+                            Notebooks entsprechen nur dann der ArbStättV, wenn externe Tastatur und ggf. Monitor genutzt werden!
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <b>Selbsttest:</b> Welcher Mindestabstand zum Monitor ist laut Ergonomie-Richtlinien einzuhalten?
+                            <input type="text" class="selbsttest-input" placeholder="Abstand in cm" data-correct="50|50 cm|50cm">
+                            <span class="selbsttest-feedback"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2062,6 +2122,87 @@
                             <li><b>nslookup google.de</b> – DNS-Auflösung funktioniert?</li>
                         </ol>
                         
+                        <b>Linux-Netzwerk- und Systembefehle:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Befehl</th>
+                                    <th>Zweck</th>
+                                    <th>Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>ip addr</b> / <b>ip a</b></td>
+                                    <td>IP-Konfiguration anzeigen</td>
+                                    <td>ip a (alle Interfaces)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ifconfig</b></td>
+                                    <td>IP-Konfiguration (alt)</td>
+                                    <td>ifconfig eth0</td>
+                                </tr>
+                                <tr>
+                                    <td><b>chmod</b></td>
+                                    <td>Dateiberechtigungen ändern</td>
+                                    <td>chmod 755 script.sh</td>
+                                </tr>
+                                <tr>
+                                    <td><b>traceroute</b></td>
+                                    <td>Route zum Ziel (Linux)</td>
+                                    <td>traceroute google.de</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ss / netstat</b></td>
+                                    <td>Netzwerkverbindungen</td>
+                                    <td>ss -tulpn</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Linux chmod - Dateiberechtigungen:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Recht</th>
+                                    <th>Symbol</th>
+                                    <th>Wert</th>
+                                    <th>Bedeutung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><b>Lesen</b></td><td>r</td><td>4</td><td>Datei lesen / Verzeichnis auflisten</td></tr>
+                                <tr><td><b>Schreiben</b></td><td>w</td><td>2</td><td>Datei ändern / Verzeichnis bearbeiten</td></tr>
+                                <tr><td><b>Ausführen</b></td><td>x</td><td>1</td><td>Datei/Skript ausführen / Verzeichnis betreten</td></tr>
+                            </tbody>
+                        </table>
+                        <p><b>Beispiel:</b> chmod 750 datei.sh → User (rwx=7), Gruppe (r-x=5), Andere (---=0)</p>
+                        
+                        <div class="selbsttest-box">
+                            <div class="selbsttest-frage">Schnelltest: Netzwerk-Befehle</div>
+                            
+                            <p>Welcher Windows-Befehl zeigt IP-Konfiguration an?</p>
+                            <input type="text" class="selbsttest-input" data-correct="ipconfig|ipconfig /all" placeholder="Befehl eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Linux-Befehl für IP-Adressen (modern):</p>
+                            <input type="text" class="selbsttest-input" data-correct="ip a|ip addr|ip address" placeholder="Befehl eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welcher Befehl zeigt MAC-Adressen unter Windows?</p>
+                            <input type="text" class="selbsttest-input" data-correct="getmac|getmac -v|arp -a" placeholder="Befehl eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>169.254.x.x Adresse bedeutet:</p>
+                            <input type="text" class="selbsttest-input" data-correct="DHCP nicht erreichbar|kein DHCP|APIPA" placeholder="Problem beschreiben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <div class="selbsttest-buttons">
+                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
+                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
+                            </div>
+                        </div>
+                        
                         <div class="typische-frage">
                             „Welches Befehlszeilenkommando zeigt die vollständige IP-Konfiguration eines Windows-Rechners an?"
                         </div>
@@ -2242,6 +2383,127 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- WLAN-Absicherung -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-wlan-sicherheit">WLAN-Absicherung (WPA2/WPA3)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>WLAN-Verschlüsselungsstandards:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Standard</th>
+                                    <th>Verschlüsselung</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>WEP</b></td>
+                                    <td>RC4 (40/104 Bit)</td>
+                                    <td>Unsicher, nicht verwenden!</td>
+                                </tr>
+                                <tr>
+                                    <td><b>WPA</b></td>
+                                    <td>TKIP (128 Bit)</td>
+                                    <td>Veraltet</td>
+                                </tr>
+                                <tr>
+                                    <td><b>WPA2</b></td>
+                                    <td>AES-CCMP (128 Bit)</td>
+                                    <td>✓ Standard</td>
+                                </tr>
+                                <tr>
+                                    <td><b>WPA3</b></td>
+                                    <td>AES-GCMP (192 Bit)</td>
+                                    <td>✓ Aktuellster Standard</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>WPA2-Personal vs. WPA2-Enterprise:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Kriterium</th>
+                                    <th>WPA2-Personal (PSK)</th>
+                                    <th>WPA2-Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Authentifizierung</b></td>
+                                    <td>Pre-Shared Key (gemeinsames Passwort)</td>
+                                    <td>Individuelle Benutzerkonten (802.1X)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Server</b></td>
+                                    <td>Nicht erforderlich</td>
+                                    <td>RADIUS-Server erforderlich</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Einsatzbereich</b></td>
+                                    <td>Heimnetz, kleine Büros</td>
+                                    <td>Unternehmen, Universitäten</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Passwortwechsel</b></td>
+                                    <td>Alle Geräte müssen aktualisiert werden</td>
+                                    <td>Nur betroffener Benutzer</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Sicherheit</b></td>
+                                    <td>Passwort oft bekannt / weitergegeben</td>
+                                    <td>Höher (individuelle Zugänge)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Aufwand</b></td>
+                                    <td>Einfach einzurichten</td>
+                                    <td>Komplex (RADIUS-Infrastruktur)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Weitere WLAN-Sicherheitsmaßnahmen:</b>
+                        <ul>
+                            <li><b>SSID verbergen:</b> Netzwerkname nicht sichtbar (Security through Obscurity)</li>
+                            <li><b>MAC-Filter:</b> Nur bekannte Geräte zulassen (leicht umgehbar!)</li>
+                            <li><b>Gäste-WLAN:</b> Separates VLAN für Besucher</li>
+                            <li><b>Sendeleistung reduzieren:</b> Reichweite auf notwendiges Maß begrenzen</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            WPA2-Enterprise ist der Standard für Unternehmen – jeder Nutzer hat eigene Zugangsdaten!
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <div class="selbsttest-frage">Schnelltest: WLAN-Sicherheit</div>
+                            
+                            <p>Welcher Server ist für WPA2-Enterprise erforderlich?</p>
+                            <input type="text" class="selbsttest-input" data-correct="RADIUS|radius|Radius" placeholder="Server-Typ eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welcher WPA-Standard nutzt AES-CCMP Verschlüsselung?</p>
+                            <input type="text" class="selbsttest-input" data-correct="WPA2|wpa2" placeholder="WPA-Version eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>WPA2-Personal nutzt einen ... (Abkürzung):</p>
+                            <input type="text" class="selbsttest-input" data-correct="PSK|psk|Pre-Shared Key" placeholder="Abkürzung eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <div class="selbsttest-buttons">
+                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
+                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
+                            </div>
+                        </div>
+                        
+                        <div class="typische-frage">
+                            „Nennen Sie je zwei Vor- und Nachteile von WPA2-Personal und WPA2-Enterprise."
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- DHCP & DNS vertieft -->
             <div class="container-full">
@@ -2316,6 +2578,64 @@
                         
                         <div class="typische-frage">
                             „Beschreiben Sie den DORA-Prozess bei DHCP."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DSL-Technologien -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-dsl">DSL-Technologien (ADSL, VDSL, SDSL)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Unterschiede der DSL-Varianten:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Technologie</th>
+                                    <th>Typ</th>
+                                    <th>Eigenschaft</th>
+                                    <th>Einsatzbereich</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>ADSL</b></td>
+                                    <td>Asymmetrisch</td>
+                                    <td>Download >> Upload</td>
+                                    <td>Privatnutzer, Surfen, Streaming</td>
+                                </tr>
+                                <tr>
+                                    <td><b>VDSL</b></td>
+                                    <td>Asymmetrisch</td>
+                                    <td>Sehr hohe Geschwindigkeiten (bis 250 Mbit/s)</td>
+                                    <td>Haushalte, Home-Office</td>
+                                </tr>
+                                <tr>
+                                    <td><b>SDSL</b></td>
+                                    <td>Symmetrisch</td>
+                                    <td>Upload = Download</td>
+                                    <td>Unternehmen, Server, Video-Konferenzen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Downloadzeit berechnen (IHK-Rechenaufgabe):</b><br>
+                        Beispiel: 2 GiB-Datei über 50 Mbit/s-Leitung
+                        <ol>
+                            <li>Datei in Bit: 2 GiB × 1024³ × 8 = 17.179.869.184 Bit</li>
+                            <li>Durch Geschwindigkeit: 17.179.869.184 ÷ 50.000.000 = 343,6 Sek.</li>
+                            <li>Ergebnis: <b>ca. 5 Minuten 44 Sekunden</b></li>
+                        </ol>
+                        
+                        <div class="merksatz">
+                            Bei DSL-Angaben: Mbit/s (Megabit) ≠ MB/s (Megabyte)! Faktor 8 beachten.
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <b>Selbsttest:</b> Welche DSL-Variante hat identische Up- und Download-Geschwindigkeit?
+                            <input type="text" class="selbsttest-input" placeholder="DSL-Typ" data-correct="SDSL|sdsl">
+                            <span class="selbsttest-feedback"></span>
                         </div>
                     </div>
                 </div>
@@ -4373,6 +4693,44 @@
                         <div class="typische-frage">
                             „Erläutern Sie die vier Grundprinzipien des Harvard-Konzepts."
                         </div>
+                        
+                        <b id="sub-vier-ohren">Das Vier-Ohren-Modell (Schulz von Thun):</b><br>
+                        Jede Nachricht enthält vier Botschaften gleichzeitig:
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Ebene</th>
+                                    <th>Beschreibung</th>
+                                    <th>Beispiel: „Sie haben nicht pünktlich geliefert"</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Sachebene</b></td>
+                                    <td>Reiner Fakt, Information</td>
+                                    <td>„Die Lieferung kam zu spät."</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Appell</b></td>
+                                    <td>Aufforderung, Handlungswunsch</td>
+                                    <td>„Liefern Sie pünktlich!"</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Beziehung</b></td>
+                                    <td>Gefühlsebene zum Gegenüber</td>
+                                    <td>„Ich bin unzufrieden mit Ihnen."</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Selbstoffenbarung</b></td>
+                                    <td>Info über den Sender selbst</td>
+                                    <td>„Ich kontrolliere Ihre Leistungen genau."</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="merksatz">
+                            Im IT-Support: Auf dem richtigen „Ohr" hören vermeidet Konflikte – oft steckt hinter einer Beschwerde ein konkreter Appell.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -5598,6 +5956,7 @@
                             <li><a href="#sub-verschluesselung">Verschlüsselungsverfahren</a></li>
                             <li><a href="#sub-hashwerte">Hash-Werte</a></li>
                             <li><a href="#sub-bsi-grundschutz">BSI IT-Grundschutz</a></li>
+                            <li><a href="#sub-wlan-sicherheit">WLAN-Absicherung</a></li>
                             <li><a href="#sub-backup-konzepte">Backup-Strategien</a></li>
                             <li><a href="#sub-firewall-typen">Firewall & DMZ</a></li>
                             <li><a href="#sub-digitale-signatur">Digitale Signaturen</a></li>
@@ -6176,6 +6535,66 @@
                             Der BSI-Grundschutz bietet einen praxisnahen, standardisierten Weg zur IT-Sicherheit – wichtig für IHK und Praxis!
                         </div>
                         
+                        <b>Schutzbedarfskategorien (BSI):</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Kategorie</th>
+                                    <th>Schadenshöhe</th>
+                                    <th>Auswirkungen</th>
+                                    <th>Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Normal</b></td>
+                                    <td>&lt; 50.000 €</td>
+                                    <td>Begrenzt, tolerierbar</td>
+                                    <td>Kantinen-Menü-App, Drucker</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Hoch</b></td>
+                                    <td>50.000 – 500.000 €</td>
+                                    <td>Erheblich, Ansehensschaden</td>
+                                    <td>Kundendatenbank, CRM-System</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Sehr hoch</b></td>
+                                    <td>&gt; 500.000 €</td>
+                                    <td>Existenzbedrohend, katastrophal</td>
+                                    <td>Patientendaten, Bankdaten, KRITIS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Schutzziele für IT-Komponenten (Beispiel Router):</b>
+                        <ul>
+                            <li><b>Vertraulichkeit (Hoch):</b> Über externe Verbindungen werden vertrauliche Daten übertragen</li>
+                            <li><b>Integrität (Normal):</b> Fehlerhafte Daten können vom Router erkannt werden</li>
+                            <li><b>Verfügbarkeit (Normal):</b> Kurzer Ausfall kann toleriert werden</li>
+                        </ul>
+                        
+                        <div class="selbsttest-box">
+                            <div class="selbsttest-frage">Schnelltest: BSI Schutzbedarfskategorien</div>
+                            
+                            <p>Schaden 80.000 € = Kategorie:</p>
+                            <input type="text" class="selbsttest-input" data-correct="Hoch|hoch|HOCH" placeholder="Normal, Hoch oder Sehr hoch?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Existenzbedrohende Auswirkungen = Kategorie:</p>
+                            <input type="text" class="selbsttest-input" data-correct="Sehr hoch|sehr hoch|SEHR HOCH" placeholder="Normal, Hoch oder Sehr hoch?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Patientendaten/Bankdaten gehören zu Kategorie:</p>
+                            <input type="text" class="selbsttest-input" data-correct="Sehr hoch|sehr hoch|SEHR HOCH" placeholder="Normal, Hoch oder Sehr hoch?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <div class="selbsttest-buttons">
+                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
+                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
+                            </div>
+                        </div>
+                        
                         <div class="typische-frage">
                             „Erläutern Sie die Vorgehensweise nach BSI IT-Grundschutz."
                         </div>
@@ -6284,6 +6703,49 @@
                         <div class="merksatz">
                             <b>RTO (Recovery Time Objective):</b> Maximale Zeit bis zur Wiederherstellung<br>
                             <b>RPO (Recovery Point Objective):</b> Maximaler akzeptabler Datenverlust (in Zeit)
+                        </div>
+                        
+                        <b>Großvater-Vater-Sohn-Prinzip (Generationenprinzip):</b>
+                        <p>Klassisches Rotationsschema für Backup-Medien mit 20 Datenträgern:</p>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Generation</th>
+                                    <th>Bezeichnung</th>
+                                    <th>Rotation</th>
+                                    <th>Anzahl Medien</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Sohn</b></td>
+                                    <td>Tägliche Backups</td>
+                                    <td>Mo-Do, wöchentliche Rotation</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Vater</b></td>
+                                    <td>Wöchentliche Backups</td>
+                                    <td>Jeden Freitag, monatliche Rotation</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Großvater</b></td>
+                                    <td>Monatliche Backups</td>
+                                    <td>Letzter Freitag im Monat, jährlich</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="pruefungsfalle">
+                            <b>IHK-relevant:</b> 4 Sohn + 4 Vater + 12 Großvater = <b>20 Medien</b> für komplettes Jahr!
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <b>Selbsttest:</b> Wie viele Backup-Medien werden beim Großvater-Vater-Sohn-Prinzip benötigt?
+                            <input type="text" class="selbsttest-input" placeholder="Antwort eingeben..." data-correct="20">
+                            <span class="selbsttest-feedback"></span>
                         </div>
                         
                         <div class="typische-frage">
@@ -6467,6 +6929,8 @@
                         <div class="micrographic-title">In diesem Abschnitt</div>
                         <ul class="micrographic-list">
                             <li><a href="#sub-speicherarten">HDD vs. SSD</a></li>
+                            <li><a href="#sub-bios-uefi">BIOS vs. UEFI</a></li>
+                            <li><a href="#sub-green-it">Green-IT & Umweltzeichen</a></li>
                         </ul>
                     </div>
                     <div class="merksatz" style="margin-top: 16px;">
@@ -6528,6 +6992,70 @@
                             <li><b>SATA:</b> Bis 600 MB/s, ältere Systeme</li>
                             <li><b>NVMe (PCIe):</b> Bis 7000+ MB/s, modern</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Green-IT & Umweltzeichen -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-green-it">Green-IT & Umweltzeichen</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Definition Green-IT:</b><br>
+                        Umweltgerechte Gestaltung der IT über den gesamten Lebenszyklus: Herstellung, Betrieb und Entsorgung.
+                        
+                        <b>Green-IT Maßnahmen:</b>
+                        <ul>
+                            <li><b>Virtualisierung:</b> Mehrere Server auf einem Host reduziert Stromverbrauch</li>
+                            <li><b>Videokonferenzen:</b> Statt Dienstreisen (Teams, Zoom)</li>
+                            <li><b>Stromsparmodi:</b> Automatische Abschaltung bei Inaktivität</li>
+                            <li><b>Thin-Clients:</b> Geringerer Energieverbrauch als Fat-Clients</li>
+                        </ul>
+                        
+                        <b>Wichtige Umweltzeichen für IT-Hardware:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Zeichen</th>
+                                    <th>Herkunft</th>
+                                    <th>Bedeutung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Energy Star</b></td>
+                                    <td>USA (EPA)</td>
+                                    <td>Energieeffizienz, Stromsparmodus, &lt;0,5W Standby</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Blauer Engel</b></td>
+                                    <td>Deutschland (BMU)</td>
+                                    <td>Schadstoffarm, langlebig, recycelbar</td>
+                                </tr>
+                                <tr>
+                                    <td><b>WEEE-Richtlinie</b></td>
+                                    <td>EU</td>
+                                    <td>Fachgerechte Entsorgung von Elektro-Altgeräten</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Recycling von IT-Produkten:</b>
+                        <ul>
+                            <li>Elektrogeräte gehören <b>nicht</b> in den Hausmüll</li>
+                            <li>Hersteller sind für Produkte über gesamte Lebensdauer verantwortlich</li>
+                            <li>Enthält wertvolle Rohstoffe (Gold, Kupfer) und giftige Substanzen (Blei)</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            Der Blaue Engel ist das älteste Umweltzeichen der Welt – oft Voraussetzung bei öffentlichen Ausschreibungen.
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <b>Selbsttest:</b> Welches US-amerikanische Umweltzeichen bescheinigt Geräten die Einhaltung von Energiespar-Standards?
+                            <input type="text" class="selbsttest-input" placeholder="Umweltzeichen" data-correct="Energy Star|EnergyStar">
+                            <span class="selbsttest-feedback"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -7061,7 +7589,7 @@
                                         DELETE FROM mitarbeiter<br>
                                         WHERE gehalt < 3600;
                                     </div>
-                                    <div class="pruefungsfalle">⚠️ Vorsicht: DELETE ohne WHERE löscht ALLE Datensätze!</div>
+                                    <div class="pruefungsfalle">Vorsicht: DELETE ohne WHERE löscht ALLE Datensätze!</div>
                                 </div>
                             </div>
                         </div>
@@ -7658,6 +8186,116 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- BIOS vs. UEFI -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-bios-uefi">BIOS vs. UEFI</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Definition:</b><br>
+                        Das Firmware-Interface startet den Computer und initialisiert die Hardware, bevor das Betriebssystem geladen wird.
+                        
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Kriterium</th>
+                                    <th>BIOS (Legacy)</th>
+                                    <th>UEFI (Modern)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Name</b></td>
+                                    <td>Basic Input Output System</td>
+                                    <td>Unified Extensible Firmware Interface</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Alter</b></td>
+                                    <td>1975 (veraltet)</td>
+                                    <td>Ab ~2010 Standard</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Betriebsmodus</b></td>
+                                    <td>16-Bit Real Mode</td>
+                                    <td>32/64-Bit Protected Mode</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Partitionstabelle</b></td>
+                                    <td>MBR (Master Boot Record)</td>
+                                    <td>GPT (GUID Partition Table)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Max. Festplattengröße</b></td>
+                                    <td>2 TB</td>
+                                    <td>>2 TB (bis 9,4 ZB)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Max. Partitionen</b></td>
+                                    <td>4 primäre</td>
+                                    <td>128+ Partitionen</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Oberfläche</b></td>
+                                    <td>Textbasiert (Tastatur)</td>
+                                    <td>Grafisch (Maus möglich)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Bootzeit</b></td>
+                                    <td>Langsamer</td>
+                                    <td>Schneller (Fast Boot)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Secure Boot</b></td>
+                                    <td>Nicht unterstützt</td>
+                                    <td>Unterstützt (Malware-Schutz)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Netzwerkfunktionen</b></td>
+                                    <td>Keine</td>
+                                    <td>Remote-Diagnose möglich</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>UEFI-Vorteile im Detail:</b>
+                        <ul>
+                            <li><b>Secure Boot:</b> Nur signierte Bootloader werden geladen → Schutz vor Rootkits</li>
+                            <li><b>GPT:</b> Ermöglicht Festplatten >2 TB und mehr Partitionen</li>
+                            <li><b>Schnellerer Boot:</b> Direkte Treiberladung ohne Legacy-Emulation</li>
+                            <li><b>Grafische Oberfläche:</b> Intuitive Bedienung mit Maus</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            Moderne PCs nutzen UEFI mit GPT-Partitionierung. BIOS/MBR ist nur noch bei älteren Systemen relevant.
+                        </div>
+
+                        <div class="selbsttest-box">
+                            <div class="selbsttest-frage">Schnelltest: BIOS vs. UEFI</div>
+                            
+                            <p>Welches System unterstützt Festplatten >2 TB?</p>
+                            <input type="text" class="selbsttest-input" data-correct="UEFI|uefi" placeholder="BIOS oder UEFI?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welche Partitionstabelle nutzt UEFI?</p>
+                            <input type="text" class="selbsttest-input" data-correct="GPT|gpt|GUID Partition Table" placeholder="Abkürzung eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welche Funktion schützt vor Malware beim Start?</p>
+                            <input type="text" class="selbsttest-input" data-correct="Secure Boot|secure boot|SecureBoot" placeholder="Funktion eingeben">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <div class="selbsttest-buttons">
+                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
+                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
+                            </div>
+                        </div>
+                        
+                        <div class="typische-frage">
+                            „Nennen Sie drei Vorteile von UEFI gegenüber dem klassischen BIOS."
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Speichermedien -->
             <div class="container-full">
@@ -8169,6 +8807,52 @@
                         
                         <div class="typische-frage">
                             „Erklären Sie den Unterschied zwischen Typ-1- und Typ-2-Hypervisor."
+                        </div>
+                        
+                        <b>Thin-Clients in VDI (Virtual Desktop Infrastructure):</b><br>
+                        Ein Thin-Client ist ein schlanker Computer, der Ressourcen (CPU, RAM, Apps) vom Server nutzt.
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Eigenschaft</th>
+                                    <th>Thin-Client</th>
+                                    <th>Fat-Client (PC)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rechenleistung</td>
+                                    <td>Server im Rechenzentrum</td>
+                                    <td>Lokal am Arbeitsplatz</td>
+                                </tr>
+                                <tr>
+                                    <td>Stromverbrauch</td>
+                                    <td>Sehr gering (5-15 Watt)</td>
+                                    <td>Hoch (100-300 Watt)</td>
+                                </tr>
+                                <tr>
+                                    <td>Wartung</td>
+                                    <td>Zentral, schneller Austausch</td>
+                                    <td>Individuell pro Gerät</td>
+                                </tr>
+                                <tr>
+                                    <td>Sicherheit</td>
+                                    <td>Read-only OS, keine lokalen Daten</td>
+                                    <td>Lokale Speicherung möglich</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Vorteile von Thin-Clients:</b>
+                        <ul>
+                            <li>Geringer Stromverbrauch und Platzbedarf</li>
+                            <li>Leicht austauschbar (Nutzer meldet sich einfach neu an)</li>
+                            <li>Keine Viren dank Read-only-Betriebssystem</li>
+                            <li>Weniger Abwärme = geringere Klimatisierungskosten</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            Thin-Client = „Fenster zum Server" – ideal für VDI-Umgebungen mit zentraler Verwaltung.
                         </div>
                         
                         <div class="selbsttest-box">
@@ -9375,7 +10059,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                 <div class="subgrid">
                     <div class="container-text">
                         <b>Aufbauorganisation:</b><br>
-                        Statische Struktur eines Unternehmens – WER macht WAS?
+                        Statische Struktur eines Unternehmens – WER macht WAS? Wird im Organigramm dargestellt.
                         
                         <table class="vergleichs-tabelle">
                             <thead>
@@ -9383,31 +10067,50 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                                     <th>Struktur</th>
                                     <th>Beschreibung</th>
                                     <th>Vorteil</th>
+                                    <th>Nachteil</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><b>Einlinien</b></td>
                                     <td>Jeder hat genau einen Vorgesetzten</td>
-                                    <td>Klare Verantwortung</td>
+                                    <td>Klare Verantwortung, eindeutige Weisungswege</td>
+                                    <td>Lange Dienstwege, langsame Kommunikation</td>
                                 </tr>
                                 <tr>
                                     <td><b>Mehrlinien</b></td>
-                                    <td>Mehrere Vorgesetzte möglich</td>
-                                    <td>Spezialistenwissen</td>
+                                    <td>Mehrere fachliche Vorgesetzte</td>
+                                    <td>Spezialistenwissen, kurze Wege</td>
+                                    <td>Widersprüchliche Anweisungen möglich</td>
                                 </tr>
                                 <tr>
                                     <td><b>Stab-Linien</b></td>
-                                    <td>Beratende Stabsstellen ohne Weisungsrecht</td>
+                                    <td>Einlinien + beratende Stabsstellen</td>
                                     <td>Expertenwissen + klare Linie</td>
+                                    <td>Konflikte zwischen Stab und Linie</td>
                                 </tr>
                                 <tr>
                                     <td><b>Matrix</b></td>
-                                    <td>Funktionale + projektbezogene Hierarchie</td>
-                                    <td>Flexibilität</td>
+                                    <td>Funktionale + objektbezogene Hierarchie</td>
+                                    <td>Flexibilität, Teamarbeit</td>
+                                    <td>Hoher Kommunikationsaufwand, Kompetenzkon­flikte</td>
                                 </tr>
                             </tbody>
                         </table>
+                        
+                        <b>Stabsstelle:</b>
+                        <ul>
+                            <li>Unterstützt und berät die Leitungsebene</li>
+                            <li><b>Keine Weisungsbefugnis!</b> Nur beratende Funktion</li>
+                            <li>Beispiele: Datenschutzbeauftragter, IT-Sicherheitsbeauftragter, Rechtsabteilung</li>
+                        </ul>
+                        
+                        <b>Organigramm:</b>
+                        <ul>
+                            <li>Grafische Darstellung der Aufbauorganisation</li>
+                            <li>Zeigt Hierarchien, Abteilungen und Weisungsbeziehungen</li>
+                            <li>Enthält Stellen, Leitungsebenen und Stabsstellen</li>
+                        </ul>
                         
                         <b>Ablauforganisation:</b><br>
                         Dynamische Prozesse – WIE wird gearbeitet?
@@ -9422,6 +10125,27 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                         <div class="merksatz">
                             <b>Aufbauorganisation:</b> Organigramm zeigt Struktur<br>
                             <b>Ablauforganisation:</b> Prozessdiagramm zeigt Abläufe
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <div class="selbsttest-frage">Schnelltest: Organisationsformen</div>
+                            
+                            <p>Jeder Mitarbeiter hat genau einen Vorgesetzten:</p>
+                            <input type="text" class="selbsttest-input" data-correct="Einlinien|Einliniensystem|einlinien" placeholder="Welches System?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Welche Stelle berät, hat aber keine Weisungsbefugnis?</p>
+                            <input type="text" class="selbsttest-input" data-correct="Stabsstelle|Stab|stabsstelle" placeholder="Welche Stelle?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <p>Grafische Darstellung der Unternehmensstruktur:</p>
+                            <input type="text" class="selbsttest-input" data-correct="Organigramm|organigramm" placeholder="Wie heißt das?">
+                            <span class="selbsttest-feedback"></span>
+                            
+                            <div class="selbsttest-buttons">
+                                <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
+                                <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
+                            </div>
                         </div>
                         
                         <div class="typische-frage">
@@ -9925,6 +10649,48 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                         
                         <div class="typische-frage">
                             „Nennen Sie ein Beispiel für ein Oligopol im IT-Bereich."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cross-Selling -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-cross-selling">Cross-Selling & Up-Selling</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Vertriebsstrategien zur Umsatzsteigerung:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Strategie</th>
+                                    <th>Definition</th>
+                                    <th>IT-Beispiel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Cross-Selling</b></td>
+                                    <td>Verkauf ergänzender Produkte zum Hauptartikel</td>
+                                    <td>Notebook kaufen → Tasche + Maus anbieten</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Up-Selling</b></td>
+                                    <td>Verkauf einer höherwertigen Variante</td>
+                                    <td>Statt 8 GB RAM → 16 GB empfehlen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Vorteile von Cross-Selling:</b>
+                        <ul>
+                            <li>Umsatzsteigerung pro Kunde ohne Neukundengewinnung</li>
+                            <li>Höhere Kundenbindung durch Komplettlösungen</li>
+                            <li>Effizient: Kunde ist bereits „vor Ort"</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            Cross-Selling: Zusatzprodukte anbieten | Up-Selling: Höherwertige Alternative anbieten
                         </div>
                     </div>
                 </div>
@@ -12571,16 +13337,28 @@ Address: 192.168.1.1
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr><td><b>APIPA</b></td><td>Automatic Private IP Addressing</td><td>169.254.x.x wenn kein DHCP</td></tr>
+                                    <tr><td><b>ARP</b></td><td>Address Resolution Protocol</td><td>IP→MAC Auflösung</td></tr>
                                     <tr><td><b>DHCP</b></td><td>Dynamic Host Configuration Protocol</td><td>Automatische IP-Vergabe</td></tr>
                                     <tr><td><b>DNS</b></td><td>Domain Name System</td><td>Namensauflösung (URL→IP)</td></tr>
+                                    <tr><td><b>ICMP</b></td><td>Internet Control Message Protocol</td><td>Ping, Fehlermeldungen</td></tr>
+                                    <tr><td><b>IMAP</b></td><td>Internet Message Access Protocol</td><td>E-Mail synchronisiert (Port 143/993)</td></tr>
+                                    <tr><td><b>IP</b></td><td>Internet Protocol</td><td>Adressierung im Netzwerk</td></tr>
+                                    <tr><td><b>MAC</b></td><td>Media Access Control</td><td>Hardware-Adresse (Layer 2)</td></tr>
+                                    <tr><td><b>NAT</b></td><td>Network Address Translation</td><td>Private↔Öffentliche IP-Umwandlung</td></tr>
+                                    <tr><td><b>POP3</b></td><td>Post Office Protocol 3</td><td>E-Mail download (Port 110/995)</td></tr>
+                                    <tr><td><b>PPPoE</b></td><td>Point-to-Point Protocol over Ethernet</td><td>DSL-Einwahl</td></tr>
+                                    <tr><td><b>QoS</b></td><td>Quality of Service</td><td>Priorisierung von Datenverkehr</td></tr>
+                                    <tr><td><b>RADIUS</b></td><td>Remote Authentication Dial-In User Service</td><td>Zentrale Authentifizierung (WPA2-Enterprise)</td></tr>
+                                    <tr><td><b>SMTP</b></td><td>Simple Mail Transfer Protocol</td><td>E-Mail versenden (Port 25/587)</td></tr>
+                                    <tr><td><b>SNMP</b></td><td>Simple Network Management Protocol</td><td>Netzwerküberwachung</td></tr>
+                                    <tr><td><b>SSID</b></td><td>Service Set Identifier</td><td>WLAN-Name</td></tr>
                                     <tr><td><b>TCP</b></td><td>Transmission Control Protocol</td><td>Verbindungsorientiert, zuverlässig</td></tr>
                                     <tr><td><b>UDP</b></td><td>User Datagram Protocol</td><td>Verbindungslos, schnell</td></tr>
-                                    <tr><td><b>IP</b></td><td>Internet Protocol</td><td>Adressierung im Netzwerk</td></tr>
-                                    <tr><td><b>NAT</b></td><td>Network Address Translation</td><td>Private↔Öffentliche IP-Umwandlung</td></tr>
                                     <tr><td><b>VLAN</b></td><td>Virtual Local Area Network</td><td>Logische Netzwerktrennung</td></tr>
                                     <tr><td><b>VPN</b></td><td>Virtual Private Network</td><td>Verschlüsselter Tunnel</td></tr>
+                                    <tr><td><b>WPA/WPA2/WPA3</b></td><td>Wi-Fi Protected Access</td><td>WLAN-Verschlüsselung</td></tr>
                                     <tr><td><b>WLAN</b></td><td>Wireless Local Area Network</td><td>Drahtloses Netzwerk (IEEE 802.11)</td></tr>
-                                    <tr><td><b>MAC</b></td><td>Media Access Control</td><td>Hardware-Adresse (Layer 2)</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -12594,13 +13372,20 @@ Address: 192.168.1.1
                                     <col style="width: 40%;">
                                 </colgroup>
                                 <tbody>
-                                    <tr><td><b>SSL/TLS</b></td><td>Secure Sockets Layer / Transport Layer Security</td><td>Verschlüsselung (HTTPS)</td></tr>
                                     <tr><td><b>AES</b></td><td>Advanced Encryption Standard</td><td>Symmetrische Verschlüsselung</td></tr>
-                                    <tr><td><b>RSA</b></td><td>Rivest-Shamir-Adleman</td><td>Asymmetrische Verschlüsselung</td></tr>
-                                    <tr><td><b>SSH</b></td><td>Secure Shell</td><td>Sichere Fernwartung (Port 22)</td></tr>
-                                    <tr><td><b>HTTPS</b></td><td>HTTP Secure</td><td>Verschlüsseltes HTTP (Port 443)</td></tr>
+                                    <tr><td><b>CA</b></td><td>Certification Authority</td><td>Zertifizierungsstelle</td></tr>
                                     <tr><td><b>DMZ</b></td><td>Demilitarisierte Zone</td><td>Geschützter Bereich für Server</td></tr>
+                                    <tr><td><b>HTTPS</b></td><td>HTTP Secure</td><td>Verschlüsseltes HTTP (Port 443)</td></tr>
                                     <tr><td><b>IDS/IPS</b></td><td>Intrusion Detection/Prevention System</td><td>Angriffserkennung/-abwehr</td></tr>
+                                    <tr><td><b>ISMS</b></td><td>Informationssicherheits-Managementsystem</td><td>ISO 27001, BSI Grundschutz</td></tr>
+                                    <tr><td><b>MFA</b></td><td>Multi-Factor-Authentication</td><td>Mehrere Anmeldefaktoren</td></tr>
+                                    <tr><td><b>PKI</b></td><td>Public Key Infrastructure</td><td>Digitale Zertifikate verwalten</td></tr>
+                                    <tr><td><b>RSA</b></td><td>Rivest-Shamir-Adleman</td><td>Asymmetrische Verschlüsselung</td></tr>
+                                    <tr><td><b>SPI</b></td><td>Stateful Packet Inspection</td><td>Zustandsorientierte Firewall</td></tr>
+                                    <tr><td><b>SSH</b></td><td>Secure Shell</td><td>Sichere Fernwartung (Port 22)</td></tr>
+                                    <tr><td><b>SSL/TLS</b></td><td>Secure Sockets Layer / Transport Layer Security</td><td>Verschlüsselung (HTTPS)</td></tr>
+                                    <tr><td><b>TOM</b></td><td>Technisch-organisatorische Maßnahmen</td><td>DSGVO-Umsetzung</td></tr>
+                                    <tr><td><b>TPM</b></td><td>Trusted Platform Module</td><td>Sicherheitschip für Verschlüsselung</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -12614,12 +13399,19 @@ Address: 192.168.1.1
                                     <col style="width: 40%;">
                                 </colgroup>
                                 <tbody>
+                                    <tr><td><b>BIOS</b></td><td>Basic Input Output System</td><td>Startprogramm (alt)</td></tr>
                                     <tr><td><b>CPU</b></td><td>Central Processing Unit</td><td>Prozessor</td></tr>
-                                    <tr><td><b>RAM</b></td><td>Random Access Memory</td><td>Arbeitsspeicher (flüchtig)</td></tr>
-                                    <tr><td><b>SSD</b></td><td>Solid State Drive</td><td>Flash-Speicher (schnell)</td></tr>
                                     <tr><td><b>HDD</b></td><td>Hard Disk Drive</td><td>Magnetplatte (günstig)</td></tr>
+                                    <tr><td><b>M.2</b></td><td>M.2 Form Factor</td><td>Kompakte SSD-Bauform</td></tr>
                                     <tr><td><b>NAS</b></td><td>Network Attached Storage</td><td>Netzwerk-Speicher</td></tr>
+                                    <tr><td><b>NVMe</b></td><td>Non-Volatile Memory express</td><td>Schnelles SSD-Protokoll</td></tr>
                                     <tr><td><b>RAID</b></td><td>Redundant Array of Independent Disks</td><td>Festplattenverbund</td></tr>
+                                    <tr><td><b>RAM</b></td><td>Random Access Memory</td><td>Arbeitsspeicher (flüchtig)</td></tr>
+                                    <tr><td><b>S.M.A.R.T.</b></td><td>Self-Monitoring, Analysis and Reporting Technology</td><td>Festplatten-Überwachung</td></tr>
+                                    <tr><td><b>SAN</b></td><td>Storage Area Network</td><td>Speichernetzwerk (Fibre Channel)</td></tr>
+                                    <tr><td><b>SATA</b></td><td>Serial AT Attachment</td><td>Standard-Festplattenanschluss</td></tr>
+                                    <tr><td><b>SSD</b></td><td>Solid State Drive</td><td>Flash-Speicher (schnell)</td></tr>
+                                    <tr><td><b>UEFI</b></td><td>Unified Extensible Firmware Interface</td><td>Moderner BIOS-Nachfolger</td></tr>
                                     <tr><td><b>USV</b></td><td>Unterbrechungsfreie Stromversorgung</td><td>Notstrom bei Ausfall</td></tr>
                                 </tbody>
                             </table>
@@ -12634,10 +13426,52 @@ Address: 192.168.1.1
                                     <col style="width: 40%;">
                                 </colgroup>
                                 <tbody>
-                                    <tr><td><b>VM</b></td><td>Virtual Machine</td><td>Virtuelle Maschine</td></tr>
                                     <tr><td><b>IaaS</b></td><td>Infrastructure as a Service</td><td>Virtuelle Hardware aus der Cloud</td></tr>
                                     <tr><td><b>PaaS</b></td><td>Platform as a Service</td><td>Entwicklungsplattform</td></tr>
                                     <tr><td><b>SaaS</b></td><td>Software as a Service</td><td>Anwendungen aus der Cloud</td></tr>
+                                    <tr><td><b>VDI</b></td><td>Virtual Desktop Infrastructure</td><td>Virtuelle Arbeitsplätze</td></tr>
+                                    <tr><td><b>VM</b></td><td>Virtual Machine</td><td>Virtuelle Maschine</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <b>Software & Datenbanken:</b>
+                        <div class="tabelle-container">
+                            <table class="tabelle" style="table-layout: fixed; width: 100%;">
+                                <colgroup>
+                                    <col style="width: 15%;">
+                                    <col style="width: 45%;">
+                                    <col style="width: 40%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr><td><b>CMS</b></td><td>Content Management System</td><td>Webseiten-Verwaltung</td></tr>
+                                    <tr><td><b>CRM</b></td><td>Customer Relationship Management</td><td>Kundenverwaltung</td></tr>
+                                    <tr><td><b>DBMS</b></td><td>Datenbankmanagementsystem</td><td>Datenbankverwaltung</td></tr>
+                                    <tr><td><b>DDL</b></td><td>Data Definition Language</td><td>CREATE, ALTER, DROP</td></tr>
+                                    <tr><td><b>DML</b></td><td>Data Manipulation Language</td><td>INSERT, UPDATE, DELETE</td></tr>
+                                    <tr><td><b>DQL</b></td><td>Data Query Language</td><td>SELECT</td></tr>
+                                    <tr><td><b>ERP</b></td><td>Enterprise Resource Planning</td><td>Unternehmenssteuerung</td></tr>
+                                    <tr><td><b>IDE</b></td><td>Integrierte Entwicklungsumgebung</td><td>Editor + Compiler + Debugger</td></tr>
+                                    <tr><td><b>SQL</b></td><td>Structured Query Language</td><td>Datenbankabfragesprache</td></tr>
+                                    <tr><td><b>UML</b></td><td>Unified Modeling Language</td><td>Softwaremodellierung</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <b>Projektmanagement & Qualität:</b>
+                        <div class="tabelle-container">
+                            <table class="tabelle" style="table-layout: fixed; width: 100%;">
+                                <colgroup>
+                                    <col style="width: 15%;">
+                                    <col style="width: 45%;">
+                                    <col style="width: 40%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr><td><b>PDCA</b></td><td>Plan-Do-Check-Act</td><td>Deming-Zyklus (KVP)</td></tr>
+                                    <tr><td><b>SMART</b></td><td>Spezifisch, Messbar, Aktivierend, Realistisch, Terminiert</td><td>Zielformulierung</td></tr>
+                                    <tr><td><b>SLA</b></td><td>Service Level Agreement</td><td>Dienstleistungsvertrag</td></tr>
+                                    <tr><td><b>KVP</b></td><td>Kontinuierlicher Verbesserungsprozess</td><td>Kaizen-Prinzip</td></tr>
+                                    <tr><td><b>QM</b></td><td>Qualitätsmanagement</td><td>ISO 9001</td></tr>
                                 </tbody>
                             </table>
                         </div>
