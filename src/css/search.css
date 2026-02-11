@@ -43,17 +43,26 @@
     backdrop-filter: blur(8px);
     border-radius: var(--radius-sm);
     color: var(--text-primary);
-    transition: background var(--transition-fast), transform var(--transition-fast);
+    transition: background var(--transition-fast);
 }
 
 .search-toggle:hover {
     background: var(--bg-card);
-    transform: scale(1.05);
 }
 
 .search-toggle svg {
+    display: block;
     width: 18px;
     height: 18px;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform var(--transition-normal);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .search-toggle:hover svg {
+        transform: scale(1.1);
+    }
 }
 
 /* ============================

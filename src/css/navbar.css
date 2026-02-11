@@ -109,7 +109,7 @@
     width: 20px;
     height: 2px;
     background: var(--color-primary-dark);
-    transition: transform var(--transition-slow);
+    transition: transform var(--transition-normal);
 }
 
 /* Burger Animation - X */
