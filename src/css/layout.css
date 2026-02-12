@@ -51,9 +51,9 @@
     content: "AP1";
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 3%;
     transform: translateY(-30%);
-    font-size: 30vw;
+    font-size: 45vw;
     font-weight: var(--font-weight-bold);
     color: rgba(37, 37, 37, 0.06);
     letter-spacing: -0.05em;
@@ -298,7 +298,8 @@
     }
     
     .hero::before {
-        font-size: clamp(100px, 25vw, 300px);
+        font-size: 45vw;
+        right: 3%;
     }
     
     .grid {
@@ -350,7 +351,8 @@
     }
     
     .hero::before {
-        font-size: 40vw;
+        font-size: 45vw;
+        right: 3%;
     }
     
     .hero-subtitle {
@@ -411,7 +413,8 @@
     }
     
     .hero::before {
-        display: none;
+        font-size: 45vw;
+        right: 3%;
     }
     
     .hero-subtitle,

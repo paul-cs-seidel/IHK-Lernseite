@@ -1,0 +1,234 @@
+/**
+ * ========================================
+ * SECTIONS.CSS - Collapsible Sections
+ * ========================================
+ * 
+ * Styles für die 3 Hauptbereiche:
+ * - Informatives
+ * - Theorie
+ * - Praxis
+ * 
+ * @author Cedric Seidel
+ * @version 2.0.0
+ */
+
+/* ============================
+ * MAIN SECTION CONTAINER
+ * ============================ */
+
+.main-sections {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-4xl);
+}
+
+/* ============================
+ * COLLAPSIBLE SECTION (details/summary)
+ * ============================ */
+
+.section-collapsible {
+    border: none;
+    overflow: hidden;
+    background: transparent;
+}
+
+.section-collapsible[open] {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* ============================
+ * SECTION HEADER (summary)
+ * ============================ */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    background: transparent;
+    transition: all var(--transition-normal);
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section-header::-webkit-details-marker {
+    display: none;
+}
+
+.section-header::marker {
+    display: none;
+    content: '';
+}
+
+.section-header:hover {
+    opacity: 0.7;
+}
+
+.section-collapsible[open] .section-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ============================
+ * SECTION ICON (Nummerierung)
+ * ============================ */
+
+.section-icon {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    min-width: 30px;
+}
+
+/* ============================
+ * SECTION TITLE & META
+ * ============================ */
+
+.section-title-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.section-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    letter-spacing: var(--letter-spacing-wider);
+    text-transform: uppercase;
+}
+
+.section-count {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* ============================
+ * TOGGLE INDICATOR
+ * ============================ */
+
+.section-toggle {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.section-toggle::before {
+    content: '+';
+    font-weight: var(--font-weight-light);
+}
+
+.section-collapsible[open] .section-toggle::before {
+    content: '−';
+}
+
+/* ============================
+ * SECTION CONTENT
+ * ============================ */
+
+.section-content {
+    animation: sectionFadeIn 0.3s ease-out;
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+ * SECTION BADGES
+ * ============================ */
+
+.section-badges {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.section-badge {
+    font-family: var(--font-family-mono);
+    font-size: 0.65em;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+}
+
+.section-badge--info,
+.section-badge--theory,
+.section-badge--practice {
+    background: transparent;
+    color: var(--color-text-muted);
+}
+
+/* ============================
+ * RESPONSIVE
+ * ============================ */
+
+@media (max-width: 768px) {
+    .section-header {
+        padding: var(--spacing-md) 0;
+        gap: var(--spacing-md);
+    }
+
+    .section-icon {
+        min-width: 25px;
+        font-size: var(--font-size-xs);
+    }
+
+    .section-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .section-subtitle {
+        font-size: 0.65em;
+    }
+
+    .section-badges {
+        display: none;
+    }
+}
+
+/* ============================
+ * PRINT STYLES
+ * ============================ */
+
+@media print {
+    .section-collapsible {
+        break-inside: avoid;
+    }
+
+    .section-collapsible[open] .section-content {
+        display: block !important;
+    }
+
+    .section-toggle {
+        display: none;
+    }
+
+    .section-header {
+        border-bottom: 2px solid var(--color-border);
+    }
+}

@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Kostenlose IHK AP1 Prüfungsvorbereitung für Fachinformatiker - Theorie, Übungen, Netzwerktechnik, IT-Sicherheit und interaktive Lerntools">
+        <meta property="og:title" content="IHK AP1 Prüfungsvorbereitung">
+        <meta property="og:description" content="Umfassende Lernseite für die IHK Abschlussprüfung Teil 1 - Fachinformatiker Systemintegration & Anwendungsentwicklung">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="./src/assets/logo.svg">
         <title>IHK-Prüfungsvorbereitung - AP1</title>
         
         <!-- Favicon & Apple Touch Icon -->
@@ -13,6 +18,7 @@
         <link rel="stylesheet" href="./src/css/main.css" />
     </head>
 
+<body>
     <!-- 
         ========================================
         IHK-LERNSEITE - Prüfungsvorbereitung AP1
@@ -377,11 +383,19 @@
                         <a href="#sub-ueb-netzplan">Netzplan-Übung</a>
                         <a href="#sub-ueb-subnetting">Subnetting-Übung</a>
                         <a href="#sub-ueb-nutzwert">Nutzwert-Übung</a>
-                        <a href="#sub-ueb-entscheidung">Entscheidungs-Übung</a>
+                        <a href="#sub-ueb-entscheidung">Entscheidungsmatrix</a>
                         <a href="#sub-ueb-osi">OSI-Übung</a>
                         <a href="#sub-ueb-schreibtisch">Schreibtischtest</a>
                         <a href="#sub-ueb-verschluesselung">Verschlüsselung</a>
                         <a href="#sub-ueb-dsgvo">DSGVO-Übung</a>
+                        <a href="#sub-ueb-sicherheit">IT-Sicherheit</a>
+                        <a href="#sub-ueb-hardware">Hardware & Ergonomie</a>
+                        <a href="#sub-ueb-wirtschaft">Wirtschaft & BWL</a>
+                        <a href="#sub-ueb-ki">KI & Green IT ★</a>
+                        <a href="#sub-ueb-cloud">Cloud & Virtualisierung</a>
+                        <a href="#sub-ueb-projekt">Projektmanagement</a>
+                        <a href="#sub-ueb-lizenzen">Lizenzen & Verträge</a>
+                        <a href="#sub-ueb-netzwerk-erweitert">Netzwerk (erweitert)</a>
                         <a href="#sub-checkliste">Checkliste</a>
                     </div>
                 </div>
@@ -420,7 +434,7 @@
         </nav>
         <div id="blur-overlay" class="blur-overlay"></div>
     </header>
-    <body>
+
         <div class="hero">
             <span class="hero-title">IHK PRÜFUNG</span>
             <span class="hero-title-light">VORBEREITUNG</span>
@@ -441,6 +455,28 @@
             </div>
         </div>
 
+
+        <!-- ════════════════════════════════════════════════════════════════════════════ -->
+        <!-- HAUPTBEREICHE - COLLAPSIBLE SECTIONS                                         -->
+        <!-- ════════════════════════════════════════════════════════════════════════════ -->
+        <div class="main-sections">
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- BEREICH 1: INFORMATIVES                                         -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <details class="section-collapsible" id="section-informatives">
+                <summary class="section-header">
+                    <span class="section-icon">01</span>
+                    <div class="section-title-group">
+                        <h2 class="section-title">Informatives</h2>
+                        <span class="section-subtitle">Prüfungsablauf, Aufgabenformen & Strategie</span>
+                    </div>
+                    <div class="section-badges">
+                        <span class="section-badge section-badge--info">Infos</span>
+                    </div>
+                    <span class="section-toggle"></span>
+                </summary>
+                <div class="section-content">
 
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- WAS IST AP1 -->
@@ -463,7 +499,7 @@
                     </div>
                     <span class="info-text">Einrichten eines IT-gestützten Arbeitsplatzes – 90 Minuten, 20% der Gesamtnote</span>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/f-EpVwYWX1I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/f-EpVwYWX1I" title="Themen der IHK-Prüfungen AP1 der IT-Berufe" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: Themen der IHK-Prüfungen AP1 der IT-Berufe</div>
                     </div>
                 </div>
@@ -712,7 +748,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/IqiOvyor1OQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/IqiOvyor1OQ" title="Themen der bisherigen IHK-Prüfungen für die IT-Berufe" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: Themen der bisherigen IHK-Prüfungen für die IT-Berufe (AP1) und FI Anwendungsentwicklung (AP2)</div>
                     </div>
                     <span class="info-text">Szenario verstehen → Lösung entwickeln → Entscheidung begründen</span>
@@ -819,7 +855,7 @@
             </div>
 
             <div class="container-full">
-                <div class="subheadding" id="sub-peripherie">Prüfungsbereiche nach Ausbildungsordnung</div>
+                <div class="subheadding" id="sub-pruefungsbereiche">Prüfungsbereiche nach Ausbildungsordnung</div>
                 <div class="subgrid">
                     <div class="container-text">
                         <table class="vergleichs-tabelle">
@@ -1066,6 +1102,26 @@
             </div>
         </div>        
         
+                </div><!-- /.section-content INFORMATIVES -->
+            </details><!-- /#section-informatives -->
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- BEREICH 2: THEORIE                                              -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <details class="section-collapsible" id="section-theorie">
+                <summary class="section-header">
+                    <span class="section-icon">02</span>
+                    <div class="section-title-group">
+                        <h2 class="section-title">Theorie</h2>
+                        <span class="section-subtitle">Netzwerke, Wirtschaft, Projektmanagement & mehr</span>
+                    </div>
+                    <div class="section-badges">
+                        <span class="section-badge section-badge--theory">Kernwissen</span>
+                    </div>
+                    <span class="section-toggle"></span>
+                </summary>
+                <div class="section-content">
+
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- TOP-PRIORITÄT: NETZWERKE GRUNDLAGEN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -1099,7 +1155,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/rDCzSppPDHw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/rDCzSppPDHw" title="Subnetting mit IPv4 für Fachinformatiker" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: Subnetting mit IPv4 für Fachinformatiker:innen</div>
                     </div>
                 </div>
@@ -4911,7 +4967,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/0l7eFqwGdBw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/0l7eFqwGdBw" title="UML-Aktivitätsdiagramm für IT-Berufe" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: UML-Aktivitätsdiagramm für IT-Berufe</div>
                     </div>
                     <span class="info-text">Prozesse visualisieren, Abläufe dokumentieren</span>
@@ -5764,7 +5820,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/ZE2HxTmxfrI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/ZE2HxTmxfrI" title="DSGVO einfach erklärt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: DSGVO einfach erklärt</div>
                     </div>
                     <span class="info-text">Personenbezogene Daten schützen – rechtssicher handeln</span>
@@ -5986,7 +6042,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/inWWhr5tnEA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/inWWhr5tnEA" title="IT-Sicherheit einfach erklärt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: IT-Sicherheit einfach erklärt</div>
                     </div>
                     <span class="info-text">Schutzziele, Bedrohungen, Maßnahmen</span>
@@ -7102,7 +7158,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/26QPDBe-NB8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/26QPDBe-NB8" title="Betriebssysteme erklärt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: Betriebssysteme erklärt</div>
                     </div>
                     <span class="info-text">OS-Aufgaben, Lizenzmodelle, Deployment</span>
@@ -7229,7 +7285,7 @@
                         <b>Hinweis ab 2024:</b> SQL-Abfragen und komplexe Datenbankoperationen sind primär AP2-Stoff. In AP1 werden ER-Modelle, Normalformen und Grundkonzepte geprüft.
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/hlGoQC332VM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/hlGoQC332VM" title="ER-Modell & Normalisierung" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: ER-Modell & Normalisierung</div>
                     </div>
                     <span class="info-text">ER-Modell, Normalisierung, Beziehungen – konzeptionell verstehen</span>
@@ -8924,7 +8980,7 @@
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/36zducUX16w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/36zducUX16w" title="Cloud Computing erklärt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: Cloud Computing erklärt</div>
                     </div>
                     <span class="info-text">VMs, Container, Cloud-Modelle verstehen und vergleichen</span>
@@ -9286,7 +9342,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                         </ul>
                     </div>
                     <div class="media-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/0l7eFqwGdBw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/0l7eFqwGdBw" title="UML-Aktivitätsdiagramm für Programmierung" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="media-caption">YouTube: UML-Aktivitätsdiagramm für AP1 der IT-Berufe und AP2 Fachinformatiker:innen Anwendungsentwicklung</div>
                     </div>
                     <span class="info-text">Paradigmen, Algorithmen, Testverfahren</span>
@@ -10292,7 +10348,7 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
 
             <!-- Testverfahren -->
             <div class="container-full">
-                <div class="subheadding" id="sub-testverfahren">Testverfahren & Qualitätssicherung</div>
+                <div class="subheadding" id="sub-testverfahren-qs">Testverfahren & Qualitätssicherung</div>
                 <div class="subgrid">
                     <div class="container-text">
                         <b>Teststufen:</b>
@@ -11571,17 +11627,36 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
             </div>
         </div>
 
+                </div><!-- /.section-content THEORIE -->
+            </details><!-- /#section-theorie -->
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- BEREICH 3: PRAXIS                                               -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <details class="section-collapsible" id="section-praxis">
+                <summary class="section-header">
+                    <span class="section-icon">03</span>
+                    <div class="section-title-group">
+                        <h2 class="section-title">Praxis</h2>
+                        <span class="section-subtitle">Übungen, Tests, Prüfungssimulation & Fallstudien</span>
+                    </div>
+                    <div class="section-badges">
+                        <span class="section-badge section-badge--practice">Interaktiv</span>
+                    </div>
+                    <span class="section-toggle"></span>
+                </summary>
+                <div class="section-content">
 
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- ÜBUNGSAUFGABEN MIT LÖSUNGEN -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="uebungen" data-search-section data-search-tags="Übungen, Aufgaben, Netzplan, Subnetting, Nutzwert, OSI, Schreibtischtest, Verschlüsselung, DSGVO, Checkliste">/ Übungsaufgaben mit Lösungen <span class="badge-relevant">PRAXIS</span></span>
+        <span id="uebungen" data-search-section data-search-tags="Übungen, Aufgaben, Netzplan, Subnetting, Nutzwert, OSI, Schreibtischtest, Verschlüsselung, DSGVO, IT-Sicherheit, Hardware, Wirtschaft, KI, Cloud, Projektmanagement, Lizenzen, VLAN, IPv6, Green IT, Checkliste">/ Übungsaufgaben mit Lösungen <span class="badge-relevant">31 AUFGABEN</span></span>
         <hr>
         <div class="grid">
             <div class="container0">
                 <div class="sidebar-sticky-wrapper">
                     <div class="micrographic">
-                        <div class="micrographic-title">In diesem Abschnitt</div>
+                        <div class="micrographic-title">Übungskategorien</div>
                         <ul class="micrographic-list">
                             <li><a href="#sub-ueb-netzplan">Netzplan-Aufgaben</a></li>
                             <li><a href="#sub-ueb-subnetting">Subnetting-Aufgaben</a></li>
@@ -11591,10 +11666,18 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                             <li><a href="#sub-ueb-schreibtisch">Schreibtischtest</a></li>
                             <li><a href="#sub-ueb-verschluesselung">Verschlüsselung</a></li>
                             <li><a href="#sub-ueb-dsgvo">DSGVO-Aufgaben</a></li>
+                            <li><a href="#sub-ueb-sicherheit">IT-Sicherheit</a></li>
+                            <li><a href="#sub-ueb-hardware">Hardware & Ergonomie</a></li>
+                            <li><a href="#sub-ueb-wirtschaft">Wirtschaft & BWL</a></li>
+                            <li><a href="#sub-ueb-ki">KI & Nachhaltigkeit ★</a></li>
+                            <li><a href="#sub-ueb-cloud">Cloud & Virtualisierung</a></li>
+                            <li><a href="#sub-ueb-projekt">Projektmanagement</a></li>
+                            <li><a href="#sub-ueb-lizenzen">Lizenzen & Verträge</a></li>
+                            <li><a href="#sub-ueb-netzwerk-erweitert">Netzwerk (VLAN, IPv6)</a></li>
                             <li><a href="#sub-checkliste">Prüfungs-Checkliste</a></li>
                         </ul>
                     </div>
-                    <span class="info-text">Klicke auf die Aufgaben zum Aufklappen. Lösungen separat einblendbar.</span>
+                    <span class="info-text">Klicke auf die Aufgaben zum Aufklappen. Lösungen separat einblendbar. ★ = Neue Themen 2025</span>
                 </div>
             </div>
 
@@ -11872,10 +11955,19 @@ def analytics_berechnen(besucher, seitenaufrufe, besucherSuchmaschinen, anzahlBo
                                             = <b>7,45</b>
                                         </div>
                                         
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Neue Gewichtung (Performance 20%)</div>
+                                            Die frei werdenden 20% werden auf Anschaffungskosten umgelegt (da nun wichtiger):<br>
+                                            Performance: 20% | Kosten: 45% | Energie: 20% | Erweiterbarkeit: 15%<br><br>
+                                            Server A: (8×0,20) + (7×0,45) + (6×0,20) + (9×0,15) = 1,60 + 3,15 + 1,20 + 1,35 = <b>7,30</b><br>
+                                            Server B: (6×0,20) + (9×0,45) + (8×0,20) + (5×0,15) = 1,20 + 4,05 + 1,60 + 0,75 = <b>7,60</b><br>
+                                            Server C: (9×0,20) + (5×0,45) + (7×0,20) + (8×0,15) = 1,80 + 2,25 + 1,40 + 1,20 = <b>6,65</b>
+                                        </div>
+                                        
                                         <b>Antworten:</b><br>
                                         a) Server A: 7,50 | Server B: 7,00 | Server C: 7,45<br>
                                         b) <b>Server A</b> mit 7,50 Punkten<br>
-                                        c) Bei 20% Performance: A=6,70 | B=7,00 | C=6,65 --> <b>Server B</b> würde gewinnen
+                                        c) Bei 20% Performance (+ 45% Kosten): A=7,30 | B=7,60 | C=6,65 → <b>Server B</b> gewinnt
                                     </div>
                                 </div>
                             </div>
@@ -12304,36 +12396,1773 @@ Funktion bewertung_webseite(ladezeit, html_valid, mobile_freundlich, seo_optimie
                 </div>
             </div>
 
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - IT-SICHERHEIT -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-sicherheit">IT-Sicherheit Aufgaben</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-12">
+                                <span class="uebung-titel">[Aufgabe 12] Schutzbedarfsanalyse durchführen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Die MedTech GmbH entwickelt medizinische Diagnosesoftware. Der IT-Leiter soll für folgende Systeme eine Schutzbedarfsanalyse erstellen:<br><br>
+                                
+                                <table class="netzplan-tabelle">
+                                    <thead>
+                                        <tr>
+                                            <th>System</th>
+                                            <th>Beschreibung</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Patientendatenbank</td><td>Enthält Gesundheitsdaten von 50.000 Patienten</td></tr>
+                                        <tr><td>Webseite (Marketing)</td><td>Öffentliche Firmenpräsentation</td></tr>
+                                        <tr><td>E-Mail-Server</td><td>Interne und externe Kommunikation</td></tr>
+                                        <tr><td>Entwicklungsserver</td><td>Quellcode der Diagnosesoftware</td></tr>
+                                    </tbody>
+                                </table>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Bewerten Sie den Schutzbedarf (normal/hoch/sehr hoch) für jedes System hinsichtlich Vertraulichkeit, Integrität und Verfügbarkeit.<br>
+                                b) Begründen Sie Ihre Einschätzung für die Patientendatenbank.<br>
+                                c) Welche konkreten Schutzmaßnahmen empfehlen Sie für das System mit dem höchsten Schutzbedarf?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Schutzbedarfseinstufung</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>System</th>
+                                                        <th>Vertraulichkeit</th>
+                                                        <th>Integrität</th>
+                                                        <th>Verfügbarkeit</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="kritisch"><td>Patientendatenbank</td><td><b>SEHR HOCH</b></td><td><b>SEHR HOCH</b></td><td><b>HOCH</b></td></tr>
+                                                    <tr><td>Webseite</td><td>Normal</td><td>Normal</td><td>Normal</td></tr>
+                                                    <tr><td>E-Mail-Server</td><td>Hoch</td><td>Hoch</td><td>Hoch</td></tr>
+                                                    <tr class="kritisch"><td>Entwicklungsserver</td><td><b>SEHR HOCH</b></td><td><b>HOCH</b></td><td>Hoch</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Begründung Patientendatenbank</div>
+                                            <b>Vertraulichkeit SEHR HOCH:</b> Gesundheitsdaten sind besondere personenbezogene Daten (Art. 9 DSGVO). Offenlegung kann existenzbedrohend für Betroffene sein.<br><br>
+                                            <b>Integrität SEHR HOCH:</b> Falsche Diagnosen können Menschenleben gefährden. Manipulation muss ausgeschlossen sein.<br><br>
+                                            <b>Verfügbarkeit HOCH:</b> Daten müssen für Behandlung verfügbar sein, aber kurzzeitiger Ausfall ist tolerierbar.
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Schutzmaßnahmen Patientendatenbank</div>
+                                            <b>Technische Maßnahmen:</b><br>
+                                            - Verschlüsselung (AES-256) für Daten at rest und in transit<br>
+                                            - Mehrstufige Authentifizierung (MFA)<br>
+                                            - Zugriffskontrolle nach Rollen (RBAC)<br>
+                                            - Intrusion Detection System (IDS)<br>
+                                            - Regelmäßige Backups mit Offsite-Lagerung<br><br>
+                                            <b>Organisatorische Maßnahmen:</b><br>
+                                            - Need-to-know-Prinzip<br>
+                                            - Protokollierung aller Zugriffe<br>
+                                            - Schulungen für Mitarbeiter<br>
+                                            - Penetrationstests
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-13">
+                                <span class="uebung-titel">[Aufgabe 13] Angriffsszenarien erkennen und abwehren</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Der IT-Support erhält folgende Meldungen:<br><br>
+                                
+                                <b>Fall A:</b> Mitarbeiter erhält E-Mail von "IT-Abteilung" mit Aufforderung, Passwort über einen Link zu bestätigen.<br><br>
+                                <b>Fall B:</b> Webserver zeigt ungewöhnlich viele Anfragen von verschiedenen IP-Adressen, Antwortzeiten steigen stark.<br><br>
+                                <b>Fall C:</b> Bildschirmmeldung: "Ihre Dateien wurden verschlüsselt. Überweisen Sie 2 BTC an..."<br><br>
+                                <b>Fall D:</b> Unbefugter verschafft sich Zutritt zum Serverraum, indem er einem Mitarbeiter folgt.<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Identifizieren Sie die Angriffsart für jeden Fall.<br>
+                                b) Welches CIA-Schutzziel ist jeweils primär bedroht?<br>
+                                c) Nennen Sie je zwei Präventivmaßnahmen pro Fall.
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <table class="netzplan-tabelle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Fall</th>
+                                                    <th>Angriffsart</th>
+                                                    <th>Bedrohtes Schutzziel</th>
+                                                    <th>Präventivmaßnahmen</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><b>A</b></td>
+                                                    <td>Phishing</td>
+                                                    <td>Vertraulichkeit</td>
+                                                    <td>- Security Awareness Training<br>- E-Mail-Filter mit Linkprüfung<br>- MFA aktivieren</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>B</b></td>
+                                                    <td>DDoS-Angriff</td>
+                                                    <td>Verfügbarkeit</td>
+                                                    <td>- Rate Limiting<br>- CDN mit DDoS-Schutz<br>- Geo-Blocking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>C</b></td>
+                                                    <td>Ransomware</td>
+                                                    <td>Verfügbarkeit + Integrität</td>
+                                                    <td>- Offline-Backups (3-2-1-Regel)<br>- Endpoint Protection<br>- Makros deaktivieren</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>D</b></td>
+                                                    <td>Tailgating / Social Engineering</td>
+                                                    <td>Vertraulichkeit</td>
+                                                    <td>- Zutrittskontrollsysteme<br>- Mitarbeiterschulung<br>- Besucherbegleitung</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div class="merksatz">
+                                            <b>Merke:</b> Die meisten erfolgreichen Angriffe nutzen den "Faktor Mensch" aus. Technische Maßnahmen müssen IMMER durch Schulungen ergänzt werden!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-14">
+                                <span class="uebung-titel">[Aufgabe 14] Passwort-Richtlinie bewerten</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Unternehmen hat folgende Passwort-Richtlinie implementiert:<br><br>
+                                
+                                - Mindestlänge: 6 Zeichen<br>
+                                - Keine Sonderzeichen erforderlich<br>
+                                - Passwort muss alle 30 Tage geändert werden<br>
+                                - Die letzten 3 Passwörter dürfen nicht wiederverwendet werden<br>
+                                - Speicherung als MD5-Hash ohne Salt<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Bewerten Sie jeden Punkt der Richtlinie kritisch.<br>
+                                b) Formulieren Sie eine verbesserte Passwort-Richtlinie nach BSI-Empfehlungen.<br>
+                                c) Welche Alternative zu häufigen Passwortwechseln empfiehlt das BSI heute?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Kritische Bewertung</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Punkt</th>
+                                                        <th>Bewertung</th>
+                                                        <th>Problem</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="kritisch"><td>6 Zeichen</td><td><b>UNSICHER</b></td><td>Brute-Force in Sekunden möglich</td></tr>
+                                                    <tr class="kritisch"><td>Keine Sonderzeichen</td><td><b>UNSICHER</b></td><td>Geringere Entropie, leichter knackbar</td></tr>
+                                                    <tr><td>30 Tage Wechsel</td><td>VERALTET</td><td>Führt zu schwachen Passwörtern (Passwort1, Passwort2...)</td></tr>
+                                                    <tr><td>3er Historie</td><td>GUT</td><td>Verhindert sofortige Wiederverwendung</td></tr>
+                                                    <tr class="kritisch"><td>MD5 ohne Salt</td><td><b>KRITISCH</b></td><td>Rainbow-Table-Angriffe möglich, MD5 gilt als gebrochen</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Verbesserte Richtlinie</div>
+                                            - Mindestlänge: <b>12 Zeichen</b> (besser: 16+)<br>
+                                            - Komplexität: Groß-/Kleinbuchstaben, Zahlen, Sonderzeichen<br>
+                                            - Keine regelmäßigen Passwortwechsel, aber <b>sofort bei Kompromittierung</b><br>
+                                            - Prüfung gegen bekannte Passwort-Leaks (Have I Been Pwned)<br>
+                                            - Speicherung mit <b>bcrypt, Argon2 oder PBKDF2</b> (mit Salt)
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) BSI-Empfehlung heute</div>
+                                            Das BSI empfiehlt <b>Multi-Faktor-Authentifizierung (MFA)</b> statt häufiger Passwortwechsel:<br><br>
+                                            - Wissen (Passwort)<br>
+                                            - Besitz (Token, Smartphone)<br>
+                                            - Biometrie (Fingerabdruck, Gesicht)<br><br>
+                                            Plus: <b>Lange Passphrasen</b> statt komplexer kurzer Passwörter<br>
+                                            Beispiel: "MeinHundFritziMag3xKatzenFutter!" 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - HARDWARE & ARBEITSPLATZ -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-hardware">Hardware & Arbeitsplatz Aufgaben</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-15">
+                                <span class="uebung-titel">[Aufgabe 15] Arbeitsplatzausstattung planen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Die Kreativagentur DesignWerft richtet 5 neue Arbeitsplätze für Grafikdesigner ein. Anforderungen:<br><br>
+                                
+                                - Arbeit mit Adobe Creative Suite (Photoshop, Illustrator, After Effects)<br>
+                                - 4K-Videobearbeitung<br>
+                                - Farbtreue Darstellung für Druckvorstufe<br>
+                                - Budget: max. 3.000 € pro Arbeitsplatz (nur Hardware)<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Erstellen Sie eine Mindestanforderungsliste für CPU, RAM, GPU und Speicher.<br>
+                                b) Welcher Monitortyp eignet sich und warum?<br>
+                                c) Nennen Sie 4 ergonomische Anforderungen nach ArbStättV für den Bildschirmarbeitsplatz.
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Mindestanforderungen Hardwarekomponenten</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Komponente</th>
+                                                        <th>Mindestanforderung</th>
+                                                        <th>Begründung</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td><b>CPU</b></td><td>8 Kerne / 16 Threads (z.B. AMD Ryzen 7 / Intel i7)</td><td>After Effects nutzt Multi-Threading intensiv</td></tr>
+                                                    <tr><td><b>RAM</b></td><td>32 GB DDR5</td><td>4K-Video + mehrere Adobe-Apps gleichzeitig</td></tr>
+                                                    <tr><td><b>GPU</b></td><td>8 GB VRAM (z.B. RTX 4060)</td><td>GPU-Beschleunigung für Rendering, CUDA/OpenCL</td></tr>
+                                                    <tr><td><b>Speicher</b></td><td>1 TB NVMe SSD + 2 TB HDD</td><td>SSD für System/Cache, HDD für Projektarchiv</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Monitorempfehlung</div>
+                                            <b>IPS-Panel mit Hardware-Kalibrierung</b><br><br>
+                                            Begründung:<br>
+                                            - IPS: Weiter Betrachtungswinkel, stabile Farben<br>
+                                            - Mindestens <b>100% sRGB</b>, besser <b>Adobe RGB / DCI-P3</b><br>
+                                            - <b>10-Bit Farbtiefe</b> für Druckvorstufe (1,07 Mrd. Farben)<br>
+                                            - Auflösung: <b>4K (3840×2160)</b> für Detailarbeit<br>
+                                            - Hardware-Kalibrierung mittels Colorimeter (z.B. Datacolor Spyder)
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Ergonomische Anforderungen (ArbStättV)</div>
+                                            1. <b>Bildschirmoberkante auf Augenhöhe</b> (Kopfneigung max. 35°)<br>
+                                            2. <b>Sehabstand 50-70 cm</b> zum Monitor<br>
+                                            3. <b>Blendfreie Aufstellung</b> (90° zum Fenster, keine Reflexionen)<br>
+                                            4. <b>Verstellbarer Bürostuhl</b> mit Lordosenstütze<br>
+                                            5. <b>Ausreichende Beleuchtungsstärke</b> (mind. 500 Lux)<br>
+                                            6. <b>Platz für Tastatur + Handballenauflage</b> (mind. 10 cm Tischkante)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-16">
+                                <span class="uebung-titel">[Aufgabe 16] RAID-System auswählen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Architekturbüro benötigt einen Fileserver für CAD-Projektdaten:<br><br>
+                                
+                                - Hohe Ausfallsicherheit (Projektdaten sind geschäftskritisch)<br>
+                                - Performante Lese-/Schreibzugriffe für große Dateien<br>
+                                - 10 TB Netto-Speicherkapazität benötigt<br>
+                                - Verfügbar: 6 identische Festplatten à 4 TB<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Vergleichen Sie RAID 5 und RAID 6 für diesen Anwendungsfall.<br>
+                                b) Berechnen Sie die Nettokapazität für beide RAID-Level.<br>
+                                c) Welches RAID-Level empfehlen Sie und warum?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Vergleich RAID 5 vs. RAID 6</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Eigenschaft</th>
+                                                        <th>RAID 5</th>
+                                                        <th>RAID 6</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Mindestanzahl Platten</td><td>3</td><td>4</td></tr>
+                                                    <tr><td>Parität</td><td>Einfach (XOR)</td><td>Doppelt</td></tr>
+                                                    <tr><td>Ausfalltoleranz</td><td>1 Platte</td><td>2 Platten</td></tr>
+                                                    <tr><td>Schreibperformance</td><td>Gut</td><td>Etwas langsamer</td></tr>
+                                                    <tr><td>Rebuild-Zeit</td><td>Kritische Phase</td><td>Sicherer</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Kapazitätsberechnung (6 × 4 TB)</div>
+                                            <b>RAID 5:</b> (n-1) × Plattengröße<br>
+                                            = (6-1) × 4 TB = <b>20 TB Nettokapazität</b><br><br>
+                                            
+                                            <b>RAID 6:</b> (n-2) × Plattengröße<br>
+                                            = (6-2) × 4 TB = <b>16 TB Nettokapazität</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Empfehlung</div>
+                                            <b>Empfehlung: RAID 6</b><br><br>
+                                            Begründung:<br>
+                                            - 16 TB übersteigt die Anforderung von 10 TB ✓<br>
+                                            - Bei großen Platten (4 TB) ist die <b>Rebuild-Zeit lang</b> (8-24h)<br>
+                                            - Während Rebuild ist RAID 5 verwundbar (zweiter Ausfall = Datenverlust)<br>
+                                            - RAID 6 toleriert 2 gleichzeitige Ausfälle<br>
+                                            - Für geschäftskritische Daten: Sicherheit vor Kapazität!<br><br>
+                                            
+                                            <div class="merksatz">
+                                                <b>Wichtig:</b> RAID ersetzt KEIN Backup! RAID schützt nur vor Hardwareausfall, nicht vor versehentlichem Löschen, Ransomware oder Brand.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-17">
+                                <span class="uebung-titel">[Aufgabe 17] USV dimensionieren</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Für einen Serverraum soll eine USV beschafft werden. Zu versorgende Geräte:<br><br>
+                                
+                                <table class="netzplan-tabelle">
+                                    <thead>
+                                        <tr>
+                                            <th>Gerät</th>
+                                            <th>Leistungsaufnahme</th>
+                                            <th>Anzahl</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Server</td><td>450 W</td><td>2</td></tr>
+                                        <tr><td>NAS-System</td><td>200 W</td><td>1</td></tr>
+                                        <tr><td>Switch</td><td>50 W</td><td>2</td></tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                Die USV soll mindestens 15 Minuten Überbrückungszeit bieten.<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie die Gesamtleistung in Watt.<br>
+                                b) Rechnen Sie die Leistung in VA um (Annahme: Power Factor 0,7).<br>
+                                c) Welche USV-Typen gibt es und welcher eignet sich für Server?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Gesamtleistung berechnen</div>
+                                            Server: 2 × 450 W = 900 W<br>
+                                            NAS: 1 × 200 W = 200 W<br>
+                                            Switches: 2 × 50 W = 100 W<br><br>
+                                            <b>Gesamt: 1.200 W</b><br><br>
+                                            + 20% Reserve für Spitzenlasten: 1.200 × 1,2 = <b>1.440 W</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Umrechnung Watt → VA</div>
+                                            Formel: VA = W / Power Factor<br><br>
+                                            VA = 1.440 W / 0,7 = <b>2.057 VA ≈ 2.100 VA</b><br><br>
+                                            Empfehlung: USV mit mindestens <b>2.200 VA / 1.500 W</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) USV-Typen</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Typ</th>
+                                                        <th>Funktion</th>
+                                                        <th>Einsatzbereich</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Offline/Standby</td><td>Schaltet bei Ausfall um</td><td>Einzelne PCs</td></tr>
+                                                    <tr><td>Line-Interactive</td><td>+ Spannungsregelung</td><td>Netzwerkgeräte, kleine Server</td></tr>
+                                                    <tr class="kritisch"><td><b>Online/Double Conversion</b></td><td>Permanente Umwandlung AC→DC→AC</td><td><b>Server, kritische Systeme</b></td></tr>
+                                                </tbody>
+                                            </table>
+                                            <br>
+                                            <b>Empfehlung:</b> Online-USV (Double Conversion)<br>
+                                            - Keine Umschaltzeit (0 ms)<br>
+                                            - Perfekte Sinuswelle<br>
+                                            - Schutz vor Spannungsschwankungen
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - WIRTSCHAFTLICHKEIT & BWL -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-wirtschaft">Wirtschaftlichkeit & BWL Aufgaben</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-18">
+                                <span class="uebung-titel">[Aufgabe 18] TCO-Berechnung Cloud vs. On-Premise</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Unternehmen evaluiert die Serverinfrastruktur für die nächsten 5 Jahre:<br><br>
+                                
+                                <b>Option A: On-Premise Server</b><br>
+                                - Anschaffung Hardware: 25.000 €<br>
+                                - Jährliche Wartung: 3.000 €<br>
+                                - Stromkosten/Jahr: 2.400 €<br>
+                                - Personalkosten Administration/Jahr: 8.000 €<br>
+                                - Abschreibung: linear über 5 Jahre<br><br>
+                                
+                                <b>Option B: Cloud (IaaS)</b><br>
+                                - Monatliche Kosten: 1.200 €<br>
+                                - Keine Anschaffungskosten<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie die TCO für beide Optionen über 5 Jahre.<br>
+                                b) Berechnen Sie die jährliche AfA für Option A.<br>
+                                c) Ab welchem Jahr ist Cloud günstiger? Erstellen Sie eine Kostenübersicht.
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) TCO-Berechnung (5 Jahre)</div>
+                                            <b>Option A - On-Premise:</b><br>
+                                            Anschaffung: 25.000 €<br>
+                                            Wartung: 5 × 3.000 € = 15.000 €<br>
+                                            Strom: 5 × 2.400 € = 12.000 €<br>
+                                            Personal: 5 × 8.000 € = 40.000 €<br>
+                                            <b>TCO On-Premise = 92.000 €</b><br><br>
+                                            
+                                            <b>Option B - Cloud:</b><br>
+                                            Monatlich: 1.200 € × 12 = 14.400 €/Jahr<br>
+                                            5 Jahre: 14.400 € × 5 = <b>72.000 €</b><br><br>
+                                            
+                                            <b>Cloud ist 20.000 € günstiger über 5 Jahre</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Lineare AfA</div>
+                                            Formel: AfA = Anschaffungskosten / Nutzungsdauer<br><br>
+                                            AfA = 25.000 € / 5 Jahre = <b>5.000 € pro Jahr</b><br><br>
+                                            Restbuchwert nach Jahr 3: 25.000 € - (3 × 5.000 €) = 10.000 €
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Kostenvergleich pro Jahr</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Jahr</th>
+                                                        <th>On-Premise (kumuliert)</th>
+                                                        <th>Cloud (kumuliert)</th>
+                                                        <th>Differenz</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>1</td><td>38.400 €</td><td>14.400 €</td><td class="kritisch">-24.000 €</td></tr>
+                                                    <tr><td>2</td><td>51.800 €</td><td>28.800 €</td><td class="kritisch">-23.000 €</td></tr>
+                                                    <tr><td>3</td><td>65.200 €</td><td>43.200 €</td><td class="kritisch">-22.000 €</td></tr>
+                                                    <tr><td>4</td><td>78.600 €</td><td>57.600 €</td><td class="kritisch">-21.000 €</td></tr>
+                                                    <tr><td>5</td><td>92.000 €</td><td>72.000 €</td><td class="kritisch">-20.000 €</td></tr>
+                                                </tbody>
+                                            </table>
+                                            <br>
+                                            <b>Ergebnis:</b> Cloud ist in diesem Szenario <b>ab Jahr 1</b> und dauerhaft günstiger.<br><br>
+                                            <div class="merksatz">
+                                                <b>Achtung:</b> TCO allein reicht nicht! Auch Datenschutz, Verfügbarkeit, Vendor Lock-in und Skalierbarkeit bewerten.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-19">
+                                <span class="uebung-titel">[Aufgabe 19] Make-or-Buy Entscheidung</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Die IT-Abteilung eines mittelständischen Unternehmens überlegt, ob ein Ticketsystem selbst entwickelt oder eingekauft werden soll:<br><br>
+                                
+                                <b>Make (Eigenentwicklung):</b><br>
+                                - Entwicklungskosten: 80.000 €<br>
+                                - Jährliche Wartung/Weiterentwicklung: 15.000 €<br>
+                                - Zeit bis Produktivbetrieb: 8 Monate<br><br>
+                                
+                                <b>Buy (SaaS-Lösung):</b><br>
+                                - Monatliche Lizenz: 500 € (10 Agenten)<br>
+                                - Einmalige Einrichtung: 5.000 €<br>
+                                - Zeit bis Produktivbetrieb: 2 Wochen<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie die Kosten beider Optionen über 5 Jahre.<br>
+                                b) Listen Sie qualitative Vor-/Nachteile beider Optionen auf.<br>
+                                c) Treffen Sie eine begründete Empfehlung.
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Kostenvergleich (5 Jahre)</div>
+                                            <b>Make:</b><br>
+                                            Entwicklung: 80.000 €<br>
+                                            Wartung: 5 × 15.000 € = 75.000 €<br>
+                                            <b>Gesamt Make: 155.000 €</b><br><br>
+                                            
+                                            <b>Buy:</b><br>
+                                            Einrichtung: 5.000 €<br>
+                                            Lizenzen: 500 € × 12 × 5 = 30.000 €<br>
+                                            <b>Gesamt Buy: 35.000 €</b><br><br>
+                                            
+                                            <b>Ersparnis bei Buy: 120.000 €</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Qualitative Faktoren</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Kriterium</th>
+                                                        <th>Make</th>
+                                                        <th>Buy</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Anpassbarkeit</td><td>+++ Volle Kontrolle</td><td>+ Begrenzt auf Konfiguration</td></tr>
+                                                    <tr><td>Time-to-Market</td><td>- 8 Monate</td><td>+++ 2 Wochen</td></tr>
+                                                    <tr><td>Datenhoheit</td><td>+++ On-Premise möglich</td><td>- Cloud des Anbieters</td></tr>
+                                                    <tr><td>Wartungsaufwand</td><td>- Eigenes Personal</td><td>+++ Inklusive</td></tr>
+                                                    <tr><td>Skalierbarkeit</td><td>+ Aufwändig</td><td>+++ Einfach skalierbar</td></tr>
+                                                    <tr><td>Vendor Lock-in</td><td>+++ Kein</td><td>- Abhängigkeit vom Anbieter</td></tr>
+                                                    <tr><td>Know-how</td><td>- Spezialistensuche</td><td>+++ Keine Expertise nötig</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Empfehlung</div>
+                                            <b>Empfehlung: Buy (SaaS-Lösung)</b><br><br>
+                                            Begründung:<br>
+                                            - <b>120.000 € Kostenvorteil</b> über 5 Jahre<br>
+                                            - Schnelle Verfügbarkeit (2 Wochen statt 8 Monate)<br>
+                                            - Kein Risiko von Entwicklungsfehlern<br>
+                                            - Ticketsystem ist keine Kernkompetenz<br>
+                                            - Regelmäßige Updates und Support inklusive<br><br>
+                                            
+                                            <b>Make wäre nur sinnvoll bei:</b><br>
+                                            - Hochsensiblen Daten (Gesundheit, Militär)<br>
+                                            - Sehr speziellen Anforderungen<br>
+                                            - Strategischer Bedeutung des Systems
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-20">
+                                <span class="uebung-titel">[Aufgabe 20] Angebotskalkulation erstellen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein IT-Systemhaus soll ein Angebot für die Netzwerkmodernisierung erstellen:<br><br>
+                                
+                                <b>Material:</b><br>
+                                - 5 Managed Switches à 450 € (Einkaufspreis)<br>
+                                - 200m Netzwerkkabel: 180 €<br>
+                                - Patchpanel + Kleinteile: 320 €<br><br>
+                                
+                                <b>Personalkosten:</b><br>
+                                - Planung: 8 h × 75 €/h<br>
+                                - Installation: 16 h × 55 €/h<br>
+                                - Konfiguration: 6 h × 85 €/h<br><br>
+                                
+                                <b>Kalkulationszuschläge:</b><br>
+                                - Materialzuschlag: 25%<br>
+                                - Gewinnzuschlag: 12%<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie die Materialkosten inkl. Zuschlag.<br>
+                                b) Berechnen Sie die Personalkosten.<br>
+                                c) Ermitteln Sie den Nettoangbotspreis inkl. Gewinnzuschlag.
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Materialkosten</div>
+                                            Switches: 5 × 450 € = 2.250 €<br>
+                                            Kabel: 180 €<br>
+                                            Patchpanel: 320 €<br>
+                                            <b>Materialkosten netto: 2.750 €</b><br><br>
+                                            
+                                            + 25% Materialzuschlag: 2.750 € × 1,25 = <b>3.437,50 €</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Personalkosten</div>
+                                            Planung: 8 h × 75 € = 600 €<br>
+                                            Installation: 16 h × 55 € = 880 €<br>
+                                            Konfiguration: 6 h × 85 € = 510 €<br>
+                                            <b>Personalkosten: 1.990 €</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Nettoangbotspreis</div>
+                                            Material mit Zuschlag: 3.437,50 €<br>
+                                            Personal: 1.990 €<br>
+                                            <b>Selbstkosten: 5.427,50 €</b><br><br>
+                                            
+                                            + 12% Gewinnzuschlag: 5.427,50 € × 1,12 = <b>6.078,80 €</b><br><br>
+                                            
+                                            <b>Nettoangbotspreis: 6.078,80 €</b><br>
+                                            Bruttoangbotspreis (19% MwSt): 6.078,80 € × 1,19 = <b>7.233,77 €</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - KI & NACHHALTIGKEIT (NEU 2025) -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-ki">KI & Nachhaltigkeit Aufgaben <span class="badge-neu">NEU 2025</span></div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-21">
+                                <span class="uebung-titel">[Aufgabe 21] KI-Einsatz im Unternehmen bewerten</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Kundenservice-Center mit 50 Mitarbeitern erwägt den Einsatz eines KI-gestützten Chatbots:<br><br>
+                                
+                                - Aktuell: 800 Anfragen/Tag, durchschnittliche Bearbeitungszeit 8 Minuten<br>
+                                - Chatbot könnte 60% der Standardanfragen automatisiert beantworten<br>
+                                - Investition: 45.000 € einmalig, 1.500 €/Monat laufende Kosten<br>
+                                - Aktuelle Personalkosten: 28 €/Stunde pro Mitarbeiter<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie die jährliche Zeitersparnis durch den Chatbot.<br>
+                                b) Welche ethischen Aspekte müssen beim KI-Einsatz berücksichtigt werden?<br>
+                                c) Welche Risiken birgt der Einsatz eines KI-Chatbots?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Zeitersparnis berechnen</div>
+                                            Anfragen pro Tag: 800<br>
+                                            Davon automatisierbar (60%): 480 Anfragen<br>
+                                            Bearbeitungszeit pro Anfrage: 8 Minuten<br><br>
+                                            
+                                            Eingesparte Zeit/Tag: 480 × 8 Min = 3.840 Min = <b>64 Stunden/Tag</b><br>
+                                            Eingesparte Zeit/Jahr (250 Arbeitstage): 64 × 250 = <b>16.000 Stunden/Jahr</b><br><br>
+                                            
+                                            Wert der Ersparnis: 16.000 h × 28 € = <b>448.000 €/Jahr</b><br><br>
+                                            
+                                            Kostenvergleich:<br>
+                                            - Ersparnis: 448.000 €<br>
+                                            - Investition Jahr 1: 45.000 € + (12 × 1.500 €) = 63.000 €<br>
+                                            - <b>ROI Jahr 1: 385.000 € positiv</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Ethische Aspekte</div>
+                                            <b>1. Transparenz:</b><br>
+                                            - Kunden müssen wissen, dass sie mit KI kommunizieren<br>
+                                            - Keine Täuschung über "echte" Mitarbeiter<br><br>
+                                            
+                                            <b>2. Datenschutz:</b><br>
+                                            - Was passiert mit den Gesprächsdaten?<br>
+                                            - Werden Daten zum Training verwendet?<br>
+                                            - DSGVO-konforme Verarbeitung<br><br>
+                                            
+                                            <b>3. Arbeitsplätze:</b><br>
+                                            - Sozialverträgliche Umstrukturierung<br>
+                                            - Weiterqualifizierung statt Entlassung<br>
+                                            - Betriebsrat einbinden<br><br>
+                                            
+                                            <b>4. Diskriminierungsfreiheit:</b><br>
+                                            - KI-Bias prüfen (trainiert auf welchen Daten?)<br>
+                                            - Gleiche Behandlung aller Kunden
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Risiken des KI-Einsatzes</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Risiko</th>
+                                                        <th>Beschreibung</th>
+                                                        <th>Gegenmaßnahme</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Halluzinationen</td><td>KI erfindet falsche Informationen</td><td>Human-in-the-Loop, Quellenprüfung</td></tr>
+                                                    <tr><td>Reputationsschaden</td><td>Unpassende/beleidigende Antworten</td><td>Content-Filter, Monitoring</td></tr>
+                                                    <tr><td>Vendor Lock-in</td><td>Abhängigkeit vom Anbieter</td><td>Exit-Strategie, Datenportabilität</td></tr>
+                                                    <tr><td>Datenleck</td><td>Sensible Daten in KI-Prompts</td><td>Data Masking, On-Premise-Lösung</td></tr>
+                                                    <tr><td>Akzeptanzprobleme</td><td>Kunden/Mitarbeiter lehnen KI ab</td><td>Change Management, Schulungen</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-22">
+                                <span class="uebung-titel">[Aufgabe 22] Green IT & Nachhaltigkeit bewerten</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Unternehmen möchte seinen CO₂-Fußabdruck der IT reduzieren. Aktuelle Infrastruktur:<br><br>
+                                
+                                - 200 Desktop-PCs (durchschnittlich 150 W, 8h/Tag Betrieb)<br>
+                                - 10 Server im Serverraum (durchschnittlich 400 W, 24/7)<br>
+                                - Klimaanlage Serverraum: 5 kW<br>
+                                - PUE (Power Usage Effectiveness) des Serverraums: 2,0<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie den jährlichen Stromverbrauch der IT-Infrastruktur.<br>
+                                b) Welche Green-IT-Maßnahmen können implementiert werden?<br>
+                                c) Was bedeutet PUE und wie kann dieser Wert verbessert werden?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Stromverbrauch berechnen</div>
+                                            <b>Desktop-PCs:</b><br>
+                                            200 PCs × 150 W × 8 h × 250 Tage = 60.000.000 Wh = <b>60.000 kWh/Jahr</b><br><br>
+                                            
+                                            <b>Server:</b><br>
+                                            10 Server × 400 W × 24 h × 365 Tage = 35.040.000 Wh = <b>35.040 kWh/Jahr</b><br><br>
+                                            
+                                            <b>Serverraum gesamt (mit PUE 2,0):</b><br>
+                                            35.040 kWh × 2,0 = <b>70.080 kWh/Jahr</b><br>
+                                            (PUE 2,0 bedeutet: Für 1 kWh IT braucht man 2 kWh gesamt inkl. Kühlung)<br><br>
+                                            
+                                            <b>Gesamtverbrauch: 60.000 + 70.080 = 130.080 kWh/Jahr</b><br><br>
+                                            
+                                            Bei 0,30 €/kWh: 130.080 × 0,30 = <b>39.024 € Stromkosten/Jahr</b><br>
+                                            Bei 400g CO₂/kWh: 130.080 × 0,4 = <b>52 Tonnen CO₂/Jahr</b>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Green-IT-Maßnahmen</div>
+                                            <b>Sofortmaßnahmen:</b><br>
+                                            - Energiesparprofile aktivieren (Standby nach 10 Min)<br>
+                                            - Monitore mit Bewegungsmelder koppeln<br>
+                                            - Server-Virtualisierung (weniger physische Server)<br><br>
+                                            
+                                            <b>Mittelfristig:</b><br>
+                                            - Desktop-PCs durch Thin Clients ersetzen (15 W statt 150 W)<br>
+                                            - Hardware-Refresh mit Energy-Star-Geräten<br>
+                                            - Server-Konsolidierung in die Cloud (falls CO₂-neutral)<br><br>
+                                            
+                                            <b>Langfristig:</b><br>
+                                            - Kühlung optimieren (Freecooling, Warmgang/Kaltgang)<br>
+                                            - Abwärme für Gebäudeheizung nutzen<br>
+                                            - Ökostrom beziehen oder PV-Anlage<br>
+                                            - Geräte-Lebensdauer verlängern (Reparatur vor Neuanschaffung)
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) PUE (Power Usage Effectiveness)</div>
+                                            <b>Definition:</b><br>
+                                            PUE = Gesamtenergie Rechenzentrum / Energie der IT-Geräte<br><br>
+                                            
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>PUE-Wert</th>
+                                                        <th>Bewertung</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="kritisch"><td>2,0 und höher</td><td>Ineffizient (50%+ für Kühlung)</td></tr>
+                                                    <tr><td>1,5 - 2,0</td><td>Durchschnitt</td></tr>
+                                                    <tr><td>1,2 - 1,5</td><td>Gut</td></tr>
+                                                    <tr style="background: #d4edda;"><td>unter 1,2</td><td>Exzellent (Google erreicht 1,1)</td></tr>
+                                                </tbody>
+                                            </table>
+                                            <br>
+                                            <b>Verbesserungsmaßnahmen:</b><br>
+                                            - Warmgang-/Kaltgang-Einhausung<br>
+                                            - Freikühlung (Außenluft statt Klimaanlage)<br>
+                                            - Höhere Raumtemperatur erlauben (25°C statt 20°C)<br>
+                                            - Effizientere USV-Anlagen<br>
+                                            - Blindstromkompensation
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-23">
+                                <span class="uebung-titel">[Aufgabe 23] KI-Arten und Anwendungen zuordnen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Aufgabe:</b><br>
+                                Ordnen Sie die folgenden Anwendungsfälle der passenden KI-Methode zu und erklären Sie kurz:<br><br>
+                                
+                                <b>KI-Methoden:</b><br>
+                                A) Maschinelles Lernen (ML)<br>
+                                B) Deep Learning / Neuronale Netze<br>
+                                C) Natural Language Processing (NLP)<br>
+                                D) Computer Vision<br>
+                                E) Regelbasierte Systeme / Expertensysteme<br><br>
+                                
+                                <b>Anwendungsfälle:</b><br>
+                                1. Spam-Filter für E-Mails<br>
+                                2. Gesichtserkennung am Smartphone<br>
+                                3. Chatbot für Kundenanfragen<br>
+                                4. Qualitätskontrolle in der Produktion (Bildprüfung)<br>
+                                5. Empfehlungsalgorithmus bei Netflix<br>
+                                6. Diagnose-Software für Ärzte (wenn-dann-Regeln)<br>
+                                7. Automatische Übersetzung (DeepL, Google Translate)
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <table class="netzplan-tabelle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nr.</th>
+                                                    <th>Anwendung</th>
+                                                    <th>KI-Methode</th>
+                                                    <th>Erklärung</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>1</td><td>Spam-Filter</td><td><b>A) ML</b></td><td>Klassifizierung durch Mustererkennung in Texten</td></tr>
+                                                <tr><td>2</td><td>Gesichtserkennung</td><td><b>B+D) Deep Learning + CV</b></td><td>CNN (Convolutional Neural Networks) für Bildanalyse</td></tr>
+                                                <tr><td>3</td><td>Chatbot</td><td><b>C) NLP</b></td><td>Versteht natürliche Sprache, generiert Antworten</td></tr>
+                                                <tr><td>4</td><td>Qualitätskontrolle</td><td><b>D) Computer Vision</b></td><td>Erkennt Fehler auf Bildern automatisch</td></tr>
+                                                <tr><td>5</td><td>Netflix-Empfehlung</td><td><b>A) ML</b></td><td>Collaborative Filtering basierend auf Nutzerdaten</td></tr>
+                                                <tr><td>6</td><td>Ärzte-Diagnose</td><td><b>E) Expertensystem</b></td><td>Feste Regelbasis von Experten erstellt</td></tr>
+                                                <tr><td>7</td><td>Übersetzung</td><td><b>B+C) Deep Learning + NLP</b></td><td>Transformer-Modelle für Sprachverständnis</td></tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div class="merksatz">
+                                            <b>Wichtige Begriffe für die Prüfung:</b><br>
+                                            - <b>Supervised Learning:</b> Lernen mit gelabelten Daten (z.B. Spam/Nicht-Spam)<br>
+                                            - <b>Unsupervised Learning:</b> Muster finden ohne Labels (z.B. Kundensegmentierung)<br>
+                                            - <b>LLM (Large Language Model):</b> ChatGPT, Claude - trainiert auf riesigen Textmengen<br>
+                                            - <b>Halluzination:</b> KI erfindet plausibel klingende, aber falsche Informationen
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - CLOUD & VIRTUALISIERUNG -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-cloud">Cloud & Virtualisierung Aufgaben</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-24">
+                                <span class="uebung-titel">[Aufgabe 24] Cloud-Service-Modelle auswählen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Drei Unternehmen haben unterschiedliche Anforderungen:<br><br>
+                                
+                                <b>Firma A:</b> Start-up ohne IT-Abteilung, benötigt E-Mail und Collaboration-Tools.<br>
+                                <b>Firma B:</b> Softwareentwickler, braucht schnell skalierbare Testumgebungen mit voller Kontrolle über OS und Runtime.<br>
+                                <b>Firma C:</b> E-Commerce-Shop, möchte eigene Webanwendung hosten, ohne Server administrieren zu müssen.<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Welches Cloud-Service-Modell (IaaS, PaaS, SaaS) empfehlen Sie jeweils?<br>
+                                b) Nennen Sie für jedes Modell ein konkretes Produktbeispiel.<br>
+                                c) Zeichnen Sie eine Verantwortlichkeitsmatrix (Was verwaltet Kunde, was Anbieter?).
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Service-Modell-Zuordnung</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Firma</th>
+                                                        <th>Anforderung</th>
+                                                        <th>Empfehlung</th>
+                                                        <th>Begründung</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>A</td><td>E-Mail, Collaboration</td><td><b>SaaS</b></td><td>Sofort nutzbar, keine IT-Kenntnisse nötig</td></tr>
+                                                    <tr><td>B</td><td>Testumgebungen, volle Kontrolle</td><td><b>IaaS</b></td><td>Kann OS und Middleware selbst wählen</td></tr>
+                                                    <tr><td>C</td><td>Webanwendung, keine Serveradmin</td><td><b>PaaS</b></td><td>Fokus auf Code, Infrastruktur automatisch</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Produktbeispiele</div>
+                                            <b>SaaS:</b> Microsoft 365, Google Workspace, Salesforce, Slack<br>
+                                            <b>PaaS:</b> Heroku, Google App Engine, Azure App Service<br>
+                                            <b>IaaS:</b> AWS EC2, Azure Virtual Machines, Google Compute Engine
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Verantwortlichkeitsmatrix</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Komponente</th>
+                                                        <th>On-Premise</th>
+                                                        <th>IaaS</th>
+                                                        <th>PaaS</th>
+                                                        <th>SaaS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Anwendungen</td><td>Kunde</td><td>Kunde</td><td>Kunde</td><td class="kritisch">Anbieter</td></tr>
+                                                    <tr><td>Daten</td><td>Kunde</td><td>Kunde</td><td>Kunde</td><td>Kunde</td></tr>
+                                                    <tr><td>Runtime</td><td>Kunde</td><td>Kunde</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td></tr>
+                                                    <tr><td>Middleware</td><td>Kunde</td><td>Kunde</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td></tr>
+                                                    <tr><td>Betriebssystem</td><td>Kunde</td><td>Kunde</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td></tr>
+                                                    <tr><td>Virtualisierung</td><td>Kunde</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td></tr>
+                                                    <tr><td>Server/Storage</td><td>Kunde</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td></tr>
+                                                    <tr><td>Netzwerk</td><td>Kunde</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td><td class="kritisch">Anbieter</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-25">
+                                <span class="uebung-titel">[Aufgabe 25] VM vs. Container entscheiden</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Entwicklerteam plant eine Microservices-Architektur mit 20 kleinen, unabhängigen Diensten. Jeder Dienst soll:<br><br>
+                                
+                                - Schnell startbar sein (unter 5 Sekunden)<br>
+                                - Ressourceneffizient sein<br>
+                                - Auf verschiedenen Umgebungen identisch laufen<br>
+                                - Leicht skalierbar sein<br><br>
+                                
+                                Als Alternative steht eine klassische Virtualisierung mit 20 VMs zur Debatte.<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Vergleichen Sie VM und Container für diesen Anwendungsfall.<br>
+                                b) Welche Technologie empfehlen Sie und warum?<br>
+                                c) Was ist der Unterschied zwischen Docker und Kubernetes?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Vergleich VM vs. Container</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Eigenschaft</th>
+                                                        <th>VM</th>
+                                                        <th>Container</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Startzeit</td><td>Minuten</td><td class="kritisch"><b>Sekunden</b></td></tr>
+                                                    <tr><td>Ressourcenverbrauch</td><td>Hoch (je eigenes OS)</td><td class="kritisch"><b>Gering (geteilter Kernel)</b></td></tr>
+                                                    <tr><td>Isolation</td><td><b>Stark</b> (Hardware-Level)</td><td>Mittel (Prozess-Level)</td></tr>
+                                                    <tr><td>Portabilität</td><td>Mittel (VM-Image)</td><td class="kritisch"><b>Hoch (Docker-Image)</b></td></tr>
+                                                    <tr><td>Skalierung</td><td>Langsam</td><td class="kritisch"><b>Sehr schnell</b></td></tr>
+                                                    <tr><td>OS-Vielfalt</td><td><b>Jedes OS möglich</b></td><td>Nur Host-OS-Kernel</td></tr>
+                                                    <tr><td>Größe</td><td>GB (ganzes OS)</td><td class="kritisch"><b>MB (nur App + Dependencies)</b></td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Empfehlung</div>
+                                            <b>Empfehlung: Container (Docker)</b><br><br>
+                                            Begründung:<br>
+                                            - ✓ Startzeit unter 5 Sekunden erfüllt<br>
+                                            - ✓ 20 Container statt 20 VMs = massive Ressourcenersparnis<br>
+                                            - ✓ "Build once, run anywhere" - identisches Verhalten<br>
+                                            - ✓ Microservices-Architektur ist Haupt-Usecase für Container<br>
+                                            - ✓ Einfache horizontale Skalierung mit Kubernetes<br><br>
+                                            
+                                            <b>VM wäre besser bei:</b><br>
+                                            - Unterschiedlichen Betriebssystemen<br>
+                                            - Maximaler Isolation (Multi-Tenant)<br>
+                                            - Legacy-Anwendungen
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Docker vs. Kubernetes</div>
+                                            <b>Docker:</b><br>
+                                            - Container-<b>Runtime</b> (erstellt und führt Container aus)<br>
+                                            - Einzelne Container oder kleine Gruppen<br>
+                                            - "docker run", "docker build"<br><br>
+                                            
+                                            <b>Kubernetes (K8s):</b><br>
+                                            - Container-<b>Orchestrierung</b> (verwaltet viele Container)<br>
+                                            - Automatisches Deployment, Scaling, Load Balancing<br>
+                                            - Self-Healing (startet abgestürzte Container neu)<br>
+                                            - Rolling Updates ohne Downtime<br><br>
+                                            
+                                            <div class="merksatz">
+                                                <b>Merke:</b> Docker = Container bauen & ausführen | Kubernetes = Container im großen Stil managen
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - PROJEKTMANAGEMENT -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-projekt">Projektmanagement Aufgaben</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-26">
+                                <span class="uebung-titel">[Aufgabe 26] Vorgehensmodell auswählen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Drei Projekte stehen zur Planung an:<br><br>
+                                
+                                <b>Projekt 1:</b> Entwicklung einer Banking-App mit sehr strikten regulatorischen Anforderungen. Alle Funktionen sind vorab definiert und dokumentiert.<br><br>
+                                
+                                <b>Projekt 2:</b> Start-up entwickelt neues Social-Media-Feature. Anforderungen ändern sich wöchentlich basierend auf Nutzerfeedback.<br><br>
+                                
+                                <b>Projekt 3:</b> Migrationsprojekt: 500 PCs werden auf Windows 11 umgestellt. Genauer Ablauf ist bekannt, muss aber in Iterationen erfolgen.<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Welches Vorgehensmodell empfehlen Sie je Projekt?<br>
+                                b) Nennen Sie die Phasen des Wasserfallmodells.<br>
+                                c) Erklären Sie den Unterschied zwischen Scrum und Kanban.
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Vorgehensmodell-Empfehlung</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Projekt</th>
+                                                        <th>Modell</th>
+                                                        <th>Begründung</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>1 - Banking-App</td><td><b>Wasserfallmodell</b></td><td>Fixe Anforderungen, starke Dokumentationspflicht, keine Änderungen erlaubt</td></tr>
+                                                    <tr><td>2 - Social Media</td><td><b>Scrum</b></td><td>Schnelles Feedback, häufige Änderungen, iterative Entwicklung</td></tr>
+                                                    <tr><td>3 - PC-Migration</td><td><b>Kanban</b></td><td>Kontinuierlicher Flow, keine festen Sprints nötig, visualisierter Fortschritt</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Phasen des Wasserfallmodells</div>
+                                            1. <b>Anforderungsanalyse</b> (Requirements)<br>
+                                            2. <b>Entwurf</b> (Design)<br>
+                                            3. <b>Implementierung</b> (Coding)<br>
+                                            4. <b>Test</b> (Verification)<br>
+                                            5. <b>Deployment</b> (Installation)<br>
+                                            6. <b>Wartung</b> (Maintenance)<br><br>
+                                            
+                                            <b>Merkmal:</b> Jede Phase wird vollständig abgeschlossen, bevor die nächste beginnt. Rücksprünge sind teuer/schwierig.
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Scrum vs. Kanban</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Aspekt</th>
+                                                        <th>Scrum</th>
+                                                        <th>Kanban</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Iterationen</td><td>Feste Sprints (1-4 Wochen)</td><td>Kontinuierlicher Fluss</td></tr>
+                                                    <tr><td>Rollen</td><td>Product Owner, Scrum Master, Team</td><td>Keine vorgegebenen Rollen</td></tr>
+                                                    <tr><td>Planung</td><td>Sprint Planning zu Sprintbeginn</td><td>Kein fester Planungszyklus</td></tr>
+                                                    <tr><td>Änderungen</td><td>Im Sprint keine Änderungen</td><td>Jederzeit neue Aufgaben möglich</td></tr>
+                                                    <tr><td>Metriken</td><td>Velocity (Story Points/Sprint)</td><td>Lead Time, Cycle Time</td></tr>
+                                                    <tr><td>Board</td><td>Wird pro Sprint geleert</td><td>Aufgaben fließen kontinuierlich</td></tr>
+                                                    <tr><td>WIP-Limit</td><td>Implizit durch Sprintkapazität</td><td>Explizites WIP-Limit pro Spalte</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-27">
+                                <span class="uebung-titel">[Aufgabe 27] SMART-Ziele formulieren</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Aufgabe:</b><br>
+                                Bewerten Sie die folgenden Projektziele nach den SMART-Kriterien und formulieren Sie sie ggf. um:<br><br>
+                                
+                                1. "Die Website soll schneller werden."<br>
+                                2. "Wir müssen die Kundenzufriedenheit verbessern."<br>
+                                3. "Die Serverinfrastruktur soll bis Q2 2026 auf Cloud migriert werden."<br>
+                                4. "Es sollen weniger IT-Tickets entstehen."
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">SMART-Kriterien Erinnerung</div>
+                                            <b>S</b>pezifisch - Was genau?<br>
+                                            <b>M</b>essbar - Wie wird Erfolg gemessen?<br>
+                                            <b>A</b>kzeptiert/Attraktiv - Wird es unterstützt?<br>
+                                            <b>R</b>ealistisch - Ist es erreichbar?<br>
+                                            <b>T</b>erminiert - Bis wann?
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">Bewertung und Umformulierung</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nr.</th>
+                                                        <th>Original</th>
+                                                        <th>Problem</th>
+                                                        <th>SMART-Version</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>"Website schneller"</td>
+                                                        <td class="kritisch">Nicht messbar, nicht terminiert</td>
+                                                        <td>"Die Ladezeit der Startseite soll bis 31.03.2026 von 4s auf unter 2s reduziert werden."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>"Kundenzufriedenheit verbessern"</td>
+                                                        <td class="kritisch">Nicht spezifisch, nicht messbar</td>
+                                                        <td>"Der NPS (Net Promoter Score) soll bis Ende 2026 von 30 auf 50 Punkte steigen."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>"Migration bis Q2 2026"</td>
+                                                        <td style="background: #d4edda;">✓ Bereits SMART</td>
+                                                        <td>Ergänzung: "Alle 15 Server (100%) werden auf AWS migriert."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>"Weniger IT-Tickets"</td>
+                                                        <td class="kritisch">Vage, nicht messbar</td>
+                                                        <td>"Die Anzahl der Passwort-Reset-Tickets soll durch Self-Service-Portal bis 30.06.2026 um 70% sinken."</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - LIZENZEN & VERTRÄGE -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-lizenzen">Lizenzen & Verträge Aufgaben</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-28">
+                                <span class="uebung-titel">[Aufgabe 28] Softwarelizenzen vergleichen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Aufgabe:</b><br>
+                                Ordnen Sie die folgenden Szenarien der passenden Lizenzart zu und erklären Sie, was bei Nutzung zu beachten ist:<br><br>
+                                
+                                <b>Lizenzarten:</b><br>
+                                A) Proprietäre Lizenz<br>
+                                B) Open Source (GPL)<br>
+                                C) Open Source (MIT/BSD)<br>
+                                D) Freeware<br>
+                                E) Shareware<br>
+                                F) SaaS-Subscription<br><br>
+                                
+                                <b>Szenarien:</b><br>
+                                1. Microsoft Office 365 für 150 Mitarbeiter<br>
+                                2. Linux-Kernel im eigenen Produkt eingebaut<br>
+                                3. Kleine JavaScript-Bibliothek in kommerziellem Web-Projekt<br>
+                                4. WinRAR-Testversion seit 3 Jahren im Einsatz<br>
+                                5. VLC Media Player auf allen Firmen-PCs
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <table class="netzplan-tabelle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nr.</th>
+                                                    <th>Software</th>
+                                                    <th>Lizenz</th>
+                                                    <th>Zu beachten</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Microsoft 365</td>
+                                                    <td><b>F) SaaS-Subscription</b></td>
+                                                    <td>Monatliche Abrechnung pro Nutzer, Compliance-Anforderungen prüfen, Datenverarbeitung in MS-Cloud</td>
+                                                </tr>
+                                                <tr class="kritisch">
+                                                    <td>2</td>
+                                                    <td>Linux-Kernel</td>
+                                                    <td><b>B) GPL</b></td>
+                                                    <td><b>ACHTUNG:</b> Copyleft! Eigener Code muss auch unter GPL veröffentlicht werden (Quellcode-Pflicht)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>JS-Bibliothek</td>
+                                                    <td><b>C) MIT/BSD</b></td>
+                                                    <td>Permissive License - kommerziell nutzbar, Lizenzhinweis muss erhalten bleiben</td>
+                                                </tr>
+                                                <tr class="kritisch">
+                                                    <td>4</td>
+                                                    <td>WinRAR</td>
+                                                    <td><b>E) Shareware</b></td>
+                                                    <td><b>LIZENZVERSTOS!</b> Nach Testphase ist Kauf erforderlich. Firmeneinsatz = Lizenz kaufen!</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>VLC Player</td>
+                                                    <td><b>B) GPL</b></td>
+                                                    <td>Kostenlos nutzbar, aber bei Änderungen/Distribution gilt GPL-Copyleft</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div class="merksatz">
+                                            <b>GPL-Copyleft:</b> Änderungen an GPL-Software müssen wieder unter GPL veröffentlicht werden.<br>
+                                            <b>MIT/BSD (Permissive):</b> Keine Pflicht zur Veröffentlichung eigener Änderungen. Nur Copyright-Hinweis beibehalten.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-29">
+                                <span class="uebung-titel">[Aufgabe 29] SLA analysieren</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein Cloud-Anbieter wirbt mit folgenden SLA-Garantien:<br><br>
+                                
+                                - Verfügbarkeit: 99,9%<br>
+                                - Support-Reaktionszeit: 4 Stunden (Business Hours)<br>
+                                - Maximale Wiederherstellungszeit nach Ausfall: 2 Stunden<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Berechnen Sie die maximal zulässige Ausfallzeit pro Monat und pro Jahr bei 99,9% Verfügbarkeit.<br>
+                                b) Was bedeuten RTO und RPO? Welche Werte wären bei diesem SLA kritisch?<br>
+                                c) Welche Fragen sollte man vor Vertragsabschluss klären?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) Ausfallzeit berechnen</div>
+                                            <b>Pro Jahr (8.760 Stunden):</b><br>
+                                            Ausfall = 8.760 h × (1 - 0,999) = 8.760 h × 0,001 = <b>8,76 Stunden/Jahr</b><br><br>
+                                            
+                                            <b>Pro Monat (730 Stunden):</b><br>
+                                            Ausfall = 730 h × 0,001 = <b>43,8 Minuten/Monat</b><br><br>
+                                            
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Verfügbarkeit</th>
+                                                        <th>Ausfall/Jahr</th>
+                                                        <th>Ausfall/Monat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>99%</td><td>87,6 h (3,6 Tage)</td><td>7,3 h</td></tr>
+                                                    <tr><td>99,9%</td><td>8,76 h</td><td>43,8 Min</td></tr>
+                                                    <tr><td>99,99%</td><td>52,6 Min</td><td>4,4 Min</td></tr>
+                                                    <tr><td>99,999%</td><td>5,26 Min</td><td>26 Sek</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) RTO und RPO</div>
+                                            <b>RTO (Recovery Time Objective):</b><br>
+                                            Maximale Zeit bis zur Wiederherstellung nach Ausfall.<br>
+                                            Im SLA: 2 Stunden → System muss nach 2h wieder laufen.<br><br>
+                                            
+                                            <b>RPO (Recovery Point Objective):</b><br>
+                                            Maximaler akzeptabler Datenverlust (Zeit seit letztem Backup).<br>
+                                            <b>Im SLA nicht genannt!</b> → Muss geklärt werden.<br><br>
+                                            
+                                            <b>Kritisch:</b> Wenn 99,9% Verfügbarkeit = 8,76h Ausfall/Jahr erlaubt sind, aber RTO 2h beträgt, können max. 4 Ausfälle/Jahr auftreten, bevor das SLA verletzt wird.
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Fragen vor Vertragsabschluss</div>
+                                            - Wie wird Verfügbarkeit gemessen? (welche Zeiträume zählen?)<br>
+                                            - Was ist die Entschädigung bei SLA-Verletzung?<br>
+                                            - Welches RPO wird garantiert? (Backup-Frequenz)<br>
+                                            - Was zählt als "Ausfall"? (geplante Wartung ausgenommen?)<br>
+                                            - Wie sind Reaktionszeiten außerhalb Business Hours?<br>
+                                            - Gibt es Eskalationsstufen?<br>
+                                            - Wo werden Daten gespeichert? (DSGVO-Konformität?)<br>
+                                            - Wie erfolgt die Kündigung und Datenrückgabe?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- NEUE ÜBUNGEN - NETZWERK ERWEITERT -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ueb-netzwerk-erweitert">Netzwerk Aufgaben (erweitert)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-30">
+                                <span class="uebung-titel">[Aufgabe 30] VLAN-Konzept erstellen</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Ausgangssituation:</b><br>
+                                Ein mittelständisches Unternehmen hat folgende Abteilungen im selben Gebäude:<br><br>
+                                
+                                - Geschäftsführung (5 PCs, sensible Daten)<br>
+                                - Entwicklung (20 PCs, Zugriff auf Testserver)<br>
+                                - Vertrieb (15 PCs, Zugriff auf CRM)<br>
+                                - Produktion (10 IoT-Geräte, Maschinensteuerung)<br>
+                                - Gäste-WLAN (variable Geräte)<br><br>
+                                
+                                <b>Aufgaben:</b><br>
+                                a) Entwerfen Sie ein VLAN-Konzept mit sinnvoller Segmentierung.<br>
+                                b) Welche Vorteile bietet die VLAN-Segmentierung?<br>
+                                c) Welches Gerät wird benötigt, damit VLANs miteinander kommunizieren können?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) VLAN-Konzept</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>VLAN</th>
+                                                        <th>ID</th>
+                                                        <th>Netzwerk</th>
+                                                        <th>Geräte</th>
+                                                        <th>Zugriffsrechte</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Management</td><td>10</td><td>10.0.10.0/24</td><td>5 PCs GF</td><td>Alle VLANs (lesend)</td></tr>
+                                                    <tr><td>Entwicklung</td><td>20</td><td>10.0.20.0/24</td><td>20 PCs + Testserver</td><td>Nur VLAN 20, Internet</td></tr>
+                                                    <tr><td>Vertrieb</td><td>30</td><td>10.0.30.0/24</td><td>15 PCs + CRM-Server</td><td>Nur VLAN 30, Internet</td></tr>
+                                                    <tr class="kritisch"><td>Produktion</td><td>40</td><td>10.0.40.0/24</td><td>10 IoT-Geräte</td><td><b>Isoliert!</b> Kein Internet</td></tr>
+                                                    <tr><td>Gäste</td><td>99</td><td>10.0.99.0/24</td><td>WLAN-Clients</td><td>Nur Internet, kein internes Netz</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) Vorteile der VLAN-Segmentierung</div>
+                                            <b>Sicherheit:</b><br>
+                                            - Broadcast-Domänen getrennt → Angriffe eingedämmt<br>
+                                            - Gäste haben keinen Zugriff auf interne Systeme<br>
+                                            - IoT-Geräte (oft unsicher) isoliert<br><br>
+                                            
+                                            <b>Performance:</b><br>
+                                            - Weniger Broadcast-Traffic pro Segment<br>
+                                            - Bessere Netzwerkauslastung<br><br>
+                                            
+                                            <b>Flexibilität:</b><br>
+                                            - Abteilungen können physisch verteilt sein<br>
+                                            - Einfaches Umziehen von Geräten (nur Port-Zuweisung ändern)<br><br>
+                                            
+                                            <b>Compliance:</b><br>
+                                            - Trennung sensibler Daten (DSGVO, PCI-DSS)
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) Inter-VLAN-Routing</div>
+                                            <b>Benötigtes Gerät:</b> Layer-3-Switch oder Router<br><br>
+                                            
+                                            VLANs sind auf Layer 2 getrennt. Für Kommunikation zwischen VLANs braucht man Routing (Layer 3).<br><br>
+                                            
+                                            <b>Optionen:</b><br>
+                                            - <b>Router-on-a-Stick:</b> Ein Router mit mehreren Subinterfaces (für kleine Netze)<br>
+                                            - <b>Layer-3-Switch:</b> Routing direkt im Switch (performanter, für größere Netze)<br>
+                                            - <b>Firewall:</b> Für zusätzliche Filterung zwischen VLANs (empfohlen bei sensiblen Daten)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uebung-box">
+                            <div class="uebung-header">
+                                <input type="checkbox" class="uebung-check" data-id="ueb-31">
+                                <span class="uebung-titel">[Aufgabe 31] IPv6-Grundlagen anwenden</span>
+                                <span class="uebung-toggle">+</span>
+                            </div>
+                            <div class="uebung-aufgabe">
+                                <b>Aufgaben:</b><br><br>
+                                
+                                a) Gegeben ist die IPv6-Adresse <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code>. Kürzen Sie diese nach den Regeln der IPv6-Notation.<br><br>
+                                
+                                b) Nennen Sie 3 wesentliche Unterschiede zwischen IPv4 und IPv6.<br><br>
+                                
+                                c) Welche Adresstypen gibt es bei IPv6? (Unicast, Multicast, etc.)<br><br>
+                                
+                                d) Warum wird bei IPv6 kein NAT mehr benötigt?
+                            </div>
+                            <div class="uebung-content">
+                                <div class="loesung-box">
+                                    <div class="loesung-header">
+                                        <span class="loesung-titel">Lösung anzeigen</span>
+                                    </div>
+                                    <div class="loesung-content">
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">a) IPv6-Adresse kürzen</div>
+                                            Original: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code><br><br>
+                                            
+                                            <b>Regel 1:</b> Führende Nullen in jedem Block weglassen:<br>
+                                            <code>2001:db8:0:0:0:ff00:42:8329</code><br><br>
+                                            
+                                            <b>Regel 2:</b> Aufeinanderfolgende Null-Blöcke durch :: ersetzen (nur einmal!):<br>
+                                            <code><b>2001:db8::ff00:42:8329</b></code>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">b) IPv4 vs. IPv6 Unterschiede</div>
+                                            <table class="netzplan-tabelle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Merkmal</th>
+                                                        <th>IPv4</th>
+                                                        <th>IPv6</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Adresslänge</td><td>32 Bit (4 Bytes)</td><td>128 Bit (16 Bytes)</td></tr>
+                                                    <tr><td>Adressanzahl</td><td>~4,3 Milliarden</td><td>~340 Sextillionen</td></tr>
+                                                    <tr><td>Notation</td><td>Dezimal (192.168.1.1)</td><td>Hexadezimal (2001:db8::1)</td></tr>
+                                                    <tr><td>Header</td><td>Variable Länge</td><td>Fixe Länge (40 Bytes)</td></tr>
+                                                    <tr><td>Broadcast</td><td>Ja</td><td>Nein (ersetzt durch Multicast)</td></tr>
+                                                    <tr><td>Autokonfiguration</td><td>DHCP erforderlich</td><td>SLAAC (Stateless)</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">c) IPv6-Adresstypen</div>
+                                            <b>Unicast:</b> Einzelnes Ziel<br>
+                                            - Global Unicast (2000::/3): Öffentlich, routbar<br>
+                                            - Link-Local (fe80::/10): Nur im lokalen Netz<br>
+                                            - Unique Local (fc00::/7): Wie private IPv4<br><br>
+                                            
+                                            <b>Multicast (ff00::/8):</b> Gruppe von Zielen<br>
+                                            - Ersetzt Broadcast<br>
+                                            - ff02::1 = Alle Geräte im Link<br><br>
+                                            
+                                            <b>Anycast:</b> Nächstes von mehreren identisch konfigurierten Zielen
+                                        </div>
+                                        
+                                        <div class="rechenschritt">
+                                            <div class="rechenschritt-nr">d) Warum kein NAT mehr nötig?</div>
+                                            Bei IPv4 wurde NAT eingesetzt, weil:<br>
+                                            - Nicht genug öffentliche Adressen für alle Geräte<br>
+                                            - Mehrere interne Geräte teilen sich eine öffentliche IP<br><br>
+                                            
+                                            IPv6 löst das Problem:<br>
+                                            - 340 Sextillionen Adressen verfügbar<br>
+                                            - Jedes Gerät bekommt eigene öffentliche Adresse<br>
+                                            - Ende-zu-Ende-Kommunikation wieder möglich<br>
+                                            - Vereinfacht Peer-to-Peer, VoIP, Gaming<br><br>
+                                            
+                                            <div class="merksatz">
+                                                <b>Achtung:</b> NAT ist KEINE Sicherheitsmaßnahme! Trotz IPv6 bleibt eine Firewall erforderlich.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <div class="container-full">
                 <div class="subheadding" id="sub-checkliste">Prüfungs-Checkliste</div>
                 <div class="subgrid">
                     <div class="container-text">
-                        <b>Prüfungsvortschritt:</b>
+                        <b>Prüfungsfortschritt:</b>
                             <button class="reset-btn" onclick="resetChecklist()">Zurücksetzen</button>
                         
                         <div class="checkliste">
+                            <b>Netzwerk & Subnetting</b>
                             <label class="check-item"><input type="checkbox" data-id="check-1"><span class="check-text">Netzplan: FAZ, FEZ, SAZ, SEZ, GP, FP berechnen können</span></label>
                             <label class="check-item"><input type="checkbox" data-id="check-2"><span class="check-text">Kritischen Pfad identifizieren können</span></label>
                             <label class="check-item"><input type="checkbox" data-id="check-3"><span class="check-text">Subnetting: Hosts aus CIDR berechnen (2^n - 2)</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-4"><span class="check-text">Wichtige Ports auswendig (21, 22, 23, 25, 53, 80, 443)</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-4"><span class="check-text">Wichtige Ports auswendig (21, 22, 23, 25, 53, 80, 443, 3389)</span></label>
                             <label class="check-item"><input type="checkbox" data-id="check-5"><span class="check-text">OSI-Schichten mit Protokollen zuordnen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-31"><span class="check-text">VLAN-Konzepte und Inter-VLAN-Routing verstehen</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-32"><span class="check-text">IPv6-Adressen kürzen und Adresstypen kennen</span></label>
+                            
+                            <b>IT-Sicherheit</b>
                             <label class="check-item"><input type="checkbox" data-id="check-6"><span class="check-text">Symmetrische vs. asymmetrische Verschlüsselung erklären</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-11"><span class="check-text">CIA-Schutzziele erklären können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-14"><span class="check-text">Hash-Werte und deren Zweck kennen</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-19"><span class="check-text">Schutzbedarfsanalyse durchführen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-20"><span class="check-text">Angriffsarten erkennen (Phishing, DDoS, Ransomware)</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-21"><span class="check-text">Passwort-Richtlinien nach BSI-Empfehlung kennen</span></label>
+                            
+                            <b>DSGVO & Datenschutz</b>
+                            <label class="check-item"><input type="checkbox" data-id="check-10"><span class="check-text">DSGVO-Grundsätze nennen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-22"><span class="check-text">Personenbezogene Daten identifizieren können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-23"><span class="check-text">Betroffenenrechte aufzählen können</span></label>
+                            
+                            <b>Wirtschaft & BWL</b>
                             <label class="check-item"><input type="checkbox" data-id="check-7"><span class="check-text">Entscheidungsmatrix mit Punktevergabe erstellen</span></label>
                             <label class="check-item"><input type="checkbox" data-id="check-8"><span class="check-text">Nutzwertanalyse mit Gewichtung berechnen</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-9"><span class="check-text">Schreibtischtest durchführen können</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-10"><span class="check-text">DSGVO-Grundsätze nennen können</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-11"><span class="check-text">CIA-Schutzziele erklären können</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-12"><span class="check-text">Lastenheft vs. Pflichtenheft unterscheiden</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-13"><span class="check-text">IMAP vs. POP3 erklären können</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-14"><span class="check-text">Hash-Werte und deren Zweck kennen</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-15"><span class="check-text">Statische vs. dynamische Websites unterscheiden</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-16"><span class="check-text">KI-Einsatzmöglichkeiten mit Vor-/Nachteilen kennen</span></label>
-                            <label class="check-item"><input type="checkbox" data-id="check-17"><span class="check-text">BPMN-Elemente zuordnen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-24"><span class="check-text">TCO-Berechnung durchführen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-25"><span class="check-text">Make-or-Buy Analyse erstellen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-26"><span class="check-text">Lineare AfA berechnen können</span></label>
+                            
+                            <b>Hardware & Arbeitsplatz</b>
                             <label class="check-item"><input type="checkbox" data-id="check-18"><span class="check-text">Anschlüsse visuell erkennen (RJ45, USB-A, USB-C)</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-27"><span class="check-text">RAID-Level unterscheiden können (0, 1, 5, 6, 10)</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-28"><span class="check-text">USV-Typen kennen und dimensionieren können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-29"><span class="check-text">Ergonomie-Anforderungen nach ArbStättV kennen</span></label>
+                            
+                            <b>Cloud & Virtualisierung</b>
+                            <label class="check-item"><input type="checkbox" data-id="check-30"><span class="check-text">IaaS, PaaS, SaaS unterscheiden können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-33"><span class="check-text">VM vs. Container Unterschiede erklären</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-34"><span class="check-text">Docker vs. Kubernetes Unterschied kennen</span></label>
+                            
+                            <b>Projektmanagement</b>
+                            <label class="check-item"><input type="checkbox" data-id="check-12"><span class="check-text">Lastenheft vs. Pflichtenheft unterscheiden</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-35"><span class="check-text">Wasserfall vs. Scrum vs. Kanban unterscheiden</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-36"><span class="check-text">SMART-Ziele formulieren können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-17"><span class="check-text">BPMN-Elemente zuordnen können</span></label>
+                            
+                            <b>Lizenzen & Software</b>
+                            <label class="check-item"><input type="checkbox" data-id="check-37"><span class="check-text">GPL vs. MIT/BSD Unterschied kennen</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-38"><span class="check-text">SLA-Kennzahlen (Verfügbarkeit, RTO, RPO) verstehen</span></label>
+                            
+                            <b>KI & Nachhaltigkeit (NEU 2025)</b>
+                            <label class="check-item"><input type="checkbox" data-id="check-16"><span class="check-text">KI-Einsatzmöglichkeiten mit Vor-/Nachteilen kennen</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-39"><span class="check-text">Ethische Aspekte von KI benennen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-40"><span class="check-text">KI-Arten zuordnen können (ML, NLP, Computer Vision)</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-41"><span class="check-text">Green IT: PUE erklären und Maßnahmen kennen</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-42"><span class="check-text">Stromverbrauch der IT-Infrastruktur berechnen</span></label>
+                            
+                            <b>Sonstiges</b>
+                            <label class="check-item"><input type="checkbox" data-id="check-9"><span class="check-text">Schreibtischtest durchführen können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-13"><span class="check-text">IMAP vs. POP3 erklären können</span></label>
+                            <label class="check-item"><input type="checkbox" data-id="check-15"><span class="check-text">Statische vs. dynamische Websites unterscheiden</span></label>
                         </div>
                         
                         <div class="merksatz">
-                            Alle Themen dieser Liste sind in den letzten Prüfungen vorgekommen. Kein Punkt sollte unvorbereitet sein.
+                            Diese Checkliste enthält alle prüfungsrelevanten Themen inkl. der neuen Inhalte aus dem Prüfungskatalog 2025 (KI, Nachhaltigkeit/Green IT). Kein Punkt sollte unvorbereitet sein!
                         </div>
                     </div>
                 </div>
@@ -14979,6 +16808,11 @@ Address: 192.168.1.1
             </div>
         </div>
 
+                </div><!-- /.section-content PRAXIS -->
+            </details><!-- /#section-praxis -->
+
+        </div><!-- /.main-sections -->
+
         <!-- Timer Start Button (Fixed) -->
         <button id="open-timer-btn" class="timer-start-btn" title="Prüfungs-Timer starten">TIMER</button>
         
@@ -15125,8 +16959,7 @@ Address: 192.168.1.1
             </div>
         </footer>
 
+        <!-- JavaScript -->
+        <script src="./src/js/main.js"></script>
     </body>
-
-    <!-- JavaScript -->
-    <script src="./src/js/main.js"></script>
 </html>

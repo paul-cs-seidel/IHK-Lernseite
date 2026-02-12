@@ -20,6 +20,90 @@
 'use strict';
 
 // ========================================
+// UTILITY FUNCTIONS
+// ========================================
+
+/**
+ * Throttle function - limits execution to once per delay period
+ * @param {Function} fn - Function to throttle
+ * @param {number} delay - Delay in milliseconds
+ * @returns {Function} Throttled function
+ */
+function throttle(fn, delay) {
+    let lastCall = 0;
+    return function(...args) {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            fn.apply(this, args);
+        }
+    };
+}
+
+/**
+ * Safe JSON parse with fallback
+ * @param {string} str - JSON string to parse
+ * @param {*} fallback - Fallback value if parsing fails
+ * @returns {*} Parsed object or fallback
+ */
+function safeJSONParse(str, fallback = null) {
+    try {
+        return JSON.parse(str);
+    } catch (e) {
+        return fallback;
+    }
+}
+
+// ========================================
+// UI MANAGER - Controls exclusive element opening
+// ========================================
+
+/**
+ * UIManager - Ensures only one UI element is open at a time
+ */
+const UIManager = {
+    /**
+     * Close all UI overlays (navbar, search, timer, calculator)
+     * @param {string} except - Element to keep open ('navbar', 'search', 'timer', 'calc')
+     */
+    closeAll(except = '') {
+        // Close navbar menu
+        if (except !== 'navbar') {
+            const burgerToggle = document.getElementById('burger-toggle');
+            const blurOverlay = document.querySelector('.blur-overlay');
+            if (burgerToggle?.checked) {
+                burgerToggle.checked = false;
+                blurOverlay?.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close search
+        if (except !== 'search') {
+            const searchBox = document.getElementById('search-box');
+            const searchResults = document.getElementById('search-results');
+            const searchInput = document.getElementById('search-input');
+            searchBox?.classList.remove('active');
+            searchResults?.classList.remove('active');
+            if (searchInput) searchInput.value = '';
+            if (searchResults) searchResults.innerHTML = '';
+        }
+        
+        // Close timer (but keep running)
+        if (except !== 'timer') {
+            document.getElementById('timer-box')?.classList.add('hidden');
+            document.getElementById('open-timer-btn')?.classList.remove('hidden');
+        }
+        
+        // Close calculator
+        if (except !== 'calc') {
+            document.getElementById('calc-box')?.classList.add('hidden');
+            document.getElementById('open-calc-btn')?.classList.remove('hidden');
+        }
+    }
+};
+
+// ========================================
 // 1. NAVIGATION & BURGER MENU
 // ========================================
 
@@ -284,6 +368,7 @@ const NavigationController = {
      */
     handleToggle() {
         if (this.burgerToggle.checked) {
+            UIManager.closeAll('navbar');
             this.blurOverlay.classList.add('active');
             this.lockScroll();
         } else {
@@ -546,7 +631,7 @@ const ChecklistController = {
         const saved = localStorage.getItem(this.storageKey);
         
         if (saved) {
-            const state = JSON.parse(saved);
+            const state = safeJSONParse(saved, {});
             
             document.querySelectorAll('.checkliste input[type="checkbox"]').forEach(cb => {
                 if (state[cb.dataset.id]) {
@@ -588,7 +673,7 @@ const ChecklistController = {
         const saved = localStorage.getItem(this.exerciseStorageKey);
         
         if (saved) {
-            const state = JSON.parse(saved);
+            const state = safeJSONParse(saved, {});
             
             document.querySelectorAll('.uebung-check').forEach(cb => {
                 if (state[cb.dataset.id]) {
@@ -637,7 +722,7 @@ const TimerController = {
         this.updateDisplay();
         this.bindEvents();
         this.checkVisibility();
-        window.addEventListener('scroll', () => this.checkVisibility());
+        window.addEventListener('scroll', throttle(() => this.checkVisibility(), 100));
     },
 
     /**
@@ -705,6 +790,7 @@ const TimerController = {
 
         // Open timer button
         document.getElementById('open-timer-btn')?.addEventListener('click', () => {
+            UIManager.closeAll('timer');
             document.getElementById('timer-box').classList.remove('hidden');
             document.getElementById('open-timer-btn').classList.add('hidden');
         });
@@ -780,13 +866,22 @@ const TimerController = {
     },
 
     /**
-     * Hide timer
+     * Hide timer (keeps running in background)
      */
     hide() {
+        document.getElementById('timer-box').classList.add('hidden');
+        document.getElementById('open-timer-btn')?.classList.remove('hidden');
+    },
+
+    /**
+     * Reset and hide timer
+     */
+    resetAndHide() {
         this.pause();
         document.getElementById('timer-box').classList.add('hidden');
         document.getElementById('open-timer-btn')?.classList.remove('hidden');
         this.seconds = this.startTime;
+        this.updateDisplay();
     },
 
     /**
@@ -1038,7 +1133,7 @@ const CaseStudyController = {
     loadProgress() {
         const saved = localStorage.getItem('caseStudyProgress');
         if (saved) {
-            const data = JSON.parse(saved);
+            const data = safeJSONParse(saved, {});
             this.totalPoints = data.totalPoints || 0;
             this.completedMissions = new Set(data.completedMissions || []);
             
@@ -1723,6 +1818,7 @@ const CalcController = {
     bindEvents() {
         // Open/Close
         document.getElementById('open-calc-btn')?.addEventListener('click', () => {
+            UIManager.closeAll('calc');
             document.getElementById('calc-box')?.classList.remove('hidden');
             document.getElementById('open-calc-btn')?.classList.add('hidden');
         });
@@ -1965,8 +2061,10 @@ const SearchController = {
      * Toggle search box visibility
      */
     toggleSearchBox() {
-        const isActive = this.searchBox.classList.toggle('active');
-        if (isActive) {
+        const isActive = this.searchBox.classList.contains('active');
+        if (!isActive) {
+            UIManager.closeAll('search');
+            this.searchBox.classList.add('active');
             this.searchInput.focus();
         } else {
             this.closeSearch();
@@ -2100,6 +2198,63 @@ const SearchController = {
 
 
 // ========================================
+// COLLAPSIBLE SECTIONS - Auto-open on anchor click
+// ========================================
+
+/**
+ * SectionController - Opens collapsed sections when navigating via anchor links
+ */
+const SectionController = {
+    init() {
+        // Handle initial page load with hash
+        if (window.location.hash) {
+            this.openSectionForTarget(window.location.hash.substring(1));
+        }
+
+        // Handle all anchor clicks
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+            
+            const targetId = link.getAttribute('href').substring(1);
+            if (targetId) {
+                this.openSectionForTarget(targetId);
+            }
+        });
+
+        // Handle browser back/forward
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash) {
+                this.openSectionForTarget(window.location.hash.substring(1));
+            }
+        });
+    },
+
+    /**
+     * Find and open the section containing the target element
+     * @param {string} targetId - The ID of the target element
+     */
+    openSectionForTarget(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (!targetElement) return;
+
+        // Find all parent details elements
+        let parent = targetElement.parentElement;
+        while (parent) {
+            if (parent.tagName === 'DETAILS' && parent.classList.contains('section-collapsible')) {
+                parent.open = true;
+            }
+            parent = parent.parentElement;
+        }
+
+        // Small delay to allow section to open, then scroll
+        setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+};
+
+// ========================================
 // INITIALIZATION
 // ========================================
 
@@ -2115,5 +2270,6 @@ document.addEventListener('DOMContentLoaded', () => {
     CaseStudyController.init();
     CalcController.init();
     SearchController.init();
+    SectionController.init();
 });
 

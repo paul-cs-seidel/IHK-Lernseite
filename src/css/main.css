@@ -33,6 +33,9 @@
 /* 3. Layout System & Hero */
 @import 'layout.css';
 
+/* 3b. Collapsible Sections */
+@import 'sections.css';
+
 /* 4. Navigation & Burger Menu */
 @import 'navbar.css';
 
