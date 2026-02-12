@@ -133,6 +133,7 @@ li {
     align-items: center;
     justify-content: center;
     font-size: 0.8em;
+    border-radius: var(--radius-sm);
 }
 
 /* ============================

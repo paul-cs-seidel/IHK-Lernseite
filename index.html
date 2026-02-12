@@ -8,6 +8,11 @@
         <meta property="og:description" content="Umfassende Lernseite für die IHK Abschlussprüfung Teil 1 - Fachinformatiker Systemintegration & Anwendungsentwicklung">
         <meta property="og:type" content="website">
         <meta property="og:image" content="./src/assets/logo.svg">
+        <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: dark)">
+        <meta name="color-scheme" content="light">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
         <title>IHK-Prüfungsvorbereitung - AP1</title>
         
         <!-- Favicon & Apple Touch Icon -->
@@ -66,10 +71,6 @@
                         <div class="nav-submenu-title">Was ist AP1</div>
                         <a href="#sub-was-ist-ap1">Was ist die AP1?</a>
                         <a href="#sub-pruefungsinhalte">Prüfungsinhalte AP1</a>
-                        <a href="#sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</a>
-                        <a href="#sub-ergonomie">Ergonomie (ArbStättV)</a>
-                        <a href="#sub-massnahmen">Technische Schutzmaßnahmen</a>
-                        <a href="#sub-org-massnahmen">Organisatorische Maßnahmen</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -79,7 +80,7 @@
                         <a href="#sub-aufgabentypen">Aufgabentypen in der AP1</a>
                         <a href="#sub-szenario">Szenario-Aufgaben meistern</a>
                         <a href="#sub-begruendungen">Begründen Sie Ihre Entscheidung</a>
-                        <a href="#sub-peripherie">Prüfungsbereiche</a>
+                        <a href="#sub-pruefungsbereiche">Prüfungsbereiche</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -195,6 +196,8 @@
                     <div class="nav-submenu">
                         <div class="nav-submenu-title">IT-Sicherheit</div>
                         <a href="#sub-cia">CIA-Schutzziele</a>
+                        <a href="#sub-massnahmen">Technische Schutzmaßnahmen</a>
+                        <a href="#sub-org-massnahmen">Organisatorische Maßnahmen</a>
                         <a href="#sub-bedrohungen">Bedrohungen</a>
                         <a href="#sub-schutzmassnahmen">Schutzmaßnahmen</a>
                         <a href="#sub-auth">Authentifizierung</a>
@@ -257,6 +260,8 @@
                     <a class="nav-bar-links" href="#hardware">Hardware</a>
                     <div class="nav-submenu">
                         <div class="nav-submenu-title">Hardware</div>
+                        <a href="#sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</a>
+                        <a href="#sub-ergonomie">Ergonomie (ArbStättV)</a>
                         <a href="#sub-cpu-ram">CPU & RAM</a>
                         <a href="#sub-schnittstellen">Schnittstellen</a>
                         <a href="#sub-servertypen">Servertypen</a>
@@ -481,7 +486,7 @@
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- WAS IST AP1 -->
         <!-- ═══════════════════════════════════════════════════════════════ -->
-        <span id="wasIstAp1" data-search-section data-search-tags="AP1, Prüfung, Grundlagen, IT-Arbeitsplatz, Ergonomie, ArbStättV, Schutzmaßnahmen, CIA, Vertraulichkeit, Integrität, Verfügbarkeit">/ Was ist AP1 <span class="badge-relevant">Grundlagen</span></span>
+        <span id="wasIstAp1" data-search-section data-search-tags="AP1, Prüfung, Grundlagen, Prüfungsinhalte, IT-Berufe">/ Was ist AP1 <span class="badge-relevant">Grundlagen</span></span>
         <hr>
         <div class="grid">
 
@@ -492,9 +497,6 @@
                         <ul class="micrographic-list">
                             <li><a href="#sub-was-ist-ap1">Was ist die AP1?</a></li>
                             <li><a href="#sub-pruefungsinhalte">Prüfungsinhalte AP1</a></li>
-                            <li><a href="#sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</a></li>
-                            <li><a href="#sub-massnahmen">Technische Schutzmaßnahmen</a></li>
-                            <li><a href="#sub-org-massnahmen">Organisatorische Maßnahmen</a></li>
                         </ul>
                     </div>
                     <span class="info-text">Einrichten eines IT-gestützten Arbeitsplatzes – 90 Minuten, 20% der Gesamtnote</span>
@@ -569,165 +571,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container-full">
-                <div class="subheadding" id="sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>Definition:</b><br>
-                        Ein durch technische und organisatorische Maßnahmen abgesichertes Arbeitsumfeld für sichere IT-Nutzung.<br><br>
-                        
-                        <b>Komponenten:</b>
-                        <ul>
-                            <li><b>Hardware:</b> PC/Laptop, Monitor, Peripherie</li>
-                            <li><b>Software:</b> OS, Anwendungen, Sicherheitstools</li>
-                            <li><b>Netzwerk:</b> Anbindung, VPN, Firewall</li>
-                            <li><b>Sicherheit:</b> Verschlüsselung, Zugriffsrechte</li>
-                        </ul>
-                        
-                        <b>Schutzziele (CIA):</b>
-                        <ul>
-                            <li><b>C</b>onfidentiality – Vertraulichkeit</li>
-                            <li><b>I</b>ntegrity – Integrität</li>
-                            <li><b>A</b>vailability – Verfügbarkeit</li>
-                        </ul>
-                        
-                        <div class="typische-frage">
-                            „Nennen Sie drei Maßnahmen zur Absicherung eines IT-Arbeitsplatzes."</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ergonomischer Arbeitsplatz -->
-            <div class="container-full">
-                <div class="subheadding" id="sub-ergonomie">Ergonomischer Arbeitsplatz (ArbStättV)</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>Anforderungen an einen ergonomischen PC-Arbeitsplatz:</b>
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Bereich</th>
-                                    <th>Anforderung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Monitor</b></td>
-                                    <td>Oberste Zeile leicht unter Sehachse, Mindestabstand 50 cm, frei von Blendungen</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Körperhaltung</b></td>
-                                    <td>90°-Winkel zwischen Ober-/Unterarm sowie Ober-/Unterschenkel</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Bewegung</b></td>
-                                    <td>Genügend Beinfreiheit, natürliche Körperhaltung möglich</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Flexibilität</b></td>
-                                    <td>Bildschirm frei stehend, leicht dreh- und neigbar</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <b>Arbeitsstättenverordnung (ArbStättV) - Bildschirm & Tastatur:</b>
-                        <ul>
-                            <li><b>Bildschirm:</b> Zeichen scharf, deutlich, ausreichend groß; flimmerfrei; Helligkeit/Kontrast einstellbar</li>
-                            <li><b>Tastatur:</b> Vom Bildschirmgerät getrennt; reflexionsarme Oberfläche; lesbare Beschriftung</li>
-                            <li><b>Notebooks:</b> Erfüllen ArbStättV nur mit externer Peripherie (Tastatur, Maus, ggf. Monitor)</li>
-                        </ul>
-                        
-                        <div class="pruefungsfalle">
-                            Notebooks entsprechen nur dann der ArbStättV, wenn externe Tastatur und ggf. Monitor genutzt werden!
-                        </div>
-                        
-                        <div class="selbsttest-box">
-                            <b>Selbsttest:</b> Welcher Mindestabstand zum Monitor ist laut Ergonomie-Richtlinien einzuhalten?
-                            <input type="text" class="selbsttest-input" placeholder="Abstand in cm" data-correct="50|50 cm|50cm">
-                            <span class="selbsttest-feedback"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                
-        
-            <div class="container-wide-mid">
-                <div class="subheadding" id="sub-massnahmen">Technische Schutzmaßnahmen</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <table class="vergleichs-tabelle">
-                            <thead>
-                                <tr>
-                                    <th>Maßnahme</th>
-                                    <th>Beschreibung</th>
-                                    <th>Schutzziel</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Firewall</b></td>
-                                    <td>Kontrolliert Netzwerkverkehr</td>
-                                    <td>Vertraulichkeit, Integrität</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Verschlüsselung</b></td>
-                                    <td>Daten unlesbar ohne Schlüssel</td>
-                                    <td>Vertraulichkeit</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Antivirus</b></td>
-                                    <td>Erkennt Schadsoftware</td>
-                                    <td>Integrität, Verfügbarkeit</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Backup</b></td>
-                                    <td>Datensicherung</td>
-                                    <td>Verfügbarkeit</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Updates/Patches</b></td>
-                                    <td>Schließen Sicherheitslücken</td>
-                                    <td>Alle drei</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Zugriffsrechte</b></td>
-                                    <td>Need-to-know-Prinzip</td>
-                                    <td>Vertraulichkeit</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container3">
-                <div class="subheadding" id="sub-org-massnahmen">Organisatorische Maßnahmen</div>
-                <div class="subgrid">
-                    <div class="container-text">
-                        <b>Richtlinien & Policies:</b>
-                        <ul>
-                            <li>Passwortrichtlinie (Komplexität, Wechsel)</li>
-                            <li>Clean Desk Policy</li>
-                            <li>Bildschirmsperre bei Abwesenheit</li>
-                            <li>Verbot privater USB-Sticks</li>
-                            <li>Trennung privat/beruflich</li>
-                        </ul>
-                        
-                        <b>Mobile Sicherheit (Home-Office):</b>
-                        <ul>
-                            <li>VPN-Pflicht</li>
-                            <li>Mobile Device Management (MDM)</li>
-                            <li>Container-Apps</li>
-                            <li>Festplattenverschlüsselung</li>
-                        </ul>
-                        
-                        <div class="merksatz">
-                            Jeder Mitarbeiter trägt Verantwortung – Awareness-Schulungen sind Pflicht!
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -744,7 +587,7 @@
                             <li><a href="#sub-aufgabentypen">Aufgabentypen in der AP1</a></li>
                             <li><a href="#sub-szenario">Szenario-Aufgaben meistern</a></li>
                             <li><a href="#sub-begruendungen">Begründen Sie Ihre Entscheidung</a></li>
-                            <li><a href="#sub-peripherie">Prüfungsbereiche</a></li>
+                            <li><a href="#sub-pruefungsbereiche">Prüfungsbereiche</a></li>
                         </ul>
                     </div>
                     <div class="media-container">
@@ -1151,6 +994,7 @@
                             <li><a href="#sub-vlan">VLAN</a></li>
                             <li><a href="#sub-vpn">VPN</a></li>
                             <li><a href="#sub-dhcp-dns">DHCP & DNS</a></li>
+                            <li><a href="#sub-dsl">DSL-Technologien</a></li>
                             <li><a href="#sub-nat">NAT</a></li>
                         </ul>
                     </div>
@@ -4569,6 +4413,7 @@
                             <li><a href="#sub-tuckman">Teamphasen nach Tuckman</a></li>
                             <li><a href="#sub-reflexion">Reflexion & Retrospektive</a></li>
                             <li><a href="#sub-kommunikation">Kommunikation & Verhandlung</a></li>
+                            <li><a href="#sub-vier-ohren">Vier-Ohren-Modell</a></li>
                             <li><a href="#sub-arbeitsorganisation">Arbeitsorganisation</a></li>
                             <li><a href="#sub-betriebsrat">Betriebsrat & Arbeitsrecht</a></li>
                         </ul>
@@ -6029,6 +5874,8 @@
                         <div class="micrographic-title">In diesem Abschnitt</div>
                         <ul class="micrographic-list">
                             <li><a href="#sub-cia">CIA-Triade (Schutzziele)</a></li>
+                            <li><a href="#sub-massnahmen">Technische Schutzmaßnahmen</a></li>
+                            <li><a href="#sub-org-massnahmen">Organisatorische Maßnahmen</a></li>
                             <li><a href="#sub-bedrohungen">Bedrohungen & Angriffe</a></li>
                             <li><a href="#sub-schutzmassnahmen">Schutzmaßnahmen</a></li>    
                             <li><a href="#sub-auth">Authentifizierung</a></li>
@@ -6179,6 +6026,85 @@
                                 <button class="selbsttest-btn" onclick="checkSelbsttest(this)">Prüfen</button>
                                 <button class="selbsttest-btn btn-reset" onclick="resetSelbsttest(this)">Zurücksetzen</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technische Schutzmaßnahmen (verschoben aus Informatives) -->
+            <div class="container-wide-mid">
+                <div class="subheadding" id="sub-massnahmen">Technische Schutzmaßnahmen</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Maßnahme</th>
+                                    <th>Beschreibung</th>
+                                    <th>Schutzziel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Firewall</b></td>
+                                    <td>Kontrolliert Netzwerkverkehr</td>
+                                    <td>Vertraulichkeit, Integrität</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Verschlüsselung</b></td>
+                                    <td>Daten unlesbar ohne Schlüssel</td>
+                                    <td>Vertraulichkeit</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Antivirus</b></td>
+                                    <td>Erkennt Schadsoftware</td>
+                                    <td>Integrität, Verfügbarkeit</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Backup</b></td>
+                                    <td>Datensicherung</td>
+                                    <td>Verfügbarkeit</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Updates/Patches</b></td>
+                                    <td>Schließen Sicherheitslücken</td>
+                                    <td>Alle drei</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Zugriffsrechte</b></td>
+                                    <td>Need-to-know-Prinzip</td>
+                                    <td>Vertraulichkeit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organisatorische Maßnahmen (verschoben aus Informatives) -->
+            <div class="container3">
+                <div class="subheadding" id="sub-org-massnahmen">Organisatorische Maßnahmen</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Richtlinien & Policies:</b>
+                        <ul>
+                            <li>Passwortrichtlinie (Komplexität, Wechsel)</li>
+                            <li>Clean Desk Policy</li>
+                            <li>Bildschirmsperre bei Abwesenheit</li>
+                            <li>Verbot privater USB-Sticks</li>
+                            <li>Trennung privat/beruflich</li>
+                        </ul>
+                        
+                        <b>Mobile Sicherheit (Home-Office):</b>
+                        <ul>
+                            <li>VPN-Pflicht</li>
+                            <li>Mobile Device Management (MDM)</li>
+                            <li>Container-Apps</li>
+                            <li>Festplattenverschlüsselung</li>
+                        </ul>
+                        
+                        <div class="merksatz">
+                            Jeder Mitarbeiter trägt Verantwortung – Awareness-Schulungen sind Pflicht!
                         </div>
                     </div>
                 </div>
@@ -7011,10 +6937,6 @@
                             <li><a href="#sub-bios-uefi">BIOS vs. UEFI</a></li>
                             <li><a href="#sub-green-it">Green-IT & Umweltzeichen</a></li>
                         </ul>
-                    </div>
-                    <div class="merksatz" style="margin-top: 16px;">
-                        <b>RAID-Systeme:</b> Ausführliche RAID-Informationen im Abschnitt <a href="#sub-raid">Hardware > RAID-Systeme</a>.<br>
-                        <b>Backup-Strategien:</b> Detaillierte Infos unter <a href="#sub-backup-konzepte">IT-Sicherheit > Backup</a>.
                     </div>
                     <span class="info-text">HDD, SSD – Speichermedien verstehen und auswählen</span>
                 </div>
@@ -7938,6 +7860,8 @@
                     <div class="micrographic">
                         <div class="micrographic-title">In diesem Abschnitt</div>
                         <ul class="micrographic-list">
+                            <li><a href="#sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</a></li>
+                            <li><a href="#sub-ergonomie">Ergonomie (ArbStättV)</a></li>
                             <li><a href="#sub-cpu-ram">CPU & Arbeitsspeicher</a></li>
                             <li><a href="#sub-schnittstellen">Schnittstellen</a></li>
                             <li><a href="#sub-servertypen">Servertypen</a></li>
@@ -7952,6 +7876,88 @@
                         </ul>
                     </div>
                     <span class="info-text">Komponenten, Schnittstellen, Formfaktoren</span>
+                </div>
+            </div>
+
+            <!-- IT-gestützter Arbeitsplatz (verschoben aus Informatives) -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-it-arbeitsplatz">IT-gestützter Arbeitsplatz</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Definition:</b><br>
+                        Ein durch technische und organisatorische Maßnahmen abgesichertes Arbeitsumfeld für sichere IT-Nutzung.<br><br>
+                        
+                        <b>Komponenten:</b>
+                        <ul>
+                            <li><b>Hardware:</b> PC/Laptop, Monitor, Peripherie</li>
+                            <li><b>Software:</b> OS, Anwendungen, Sicherheitstools</li>
+                            <li><b>Netzwerk:</b> Anbindung, VPN, Firewall</li>
+                            <li><b>Sicherheit:</b> Verschlüsselung, Zugriffsrechte</li>
+                        </ul>
+                        
+                        <b>Schutzziele (CIA):</b>
+                        <ul>
+                            <li><b>C</b>onfidentiality – Vertraulichkeit</li>
+                            <li><b>I</b>ntegrity – Integrität</li>
+                            <li><b>A</b>vailability – Verfügbarkeit</li>
+                        </ul>
+                        
+                        <div class="typische-frage">
+                            „Nennen Sie drei Maßnahmen zur Absicherung eines IT-Arbeitsplatzes."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ergonomischer Arbeitsplatz (verschoben aus Informatives) -->
+            <div class="container-full">
+                <div class="subheadding" id="sub-ergonomie">Ergonomischer Arbeitsplatz (ArbStättV)</div>
+                <div class="subgrid">
+                    <div class="container-text">
+                        <b>Anforderungen an einen ergonomischen PC-Arbeitsplatz:</b>
+                        <table class="vergleichs-tabelle">
+                            <thead>
+                                <tr>
+                                    <th>Bereich</th>
+                                    <th>Anforderung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Monitor</b></td>
+                                    <td>Oberste Zeile leicht unter Sehachse, Mindestabstand 50 cm, frei von Blendungen</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Körperhaltung</b></td>
+                                    <td>90°-Winkel zwischen Ober-/Unterarm sowie Ober-/Unterschenkel</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Bewegung</b></td>
+                                    <td>Genügend Beinfreiheit, natürliche Körperhaltung möglich</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Flexibilität</b></td>
+                                    <td>Bildschirm frei stehend, leicht dreh- und neigbar</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <b>Arbeitsstättenverordnung (ArbStättV) - Bildschirm & Tastatur:</b>
+                        <ul>
+                            <li><b>Bildschirm:</b> Zeichen scharf, deutlich, ausreichend groß; flimmerfrei; Helligkeit/Kontrast einstellbar</li>
+                            <li><b>Tastatur:</b> Vom Bildschirmgerät getrennt; reflexionsarme Oberfläche; lesbare Beschriftung</li>
+                            <li><b>Notebooks:</b> Erfüllen ArbStättV nur mit externer Peripherie (Tastatur, Maus, ggf. Monitor)</li>
+                        </ul>
+                        
+                        <div class="pruefungsfalle">
+                            Notebooks entsprechen nur dann der ArbStättV, wenn externe Tastatur und ggf. Monitor genutzt werden!
+                        </div>
+                        
+                        <div class="selbsttest-box">
+                            <b>Selbsttest:</b> Welcher Mindestabstand zum Monitor ist laut Ergonomie-Richtlinien einzuhalten?
+                            <input type="text" class="selbsttest-input" placeholder="Abstand in cm" data-correct="50|50 cm|50cm">
+                            <span class="selbsttest-feedback"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
 

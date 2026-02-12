@@ -240,6 +240,7 @@
     background: none;
     cursor: pointer;
     transition: all var(--transition-fast);
+    border-radius: var(--radius-sm);
 }
 
 .reset-btn:hover {
@@ -527,6 +528,7 @@
     background: var(--color-primary);
     color: var(--color-text-inverted);
     padding: var(--spacing-2xl);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .case-study-badge {
@@ -871,6 +873,7 @@
     letter-spacing: var(--letter-spacing-wide);
     cursor: pointer;
     transition: all var(--transition-fast);
+    border-radius: var(--radius-sm);
 }
 
 .case-btn:hover {
@@ -883,6 +886,7 @@
     background: var(--color-primary);
     color: var(--color-text-inverted);
     border-color: var(--color-primary);
+    border-radius: var(--radius-sm);
 }
 
 .case-btn-primary:hover {
@@ -938,6 +942,7 @@
     color: var(--color-text-inverted);
     text-align: center;
     display: none;
+    border-radius: var(--radius-sm);
 }
 
 .case-result.show {

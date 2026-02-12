@@ -164,24 +164,28 @@
     display: block;
 }
 
-/* Desktop: Sticky Sidebar für container0 mit Micrographic */
-@media (min-width: 1025px) {
-    .container0:has(.micrographic) {
-        position: absolute;
-    }
-    
-    .container0:has(.micrographic) > .sidebar-sticky-wrapper {
-        position: sticky;
-        top: 60px;
-    }
-    
-    .container0.sticky-sidebar {
-        position: absolute;
-    }
-    
-    .container0.sticky-sidebar > .sidebar-sticky-wrapper {
-        position: sticky;
-        top: 60px;
+/* JS-gesteuerte Sticky-States */
+.sidebar-sticky-wrapper.is-sticky {
+    position: fixed;
+    top: 72px;
+    left: var(--spacing-3xl);
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+}
+
+.sidebar-sticky-wrapper.is-bottom {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+}
+
+@media (max-width: 1024px) {
+    .sidebar-sticky-wrapper,
+    .sidebar-sticky-wrapper.is-sticky,
+    .sidebar-sticky-wrapper.is-bottom {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
     }
 }
 

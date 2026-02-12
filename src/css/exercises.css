@@ -187,6 +187,7 @@
     margin: var(--spacing-lg) 0;
     position: relative;
     background: var(--color-background);
+    border-radius: var(--radius-sm);
 }
 
 .selbsttest-box::before {
@@ -271,6 +272,7 @@
     letter-spacing: 1px;
     transition: all var(--transition-fast);
     position: relative;
+    border-radius: var(--radius-sm);
 }
 
 .selbsttest-btn::before {
@@ -435,6 +437,7 @@
     color: var(--color-text-inverted);
     padding: 2px 6px;
     font-size: 0.9em;
+    border-radius: var(--radius-sm);
 }
 
 @media (max-width: 900px) {
@@ -475,6 +478,14 @@
     color: var(--color-text-inverted);
 }
 
+.sql-tabelle th:first-child {
+    border-radius: var(--radius-sm) 0 0 0;
+}
+
+.sql-tabelle th:last-child {
+    border-radius: 0 var(--radius-sm) 0 0;
+}
+
 .sql-tabelle tr:nth-child(even) {
     background: none;
 }
@@ -486,7 +497,7 @@
     font-family: var(--font-family-mono);
     font-size: 0.9em;
     margin: var(--spacing-sm) 0;
-    border-radius: 0;
+    border-radius: var(--radius-sm);
     overflow-x: auto;
 }
 
@@ -534,11 +545,13 @@
     margin-bottom: var(--spacing-xl);
     font-family: var(--font-family-mono);
     text-align: left;
+    border-radius: var(--radius-sm);
 }
 
 .pruefung-simulation {
     border: 3px solid var(--color-primary);
     padding: var(--spacing-xl) var(--spacing-2xl);
+    border-radius: var(--radius-sm);
 }
 
 .pruefung-aufgabe {
@@ -587,6 +600,7 @@
     padding: var(--spacing-lg) var(--spacing-xl);
     background: var(--color-primary);
     color: var(--color-text-inverted);
+    border-radius: var(--radius-sm);
 }
 
 .szenario-firma {
