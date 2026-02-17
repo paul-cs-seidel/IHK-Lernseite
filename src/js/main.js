@@ -904,7 +904,8 @@ const TimerController = {
  * @param {HTMLElement} button - The check button clicked
  */
 function checkSelbsttest(button) {
-    const container = button.closest('.selbsttest-box');
+    const container = button.closest('.selbsttest-box') || button.closest('.pruefung-simulation');
+    if (!container) return;
     const inputs = container.querySelectorAll('.selbsttest-input');
 
     inputs.forEach(input => {
@@ -940,7 +941,8 @@ function checkSelbsttest(button) {
  * @param {HTMLElement} button - The reset button clicked
  */
 function resetSelbsttest(button) {
-    const container = button.closest('.selbsttest-box');
+    const container = button.closest('.selbsttest-box') || button.closest('.pruefung-simulation');
+    if (!container) return;
     const inputs = container.querySelectorAll('.selbsttest-input');
     const feedbacks = container.querySelectorAll('.selbsttest-feedback');
 
