@@ -485,6 +485,7 @@
 .footer-author {
     font-size: var(--font-size-md);
     margin: 0;
+    align-self: center;
 }
 
 .footer-disclaimer {
@@ -492,11 +493,13 @@
     color: var(--color-text-muted);
     margin: 0;
     font-style: italic;
+    align-self: center;
 }
 
 .footer-legal {
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--color-border-light);
+    align-self: center;
 }
 
 .footer-legal p {
