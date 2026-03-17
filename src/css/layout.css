@@ -168,7 +168,6 @@
 .sidebar-sticky-wrapper.is-sticky {
     position: fixed;
     top: 72px;
-    left: var(--spacing-3xl);
     max-height: calc(100vh - 88px);
     overflow-y: auto;
 }
