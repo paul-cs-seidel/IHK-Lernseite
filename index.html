@@ -20,7 +20,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/apple-touch-icon.png" />
         
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="./src/css/main.css" />
+        <link rel="stylesheet" href="./src/styles/main.css" />
     </head>
 
 <body>
@@ -33,7 +33,7 @@
         © 2024–2026 Alle Rechte vorbehalten.
         
         Projektstruktur:
-        - src/css/main.css (importiert alle CSS-Module)
+        - src/styles/main.css (importiert alle CSS-Module)
         - src/js/main.js (alle JavaScript-Funktionen)
         - src/assets/ (Logo, Icons)
         
@@ -16965,6 +16965,23 @@ Address: 192.168.1.1
         </footer>
 
         <!-- JavaScript -->
-        <script src="./src/js/main.js"></script>
+        <!-- JS Module (Ladereihenfolge = Abhängigkeitsreihenfolge) -->
+        <script defer src="./src/js/modules/utils.js"></script>
+        <script defer src="./src/js/modules/ui-manager.js"></script>
+        <script defer src="./src/js/modules/navigation.js"></script>
+        <script defer src="./src/js/modules/micrographic.js"></script>
+        <script defer src="./src/js/modules/exercises.js"></script>
+        <script defer src="./src/js/modules/checklist.js"></script>
+        <script defer src="./src/js/modules/timer.js"></script>
+        <script defer src="./src/js/modules/selbsttest.js"></script>
+        <script defer src="./src/js/modules/calculators.js"></script>
+        <script defer src="./src/js/modules/case-study.js"></script>
+        <script defer src="./src/js/modules/case-study-2.js"></script>
+        <script defer src="./src/js/modules/case-study-3.js"></script>
+        <script defer src="./src/js/modules/calc-controller.js"></script>
+        <script defer src="./src/js/modules/search.js"></script>
+        <script defer src="./src/js/modules/sections.js"></script>
+        <script defer src="./src/js/modules/sticky-sidebar.js"></script>
+        <script defer src="./src/js/main.js"></script>
     </body>
 </html>

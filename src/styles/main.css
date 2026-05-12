@@ -25,31 +25,31 @@
  * ============================ */
 
 /* 1. Design Tokens & Variablen */
-@import 'tokens.css';
+@import './base/tokens.css';
 
 /* 2. CSS Reset & Basis-Styles */
-@import 'base.css';
+@import './base/base.css';
 
 /* 3. Layout System & Hero */
-@import 'layout.css';
+@import './layout/layout.css';
 
 /* 3b. Collapsible Sections */
-@import 'sections.css';
+@import './layout/sections.css';
 
 /* 4. Navigation & Burger Menu */
-@import 'navbar.css';
+@import './components/navbar.css';
 
 /* 4b. Search */
-@import 'search.css';
+@import './components/search.css';
 
 /* 5. UI Components */
-@import 'components.css';
+@import './components/components.css';
 
 /* 6. Übungen & Selbsttests */
-@import 'exercises.css';
+@import './components/exercises.css';
 
 /* 7. Timer */
-@import 'timer.css';
+@import './components/timer.css';
 
 /* 8. Print Styles */
-@import 'print.css';
+@import './base/print.css';
