@@ -1,6 +1,6 @@
 # IHK-Lernseite — AP1 Prüfungsvorbereitung
 
-[![Live ansehen](https://img.shields.io/badge/Live%20ansehen-%E2%86%92-252525?style=for-the-badge)](https://cedricseidel.github.io/IHK-Lernseite/)
+[![Live ansehen](https://img.shields.io/badge/Live%20ansehen-%E2%86%92-252525?style=for-the-badge)](https://paul-cs-seidel.github.io/IHK-Lernseite/)
 
 Kostenlose, interaktive Lernseite zur Vorbereitung auf die IHK Abschlussprüfung Teil 1 (AP1) für Fachinformatiker Systemintegration & Anwendungsentwicklung.
 
